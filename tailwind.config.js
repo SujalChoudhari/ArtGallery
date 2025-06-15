@@ -58,6 +58,7 @@ module.exports = {
       },
       fontFamily: {
         serif: ["var(--font-serif)"],
+        cursive: ['var(--font-dancing-script)', 'cursive'],
       },
       animation: {
         gradient: "gradient 3s ease infinite",
