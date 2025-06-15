@@ -12,20 +12,56 @@ export default function ArtGallery() {
   const [isScrolling, setIsScrolling] = useState(true);
   const [scrollSpeed, setScrollSpeed] = useState(1);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const [loadedImages, setLoadedImages] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-
   // Duplicate art pieces for seamless looping
   const duplicatedArtPieces = [...artPieces, ...artPieces];
 
-  // Loading animation
+  // Image loading logic
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
+    const requiredLoadedImages = artPieces.length; // 30% threshold
+
+    let loadedCount = 0;
+    let canFinishLoading = false;
+
+    // Minimum 2-second timer
+    const minimumTimer = setTimeout(() => {
+      canFinishLoading = true;
+      // Check if we can finish loading now
+      if (loadedCount >= requiredLoadedImages) {
+        setIsLoading(false);
+      }
     }, 2000);
-    return () => clearTimeout(timer);
+
+    const handleImageLoad = () => {
+      loadedCount++;
+      setLoadedImages(loadedCount);
+
+      if (loadedCount >= requiredLoadedImages && canFinishLoading) {
+        setIsLoading(false);
+      }
+    };
+
+    // Preload images
+    artPieces.forEach((piece) => {
+      const img = new Image();
+      img.onload = handleImageLoad;
+      img.onerror = handleImageLoad; // Count failed loads too
+      img.src = piece.image;
+    });
+
+    // Fallback timeout (in case images take too long)
+    const fallbackTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 10000); // 10 seconds max
+
+    return () => {
+      clearTimeout(minimumTimer);
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   // Initialize audio
@@ -85,8 +121,11 @@ export default function ArtGallery() {
 
   return (
     <div className="min-h-screen bg-zinc-900 text-white overflow-hidden relative">
-      {/* Loading Screen */}
-      <LoadingScreen isLoading={isLoading} />
+      {/* Loading Screen with progress */}
+      <LoadingScreen
+        isLoading={isLoading}
+        progress={(loadedImages / artPieces.length) * 100}
+      />
 
       {/* Control Panel */}
       {!isLoading && (
