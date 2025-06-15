@@ -169,9 +169,9 @@ export default function ArtGallery() {
 
           {/* Bottom Credit */}
           <div className="absolute bottom-4 right-4 z-30">
-            <p className="text-xs md:text-sm font-serif bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+            <a href="https://sujal.xyz" target="_blank" className="text-xs md:text-sm font-serif bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent underline hover:text-yellow-300 transition-colors duration-300">
               Made by Sujal Choudhari
-            </p>
+            </a>
           </div>
         </motion.div>
       )}
