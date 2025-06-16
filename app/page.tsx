@@ -1,8 +1,10 @@
+// app/ArtGallery.tsx
 "use client";
 
 import ArtPiece from "@/components/ArtPiece";
 import ControlPanel from "@/components/ControlPanel";
 import LoadingScreen from "@/components/LoadingScreen";
+import MusicPlayer from "@/components/MusicController";
 import artPieces from "@/lib/drawings";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -15,7 +17,6 @@ export default function ArtGallery() {
   const [loadedImages, setLoadedImages] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Duplicate art pieces for seamless looping
   const duplicatedArtPieces = [...artPieces, ...artPieces];
@@ -64,13 +65,6 @@ export default function ArtGallery() {
     };
   }, []);
 
-  // Initialize audio
-  useEffect(() => {
-    audioRef.current = new Audio("/sounds/bg_music.mp3");
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.3;
-  }, []);
-
   // Auto-scroll functionality with seamless looping
   useEffect(() => {
     if (!isLoading && isScrolling) {
@@ -109,18 +103,18 @@ export default function ArtGallery() {
   };
 
   const toggleMusic = () => {
-    if (audioRef.current) {
-      if (isMusicPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch(console.error);
-      }
-      setIsMusicPlaying(!isMusicPlaying);
-    }
+    setIsMusicPlaying(!isMusicPlaying);
   };
 
   return (
     <div className="min-h-screen bg-zinc-900 text-white overflow-hidden relative">
+      {/* Music Player Component */}
+      <MusicPlayer
+        isMusicPlaying={isMusicPlaying}
+        onToggleMusic={toggleMusic}
+        volume={0.60} // Pass desired volume
+      />
+
       {/* Loading Screen with progress */}
       <LoadingScreen
         isLoading={isLoading}

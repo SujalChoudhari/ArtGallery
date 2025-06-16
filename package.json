@@ -45,6 +45,7 @@
     "date-fns": "4.1.0",
     "embla-carousel-react": "8.5.1",
     "framer-motion": "latest",
+    "howler": "^2.2.4",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
     "next": "14.2.16",
@@ -62,6 +63,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/howler": "^2.2.12",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
