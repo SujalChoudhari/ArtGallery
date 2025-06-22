@@ -9,21 +9,23 @@ const artPieces = [
         title: "Insightful Gaze", // Previously "Portrait Woman With Glasses"
         image: "/drawings/12_Portrait_Woman_With_Glasses.jpg",
     },
+
     {
         id: 20,
         title: "Joyful Expression", // Previously "Smiling Woman Portrait Sketch"
         image: "/drawings/13_Smiling_Woman_Portrait_Sketch.jpg",
     },
     {
+        id: 65,
+        title: "Closeup Face of a Women", // Previously "Portrait Man With Beard"
+        image: "/drawings/65_Women_Closeup.jpg",
+    },
+    {
         id: 3,
         title: "Rainy Night Glow", // Previously "Girl in rain_Wet_lamp_post.jpg"
         image: "/drawings/64_Girl_in_rain_Wet_lamp_post.jpg",
     },
-    {
-        id: 4,
-        title: "Intricate Whispers", // Previously "Detailed Pen Sketch"
-        image: "/drawings/11_Detailed_Pen_Sketch.jpg",
-    },
+    
     // {
     //     id: 5,
     //     title: "Mechanized Intellect", // Previously "Detailed Robot Head Study"
@@ -48,6 +50,11 @@ const artPieces = [
         id: 9,
         title: "Venetian Reflections", // Previously "Venice Canal Perspective"
         image: "/drawings/03_Venice_Canal_Perspective.jpg",
+    },
+    {
+        id: 4,
+        title: "Intricate Whispers", // Previously "Detailed Pen Sketch"
+        image: "/drawings/11_Detailed_Pen_Sketch.jpg",
     },
     {
         id: 10,
