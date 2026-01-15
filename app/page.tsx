@@ -1,174 +1,80 @@
-// app/ArtGallery.tsx
 "use client";
 
-import ArtPiece from "@/components/ArtPiece";
-import ControlPanel from "@/components/ControlPanel";
-import LoadingScreen from "@/components/LoadingScreen";
-import MusicPlayer from "@/components/MusicController";
+import MasonryLayout from "@/components/MasonryLayout";
+import Lightbox from "@/components/Lightbox";
 import artPieces from "@/lib/drawings";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 export default function ArtGallery() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isScrolling, setIsScrolling] = useState(true);
-  const [scrollSpeed, setScrollSpeed] = useState(1);
-  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
-  const [loadedImages, setLoadedImages] = useState(0);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Duplicate art pieces for seamless looping
-  const duplicatedArtPieces = [...artPieces, ...artPieces];
+  // Sort by ID descending (newest first) to ensure 1..n reversed order regardless of source file order
+  const reversedArtPieces = [...artPieces].sort((a, b) => b.id - a.id);
 
-  // Image loading logic
-  useEffect(() => {
-    const requiredLoadedImages = artPieces.length; // 30% threshold
-
-    let loadedCount = 0;
-    let canFinishLoading = false;
-
-    // Minimum 2-second timer
-    const minimumTimer = setTimeout(() => {
-      canFinishLoading = true;
-      // Check if we can finish loading now
-      if (loadedCount >= requiredLoadedImages) {
-        setIsLoading(false);
-      }
-    }, 2000);
-
-    const handleImageLoad = () => {
-      loadedCount++;
-      setLoadedImages(loadedCount);
-
-      if (loadedCount >= requiredLoadedImages && canFinishLoading) {
-        setIsLoading(false);
-      }
-    };
-
-    // Preload images
-    artPieces.forEach((piece) => {
-      const img = new Image();
-      img.onload = handleImageLoad;
-      img.onerror = handleImageLoad; // Count failed loads too
-      img.src = piece.image;
-    });
-
-    // Fallback timeout (in case images take too long)
-    const fallbackTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 10000); // 10 seconds max
-
-    return () => {
-      clearTimeout(minimumTimer);
-      clearTimeout(fallbackTimer);
-    };
-  }, []);
-
-  // Auto-scroll functionality with seamless looping
-  useEffect(() => {
-    if (!isLoading && isScrolling) {
-      scrollIntervalRef.current = setInterval(() => {
-        if (scrollContainerRef.current) {
-          const container = scrollContainerRef.current;
-          const scrollAmount = scrollSpeed;
-          container.scrollLeft += scrollAmount;
-
-          // Seamless looping logic
-          const singleSetWidth = container.scrollWidth / 2;
-          if (container.scrollLeft >= singleSetWidth) {
-            container.scrollLeft = 0;
-          }
-        }
-      }, 16); // ~60fps
-    } else {
-      if (scrollIntervalRef.current) {
-        clearInterval(scrollIntervalRef.current);
-      }
-    }
-
-    return () => {
-      if (scrollIntervalRef.current) {
-        clearInterval(scrollIntervalRef.current);
-      }
-    };
-  }, [isLoading, isScrolling, scrollSpeed]);
-
-  const toggleScrolling = () => {
-    setIsScrolling(!isScrolling);
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
   };
 
-  const handleSpeedChange = (speed: number) => {
-    setScrollSpeed(speed);
+  const closeLightbox = () => {
+    setLightboxOpen(false);
   };
 
-  const toggleMusic = () => {
-    setIsMusicPlaying(!isMusicPlaying);
+  const navigateLightbox = (index: number) => {
+    setCurrentImageIndex(index);
   };
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white overflow-hidden relative">
-      {/* Music Player Component */}
-      <MusicPlayer
-        isMusicPlaying={isMusicPlaying}
-        onToggleMusic={toggleMusic}
-        volume={0.60} // Pass desired volume
-      />
+    <div className="min-h-screen bg-background text-foreground">
 
-      {/* Loading Screen with progress */}
-      <LoadingScreen
-        isLoading={isLoading}
-        progress={(loadedImages / artPieces.length) * 100}
-      />
+      {/* Header / Title */}
+      <motion.header
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-center pt-8 pb-4"
+      >
+        <h1 className="text-4xl md:text-6xl font-serif font-medium tracking-tight mb-2">
+          Art
+        </h1>
+        <p className="text-sm md:text-base text-muted-foreground font-serif italic">
+          by <a href="https://sujal.xyz" className="underline hover:text-foreground transition-colors">Sujal Choudhari</a>
+        </p>
+      </motion.header>
 
-      {/* Control Panel */}
-      {!isLoading && (
-        <ControlPanel
-          isMusicPlaying={isMusicPlaying}
-          toggleMusic={toggleMusic}
-          scrollSpeed={scrollSpeed}
-          handleSpeedChange={handleSpeedChange}
-          isScrolling={isScrolling}
-          toggleScrolling={toggleScrolling}
-        />
-      )}
-
-      {/* Main Gallery */}
-      {!isLoading && (
+      {/* Masonry Grid */}
+      <main className="max-w-7xl mx-auto px-3 md:px-6 py-6 md:py-8">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="h-screen flex flex-col pt-16 md:pt-20"
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
-          {/* Gallery Container - Horizontal Scroll */}
-          <div
-            ref={scrollContainerRef}
-            className="flex-1 overflow-x-auto overflow-y-hidden cursor-pointer scrollbar-hide"
-            onClick={toggleScrolling}
-            style={{ height: "calc(100vh - 120px)" }}
-          >
-            <div className="flex items-center h-full px-4 md:px-8 space-x-6 md:space-x-12">
-              {duplicatedArtPieces.map((piece, index) => (
-                <ArtPiece
-                  key={`${piece.id}-${index}`}
-                  id={piece.id}
-                  title={piece.title}
-                  image={piece.image}
-                  delay={(index % artPieces.length) * 0.1}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom Credit */}
-          <div className="absolute bottom-4 right-4 z-30">
-            <a href="https://sujal.xyz" target="_blank" className="text-xs md:text-sm font-serif bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent underline hover:text-yellow-300 transition-colors duration-300">
-              Made by Sujal Choudhari
-            </a>
-          </div>
+          <MasonryLayout items={reversedArtPieces} openLightbox={openLightbox} />
         </motion.div>
-      )}
+      </main>
+
+      {/* Footer */}
+      <footer className="py-12 text-center border-t mt-8 bg-zinc-50/50">
+        <div className="space-y-2">
+          <p className="text-sm font-serif text-muted-foreground">
+            All sketches & paintings &copy; {new Date().getFullYear()} Sujal Choudhari.
+          </p>
+          <p className="text-xs text-muted-foreground/60">
+            Part of <a href="https://sujal.xyz" className="hover:text-foreground transition-colors underline underline-offset-2">sujal.xyz</a>
+          </p>
+        </div>
+      </footer>
+
+      {/* Lightbox */}
+      <Lightbox
+        images={reversedArtPieces}
+        currentIndex={currentImageIndex}
+        isOpen={lightboxOpen}
+        onClose={closeLightbox}
+        onNavigate={navigateLightbox}
+      />
     </div>
   );
 }
