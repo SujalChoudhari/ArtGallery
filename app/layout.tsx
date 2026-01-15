@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   title: "Sujal Choudhari - Art Gallery",
   description: "A curated collection of artistic works",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  generator: 'v0.dev',
 }
 
 export default function RootLayout({
