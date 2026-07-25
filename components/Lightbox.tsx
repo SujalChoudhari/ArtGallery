@@ -174,10 +174,16 @@ export default function Lightbox({
             exit={{ opacity: 0, y: 20 }}
             className="absolute bottom-6 left-0 right-0 text-center px-4"
           >
-            <h2 className="text-lg md:text-xl font-serif text-white mb-2">
+            <h2
+              className="text-lg md:text-xl font-serif text-white mb-2"
+              style={{ textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.8)" }}
+            >
               {currentImage.title}
             </h2>
-            <p className="text-sm text-white/60">
+            <p
+              className="text-sm text-white/60"
+              style={{ textShadow: "0 1px 6px rgba(0,0,0,0.9)" }}
+            >
               {currentIndex + 1} / {images.length}
             </p>
           </motion.div>
