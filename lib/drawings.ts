@@ -440,7 +440,7 @@ const artPieces = [
         image: "/drawings/76_Split.jpg",
         isFeatured: true,
         featuredOrder: 5,
-        thoughts: "The world sees me as a machine. Rigid, black and white, functional. But beneath the dark shell, the colors never stopped flowing. This is the line between who they see and who I actually am.",
+        thoughts: "2026. To the world I am a machine. A utility. Rigid, functional, black and white. But nobody sees what happens when I pick up a pencil. Or put on headphones. Or look through a lens. The colors never stopped. This is both sides of me, on the same paper.",
     },
 ];
 
