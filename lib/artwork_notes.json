@@ -524,5 +524,12 @@
     "year": null,
     "notes": "Portrait of Chhatrapati Shivaji Maharaj.",
     "isFeaturedCandidate": false
+  },
+  {
+    "id": 76,
+    "title": "The Split",
+    "year": null,
+    "notes": "Represents the stark duality of my life, contrasting the vibrant, flowing colors of my hidden creative soul against the rigid, black and white reality of the machine persona the world expects me to be.",
+    "isFeaturedCandidate": true
   }
 ]

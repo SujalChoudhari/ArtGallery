@@ -4,7 +4,7 @@ const artPieces = [
         title: "The Terminus",
         image: "/drawings/01_Chhatrapati_Shivaji_Terminus.jpg",
         isFeatured: true,
-        featuredOrder: 17,
+        featuredOrder: 18,
         thoughts: "School days. A building so grand it made a kid pick up a pencil and try. Every arch, every tower, every gothic detail felt like a challenge. I didn't know then that this was the beginning of something. I just wanted to get it right.",
     },
     {
@@ -32,7 +32,7 @@ const artPieces = [
         title: "Horns & Darkness",
         image: "/drawings/06_Horned_Skull_With_Keys.jpg",
         isFeatured: true,
-        featuredOrder: 14,
+        featuredOrder: 15,
         thoughts: "2020. Depression has its own aesthetic. Dark, ornate, a little dangerous. A skull crowned with horns and tentacles. I didn't plan it. It just came out of wherever I was.",
     },
     {
@@ -96,7 +96,7 @@ const artPieces = [
         title: "When We Held On",
         image: "/drawings/17_Clasped_Hands_Gesture.jpg",
         isFeatured: true,
-        featuredOrder: 15,
+        featuredOrder: 16,
         thoughts: "2018. Two people holding hands. The third image in the hand series, and the warmest one. I drew what I felt. Wanting to be close, wanting it to last.",
     },
     {
@@ -104,7 +104,7 @@ const artPieces = [
         title: "Don't Go",
         image: "/drawings/18_Shaded_Reaching_Hand_Study.jpg",
         isFeatured: true,
-        featuredOrder: 16,
+        featuredOrder: 17,
         thoughts: "Same era, different feeling. A hand stretched out. Not reaching for something, but trying to stop something from leaving. It was never a relationship. Just a crush. Maybe a first love. The simplest drawing with the strangest story.",
     },
     {
@@ -200,7 +200,7 @@ const artPieces = [
         title: "She Had Glasses",
         image: "/drawings/36_Woman_With_Sunglasses_Profile_Sketch.jpg",
         isFeatured: true,
-        featuredOrder: 11,
+        featuredOrder: 12,
         thoughts: "College era. I was still in that familiar fog. A different person this time, not the first love, but real enough. The glasses aren't a detail. They're a disguise. I painted her without painting her.",
     },
     {
@@ -263,7 +263,7 @@ const artPieces = [
         title: "When I Was Happy",
         image: "/drawings/48_Pensive_Man_In_Blue_Watercolor.jpg",
         isFeatured: true,
-        featuredOrder: 10,
+        featuredOrder: 11,
         thoughts: "Late 2025, early 2026. Small drawing. Lots of color. That's how I knew things were different. I actually wanted color. I made this when I was happy and couldn't quite explain why. Still can't.",
     },
     {
@@ -326,7 +326,7 @@ const artPieces = [
         title: "This is What Music Feels Like",
         image: "/drawings/60_Psychedelic_Soundwaves_Aura.jpg",
         isFeatured: true,
-        featuredOrder: 6,
+        featuredOrder: 7,
         thoughts: "I couldn't describe it in words, so I drew it. Music doesn't just play. It lifts something. A quiet confidence, a sudden warmth. This is what it looks like from the inside.",
     },
     {
@@ -349,7 +349,7 @@ const artPieces = [
         title: "Rain & Lamplight",
         image: "/drawings/64_Girl_in_rain_Wet_lamp_post.jpg",
         isFeatured: true,
-        featuredOrder: 18,
+        featuredOrder: 19,
         thoughts: "2024, internship era. Rain has a way of making everything feel more honest. She's standing in it, not running from it. The lamp beside her is the only warm thing in the frame. There's something quietly brave about someone who lets themselves get rained on.",
     },
     {
@@ -357,7 +357,7 @@ const artPieces = [
         title: "Those Eyes",
         image: "/drawings/65_Women_Closeup.jpg",
         isFeatured: true,
-        featuredOrder: 5,
+        featuredOrder: 6,
         thoughts: "Made in late 2025, but the memory is from school. This is what she looked like. Not exactly. I can't replicate something that felt like that. But this is close enough to make me remember.",
     },
     {
@@ -375,7 +375,7 @@ const artPieces = [
         title: "Bappa, Buffed",
         image: "/drawings/68_Ganpati_Bappa_morya.jpg",
         isFeatured: true,
-        featuredOrder: 7,
+        featuredOrder: 8,
         thoughts: "The best drawing I think I have ever made. Ganpati Bappa, but not the gentle serene version. This one is powerful. Every muscle deliberate. I wanted to draw divinity the way strength actually feels.",
     },
     {
@@ -383,7 +383,7 @@ const artPieces = [
         title: "The One-Eyebrow Look",
         image: "/drawings/69_Self_Portrait.jpg",
         isFeatured: true,
-        featuredOrder: 20,
+        featuredOrder: 21,
         thoughts: "Late 2025. One eye steady, one brow raised. Lost in love, sure. But somewhere along the way I built something. I coded, I shipped, I grew. This is me looking back at all of it and deciding I'm not too bad after all.",
     },
     {
@@ -391,7 +391,7 @@ const artPieces = [
         title: "Infinity Castle",
         image: "/drawings/70_Infinity_Castle.jpg",
         isFeatured: true,
-        featuredOrder: 9,
+        featuredOrder: 10,
         thoughts: "Early 2024. I was deep into Demon Slayer. The Infinity Castle obsessed me. The geometry, the impossible angles, the sense of falling forever. I spent a long time on the details. Tanjiro mid-fall, corridors going nowhere.",
     },
     {
@@ -407,7 +407,7 @@ const artPieces = [
         title: "Kanheri, in Warli",
         image: "/drawings/72_Kanheri_Warli_Cave_Painting.jpg",
         isFeatured: true,
-        featuredOrder: 8,
+        featuredOrder: 9,
         thoughts: "The Kanheri caves in Sanjay Gandhi National Park, drawn in the style of Warli. Trees, pillars, floors, walls, all in that ancient tribal language of lines. The image you see here is inverted. The original was black on white, but the negative feels more honest. Like looking at a photograph of something that happened a long time ago.",
     },
     {
@@ -415,7 +415,7 @@ const artPieces = [
         title: "Krishna Lifts Govardhan",
         image: "/drawings/73_Govardhan_Parvat.jpg",
         isFeatured: true,
-        featuredOrder: 12,
+        featuredOrder: 13,
         thoughts: "Madhubani style. A folk art language that turns myth into geometry. Krishna lifting an entire mountain. The style demanded patience; every fill, every border had its own rhythm.",
     },
     {
@@ -423,7 +423,7 @@ const artPieces = [
         title: "Vasudev",
         image: "/drawings/74_Vasu_Dev.jpg",
         isFeatured: true,
-        featuredOrder: 13,
+        featuredOrder: 14,
         thoughts: "Made for Maharashtra Din. Vasudev, the wandering folk performer, bells in hand, a living tradition. Something about drawing him felt like an act of preservation.",
     },
     {
@@ -431,8 +431,16 @@ const artPieces = [
         title: "Shivaji Maharaj",
         image: "/drawings/75_Shivaji_Maharaj.jpg",
         isFeatured: true,
-        featuredOrder: 19,
+        featuredOrder: 20,
         thoughts: "A portrait on a hundred. Chhatrapati Shivaji Maharaj deserved more than a quick sketch. I wanted to get the weight of him right, the sharpness in the eyes, the quiet authority. Some subjects demand your full attention. This was one of them.",
+    },
+    {
+        id: 76,
+        title: "The Split",
+        image: "/drawings/76_Split.jpg",
+        isFeatured: true,
+        featuredOrder: 5,
+        thoughts: "The world sees me as a machine. Rigid, black and white, functional. But beneath the dark shell, the colors never stopped flowing. This is the line between who they see and who I actually am.",
     },
 ];
 
