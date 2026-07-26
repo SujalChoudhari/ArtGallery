@@ -70,7 +70,7 @@ export default function ArtGallery() {
   const navigateLightbox = (index: number) => setCurrentImageIndex(index);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
       {/* ── Full-screen Hero ── */}
       <section className="relative w-full h-screen overflow-hidden">
@@ -92,13 +92,13 @@ export default function ArtGallery() {
           transition={{ duration: 1, delay: 0.4 }}
           className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
         >
-          <p className="text-white/70 font-serif text-xs md:text-sm uppercase tracking-[0.35em] mb-5">
+          <p className="text-white/70 font-sans text-xs md:text-sm uppercase tracking-[0.35em] mb-5">
             A Personal Collection
           </p>
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-serif font-medium text-white leading-tight mb-6">
             Lines &amp; Feelings
           </h1>
-          <p className="text-white/90 font-serif text-base md:text-xl italic max-w-md leading-relaxed">
+          <p className="text-white/90 font-sans text-base md:text-xl max-w-md leading-relaxed tracking-wide">
             Sketches, paintings &amp; explorations
             <br />
             by{" "}
@@ -120,7 +120,7 @@ export default function ArtGallery() {
           transition={{ duration: 1, delay: 1.2 }}
           className="absolute bottom-6 right-6 text-right"
         >
-          <p className="text-white/70 font-serif text-sm italic">Kanheri Warli Cave Painting</p>
+          <p className="text-white/70 font-sans text-sm tracking-wide">Kanheri Warli Cave Painting</p>
         </motion.div>
 
         {/* Scroll-down arrow — no label text */}
@@ -175,7 +175,7 @@ export default function ArtGallery() {
             >
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-serif font-medium">The Archive</h2>
-                <p className="text-muted-foreground mt-2 font-serif italic text-sm md:text-base">
+                <p className="text-muted-foreground mt-2 font-sans text-sm md:text-base">
                   A complete collection of documented works
                 </p>
               </div>
@@ -188,7 +188,7 @@ export default function ArtGallery() {
       {/* ── Footer ── */}
       <footer className="py-12 text-center border-t mt-8 bg-zinc-50/50">
         <div className="space-y-2">
-          <p className="text-sm font-serif text-muted-foreground">
+          <p className="text-sm font-sans text-muted-foreground">
             All sketches &amp; paintings &copy; {new Date().getFullYear()} Sujal Choudhari.
           </p>
           <p className="text-xs text-muted-foreground/60">

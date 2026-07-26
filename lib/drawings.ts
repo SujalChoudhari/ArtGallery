@@ -76,7 +76,7 @@ const artPieces = [
         image: "/drawings/14_Skull_With_Flowing_Tentacles.jpg",
         isFeatured: true,
         featuredOrder: 2,
-        thoughts: "This is the last drawing I made before I became a programmer. The tentacles are not tentacles. They are thoughts. Every one of them pulling at something inside the skull. This was 2018, at its worst. I didn't have words for what I was feeling. So I drew this instead.",
+        thoughts: "This is the last drawing I made before I turned to programming to escape my own mind. Those aren't tentacles, they're the heavy weight of overthinking, cracking the skull from the inside. This was 2018, at its lowest.",
     },
     {
         id: 15,
@@ -84,7 +84,7 @@ const artPieces = [
         image: "/drawings/15_Train_Emerging_From_Tunnel.jpg",
         isFeatured: true,
         featuredOrder: 3,
-        thoughts: "2024. The train is old, muddy, and still running. It doesn't know it's about to reach the light. It just keeps moving. That was me. Not fully out, not yet healed. But moving. That's where I first thought that maybe I'm better than who I think I am.",
+        thoughts: "An old, muddy train pushing through the dark. That was me in 2020. I was still feeling down, not fully healed, but I was actively hoping things would get better. I was slowly but surely moving towards the light",
     },
     {
         id: 16,
@@ -109,11 +109,11 @@ const artPieces = [
     },
     {
         id: 19,
-        title: "Vasai Fort, Alone",
+        title: "Solitude",
         image: "/drawings/19_Charminar_Sketch_Hyderabad.jpg",
         isFeatured: true,
         featuredOrder: 4,
-        thoughts: "Late 2025, early 2026. I picked up the pencil again after years away. The church in Vasai Fort wasn't a subject. It was a mirror. Ruins still standing. Solitary but still there. That's what I was drawing.",
+        thoughts: "Late 2025. I picked up the pencil again after years away. The church in Vasai Fort wasn't a subject. It was a mirror. Ruins still standing. Solitary but still there. That's what I was drawing.",
     },
     {
         id: 20,
@@ -264,7 +264,7 @@ const artPieces = [
         image: "/drawings/48_Pensive_Man_In_Blue_Watercolor.jpg",
         isFeatured: true,
         featuredOrder: 11,
-        thoughts: "Late 2025, early 2026. Small drawing. Lots of color. That's how I knew things were different. I actually wanted color. I made this when I was happy and couldn't quite explain why. Still can't.",
+        thoughts: "Late 2025. Small drawing. Has color. That's how I knew things were different. I actually wanted color in life. I made this in a moment of pure, unexpected happiness.",
     },
     {
         id: 49,
@@ -323,11 +323,11 @@ const artPieces = [
     },
     {
         id: 60,
-        title: "This is What Music Feels Like",
+        title: "Vibrance Of The Tunes",
         image: "/drawings/60_Psychedelic_Soundwaves_Aura.jpg",
         isFeatured: true,
         featuredOrder: 7,
-        thoughts: "I couldn't describe it in words, so I drew it. Music doesn't just play. It lifts something. A quiet confidence, a sudden warmth. This is what it looks like from the inside.",
+        thoughts: "Music doesn't just play. It lifts something. A quiet confidence, a sudden warmth. This is what the rhythm and melody look like from the inside.",
     },
     {
         id: 61,
@@ -350,15 +350,15 @@ const artPieces = [
         image: "/drawings/64_Girl_in_rain_Wet_lamp_post.jpg",
         isFeatured: true,
         featuredOrder: 19,
-        thoughts: "2024, internship era. Rain has a way of making everything feel more honest. She's standing in it, not running from it. The lamp beside her is the only warm thing in the frame. There's something quietly brave about someone who lets themselves get rained on.",
+        thoughts: "Mid 2024. Rain has a way of making everything feel more honest. She's standing in it, not running from it. The lamp beside her is the only warm thing in the frame. There's something quietly brave about someone who lets themselves get rained on.",
     },
     {
         id: 65,
-        title: "Those Eyes",
+        title: "Now It's A Memory", 
         image: "/drawings/65_Women_Closeup.jpg",
         isFeatured: true,
         featuredOrder: 6,
-        thoughts: "Made in late 2025, but the memory is from school. This is what she looked like. Not exactly. I can't replicate something that felt like that. But this is close enough to make me remember.",
+        thoughts: "Made in late 2025, but the memory of her. This is what she looked like. Not exactly. I can't replicate something that felt like that. But this is close enough to make me remember.",
     },
     {
         id: 66,
@@ -380,11 +380,11 @@ const artPieces = [
     },
     {
         id: 69,
-        title: "The One-Eyebrow Look",
+        title: "Self Portrait",
         image: "/drawings/69_Self_Portrait.jpg",
         isFeatured: true,
         featuredOrder: 21,
-        thoughts: "Late 2025. One eye steady, one brow raised. Lost in love, sure. But somewhere along the way I built something. I coded, I shipped, I grew. This is me looking back at all of it and deciding I'm not too bad after all.",
+        thoughts: "Late 2025. Still Alive. Lost in love, sure. But somewhere along the way I built something. I coded, I wrote, I grew. This is me looking back at all of it and deciding I'm not too bad after all.",
     },
     {
         id: 70,
@@ -392,15 +392,15 @@ const artPieces = [
         image: "/drawings/70_Infinity_Castle.jpg",
         isFeatured: true,
         featuredOrder: 10,
-        thoughts: "Early 2024. I was deep into Demon Slayer. The Infinity Castle obsessed me. The geometry, the impossible angles, the sense of falling forever. I spent a long time on the details. Tanjiro mid-fall, corridors going nowhere.",
+        thoughts: "Late 2025. I was deep into Demon Slayer. The Infinity Castle obsessed me. The geometry, the impossible angles, the sense of falling forever. I spent a long time on the details. Tanjiro mid-fall, corridors going nowhere.",
     },
     {
         id: 71,
-        title: "Her Eyes",
+        title: "Glowing Eyes",
         image: "/drawings/71_Her_Eyes.jpg",
         isFeatured: true,
         featuredOrder: 1,
-        thoughts: "This is where it started. A close-up of the eyes that made me fall in love. The glow, the warmth, the way they held something I couldn't name. I still remember the exact moment I first saw them. This drawing is that moment. Everything else in this collection exists in the shadow of this one.",
+        thoughts: "This is where it started. A close-up of the eyes that made me fall in love. The absolute glow and warmth they carried. I still remember the exact moment I first saw them. This drawing is that moment. Everything else in this collection exists in the shadow of this one.",
     },
     {
         id: 72,
@@ -408,7 +408,7 @@ const artPieces = [
         image: "/drawings/72_Kanheri_Warli_Cave_Painting.jpg",
         isFeatured: true,
         featuredOrder: 9,
-        thoughts: "The Kanheri caves in Sanjay Gandhi National Park, drawn in the style of Warli. Trees, pillars, floors, walls, all in that ancient tribal language of lines. The image you see here is inverted. The original was black on white, but the negative feels more honest. Like looking at a photograph of something that happened a long time ago.",
+        thoughts: "The Kanheri caves in SGNP, drawn in the style of Warli. Trees, pillars, floors, walls, all in that ancient tribal language of lines. The image you see here is inverted. The original was black on white, but the negative feels more honest. Like looking at a photograph of something that happened a long time ago.",
     },
     {
         id: 73,
@@ -436,11 +436,11 @@ const artPieces = [
     },
     {
         id: 76,
-        title: "The Split",
+        title: "Duality: Me vs I",
         image: "/drawings/76_Split.jpg",
         isFeatured: true,
         featuredOrder: 5,
-        thoughts: "2026. To the world I am a machine. A utility. Rigid, functional, black and white. But nobody sees what happens when I pick up a pencil. Or put on headphones. Or look through a lens. The colors never stopped. This is both sides of me, on the same paper.",
+        thoughts: "2026. To the world I am an emotionless machine. An utility, a tool. They choose to ignore the person behind the keyboard. That person is far more vibrant than what people see.",
     },
 ];
 

@@ -175,7 +175,7 @@ export default function Lightbox({
             className="absolute bottom-6 left-0 right-0 text-center px-4"
           >
             <h2
-              className="text-lg md:text-xl font-serif text-white mb-2"
+              className="text-lg md:text-xl font-sans text-white mb-2"
               style={{ textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.8)" }}
             >
               {currentImage.title}

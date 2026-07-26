@@ -58,6 +58,7 @@ module.exports = {
       },
       fontFamily: {
         serif: ["var(--font-serif)"],
+        sans: ["var(--font-sans)"],
         cursive: ['var(--font-dancing-script)', 'cursive'],
       },
       animation: {

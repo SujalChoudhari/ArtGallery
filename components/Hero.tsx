@@ -75,7 +75,7 @@ export default function Hero() {
             {/* Hint text if not hovered */}
             {!isHovered && (
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <p className="text-black/50 bg-white/50 px-4 py-2 rounded-full backdrop-blur-sm text-sm font-serif animate-pulse">
+                    <p className="text-black/50 bg-white/50 px-4 py-2 rounded-full backdrop-blur-sm text-sm font-sans animate-pulse">
                         Hover to reveal
                     </p>
                 </div>

@@ -18,6 +18,32 @@ interface FeaturedSectionProps {
 export default function FeaturedSection({ artworks, onUnlockArchive, onImageClick }: FeaturedSectionProps) {
     return (
         <div className="w-full flex flex-col">
+            {/* Introductory Title Section */}
+            <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="pt-16 md:pt-32 md:pb-40 flex flex-col items-center justify-center text-center px-4"
+            >
+                <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif font-medium mb-6">
+                    Imperfection is Beautiful
+                </h2>
+                
+                <svg viewBox="0 0 100 100" width="56" height="56" className="mx-auto my-8 text-foreground/30" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <circle cx="50" cy="50" r="4" fill="currentColor" />
+                    <circle cx="50" cy="50" r="12" />
+                    {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
+                        <path key={angle} d="M50 38 C65 20 65 5 50 0 C35 5 35 20 50 38 Z" transform={`rotate(${angle} 50 50)`} />
+                    ))}
+                </svg>
+
+                <p className="text-muted-foreground font-sans text-lg md:text-2xl max-w-2xl mx-auto italic leading-relaxed">
+                    A glimpse into the chaos, the quiet moments, and the unsaid stories hidden between the lines.
+                </p>
+                <hr className="w-24 md:w-32 border-border/60 mt-12 mb-4 mx-auto" />
+            </motion.div>
+
             {artworks.map((art, index) => (
                 <FeaturedCard key={art.id} artwork={art} index={index} onImageClick={onImageClick} />
             ))}
@@ -33,12 +59,12 @@ export default function FeaturedSection({ artworks, onUnlockArchive, onImageClic
                 <h2 className="text-3xl md:text-5xl font-serif font-medium mb-6">
                     Beyond the Highlights
                 </h2>
-                <p className="text-muted-foreground font-serif text-lg mb-10 max-w-xl mx-auto">
+                <p className="text-muted-foreground font-sans text-lg mb-10 max-w-xl mx-auto">
                     These were just a few pieces that hold a deeper meaning for me. I have documented many more sketches, paintings, and creative explorations over the years.
                 </p>
                 <button 
                     onClick={onUnlockArchive}
-                    className="px-8 py-4 bg-foreground text-background font-serif text-lg rounded-full hover:bg-foreground/90 transition-all hover:scale-105 shadow-lg flex items-center gap-3 group"
+                    className="px-8 py-4 bg-foreground text-background font-sans text-lg rounded-full hover:bg-foreground/90 transition-all hover:scale-105 shadow-lg flex items-center gap-3 group"
                 >
                     Explore the Archive
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-y-1 transition-transform">
@@ -103,8 +129,10 @@ function FeaturedCard({ artwork, index, onImageClick }: { artwork: FeaturedArtwo
                 </h3>
                 {artwork.thoughts && artwork.thoughts.trim() !== "" && (
                     <div className={`relative ${isEven ? 'pl-6 border-l-2' : 'md:pr-6 md:border-r-2'} border-foreground/20`}>
-                        <p className="text-lg md:text-xl text-muted-foreground font-serif leading-relaxed italic">
-                            "{artwork.thoughts}"
+                        <p className="text-base md:text-lg text-muted-foreground font-sans leading-relaxed tracking-wide">
+                            <span className="font-serif text-3xl text-foreground/40 align-[-0.2em] mr-1">&ldquo;</span>
+                            {artwork.thoughts}
+                            <span className="font-serif text-3xl text-foreground/40 align-[-0.2em] ml-1">&rdquo;</span>
                         </p>
                     </div>
                 )}
