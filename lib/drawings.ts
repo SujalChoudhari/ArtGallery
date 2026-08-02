@@ -442,6 +442,14 @@ const artPieces = [
         featuredOrder: 5,
         thoughts: "2026. To the world I am an emotionless machine. An utility, a tool. They choose to ignore the person behind the keyboard. That person is far more vibrant than what people see.",
     },
+    {
+        id: 77,
+        title: "The Dark Lily",
+        image: "/drawings/77_The_Dark_Lily.jpg",
+        isFeatured: true,
+        featuredOrder: 22,
+        thoughts: "2026. We only ever frame the bright days. The low ones get buried, like they don't count. They do. The downs are worth sitting with too.",
+    },
 ];
 
 export default artPieces;
