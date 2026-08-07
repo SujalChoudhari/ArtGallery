@@ -20,8 +20,30 @@ const lexend = Lexend({
 })
 
 export const metadata: Metadata = {
-  title: "Sujal Choudhari - Art Gallery",
-  description: "A curated collection of artistic works",
+  metadataBase: new URL("https://art.sujal.xyz"),
+  title: {
+    default: "Sujal Choudhari - Art Gallery",
+    template: "%s | Sujal Choudhari Art",
+  },
+  description: "A curated collection of Sujal Choudhari's drawings, paintings, and visual experiments.",
+  keywords: ["Sujal Choudhari", "art gallery", "drawings", "paintings", "watercolor", "Mumbai"],
+  authors: [{ name: "Sujal Choudhari", url: "https://sujal.xyz/" }],
+  creator: "Sujal Choudhari",
+  alternates: { canonical: "https://art.sujal.xyz/" },
+  openGraph: {
+    type: "website",
+    url: "https://art.sujal.xyz/",
+    siteName: "Sujal Choudhari Art Gallery",
+    title: "Sujal Choudhari - Art Gallery",
+    description: "Drawings, paintings, and visual experiments by Sujal Choudhari.",
+    images: [{ url: "/hero/art.png", alt: "Sujal Choudhari Art Gallery" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sujal Choudhari - Art Gallery",
+    description: "Drawings, paintings, and visual experiments by Sujal Choudhari.",
+    images: ["/og-image.png"],
+  },
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 }
 
