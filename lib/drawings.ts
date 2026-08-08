@@ -450,6 +450,14 @@ const artPieces = [
         featuredOrder: 22,
         thoughts: "2026. We only ever frame the bright days. The low ones get buried, like they don't count. They do. The downs are worth sitting with too.",
     },
+    {
+        id: 78,
+        title: "After the Fall",
+        image: "/drawings/78_After_the_Fall.jpg",
+        isFeatured: true,
+        featuredOrder: 23,
+        thoughts: "2026. I wanted to paint the moment after surrender, when the thing you built is burning and you finally stop trying to save it. Somehow, the end still feels like freedom.",
+    },
 ];
 
 export default artPieces;
