@@ -1804,6 +1804,29 @@
         "bytes": 229916,
         "format": "webp"
       }
+    },
+    "/drawings/79_Oranges.jpg": {
+      "original": {
+        "path": "/drawings/79_Oranges.jpg",
+        "width": 719,
+        "height": 1280,
+        "bytes": 164948,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/79_Oranges-f9418152.thumb.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 30796,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/79_Oranges-f9418152.detail.webp",
+        "width": 719,
+        "height": 1280,
+        "bytes": 121458,
+        "format": "webp"
+      }
     }
   }
 }

@@ -546,6 +546,13 @@ const artPieces: ArtPiece[] = [
         featuredOrder: 23,
         thoughts: "2026. I wanted to paint the moment after surrender, when the thing you built is burning and you finally stop trying to save it. Somehow, the end still feels like freedom.",
     },
+    {
+        id: 79,
+        slug: "oranges",
+        title: "Oranges",
+        image: "/drawings/79_Oranges.jpg",
+        thoughts: "Aug 2026. Some seasons are meant to be left behind. What emerges from them is brighter, more beautiful, and finally ready to take flight.",
+    },
 ];
 
 export const allArtPieces = artPieces;
