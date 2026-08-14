@@ -88,6 +88,17 @@
         animation: artwork-image-shimmer 1.6s linear infinite;
     }
 
+    .artwork-detail-stage {
+        aspect-ratio: var(--artwork-aspect-ratio, 4 / 3);
+    }
+
+    @media (min-width: 1024px) {
+        .artwork-detail-stage {
+            aspect-ratio: 4 / 3;
+            min-height: 55svh;
+        }
+    }
+
     .artwork-image-media {
         opacity: 0;
         transition: opacity 700ms ease;

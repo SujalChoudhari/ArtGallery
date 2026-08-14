@@ -28,28 +28,28 @@ export const metadata: Metadata = {
 
 export default function ArchivePage() {
     return (
-        <div className="min-h-screen overflow-x-clip bg-background text-foreground">
+        <div className="min-h-screen overflow-x-clip bg-background text-foreground" data-mobile-shell="phone-first">
             <SiteHeader />
-            <main className="mx-auto max-w-7xl px-5 pb-24 pt-12 sm:px-8 sm:pt-20 lg:px-12">
-                <div className="max-w-3xl border-b border-foreground/15 pb-10">
-                    <p className="font-sans text-xs uppercase tracking-[0.28em] text-foreground/50">Lines &amp; Feelings</p>
-                    <h1 className="mt-4 text-5xl leading-[0.98] sm:text-7xl">The archive</h1>
-                    <p className="mt-6 max-w-2xl font-sans text-base leading-relaxed text-foreground/65 sm:text-lg">
+            <main className="mx-auto max-w-7xl px-4 pb-16 pt-7 sm:px-8 sm:pb-24 sm:pt-20 lg:px-12">
+                <div className="max-w-3xl border-b border-foreground/15 pb-8 sm:pb-10">
+                    <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/50 sm:tracking-[0.28em]">Lines &amp; Feelings</p>
+                    <h1 className="mt-3 text-4xl leading-[0.98] sm:mt-4 sm:text-7xl">The archive</h1>
+                    <p className="mt-5 max-w-2xl font-sans text-base leading-relaxed text-foreground/65 sm:mt-6 sm:text-lg">
                         Every documented work in one quiet, searchable place. Follow a title to spend more time with the image and the thoughts behind it.
                     </p>
-                    <p className="mt-5 font-sans text-xs uppercase tracking-[0.18em] text-foreground/45">{latestArtPieces.length} works · newest first</p>
+                    <p className="mt-4 font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:mt-5 sm:tracking-[0.18em]">{latestArtPieces.length} works · newest first</p>
                 </div>
-                <section className="mt-14" aria-labelledby="archive-grid-title">
+                <section className="mt-10 sm:mt-14" aria-labelledby="archive-grid-title">
                     <h2 id="archive-grid-title" className="sr-only">All works</h2>
-                    <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 xl:grid-cols-4">
                         {latestArtPieces.map((piece) => (
                             <ArtworkCard key={piece.id} piece={piece} />
                         ))}
                     </div>
                 </section>
             </main>
-            <footer className="border-t border-foreground/10 px-5 py-10 sm:px-8 lg:px-12">
-                <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 font-sans text-xs text-foreground/50">
+            <footer className="border-t border-foreground/10 px-4 py-8 sm:px-8 sm:py-10 lg:px-12">
+                <div className="mx-auto flex max-w-7xl flex-col items-start gap-3 font-sans text-xs text-foreground/50 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
                     <LinkBackHome />
                     <span>© Sujal Choudhari</span>
                 </div>
