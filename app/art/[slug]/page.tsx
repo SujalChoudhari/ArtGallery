@@ -80,11 +80,6 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
         <div className="min-h-screen overflow-x-clip bg-background text-foreground" data-mobile-shell="phone-first">
             <SiteHeader />
             <main className="mx-auto max-w-7xl px-4 pb-16 sm:px-8 sm:pb-24 lg:px-12">
-                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-foreground/15 py-3 font-sans text-[0.68rem] uppercase tracking-[0.12em] text-foreground/55 sm:gap-4 sm:py-5 sm:text-xs sm:tracking-[0.16em]">
-                    <Link href="/archive" className="inline-flex min-h-11 items-center transition-colors hover:text-foreground">← Back to archive</Link>
-                    <span>Work {piece.id}</span>
-                </div>
-
                 <article className="pt-6 sm:pt-16">
                     <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)] lg:gap-16">
                         <div
