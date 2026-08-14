@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "images:generate": "node scripts/generate-image-derivatives.mjs",
+    "images:report": "node scripts/report-image-derivatives.mjs",
+    "images:check": "node scripts/check-image-derivatives.mjs"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -66,6 +69,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8.5",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
