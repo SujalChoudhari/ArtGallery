@@ -561,27 +561,32 @@ export const featuredArtPieces = [...artPieces]
     .filter((piece) => piece.isFeatured)
     .sort((a, b) => (a.featuredOrder ?? Number.MAX_SAFE_INTEGER) - (b.featuredOrder ?? Number.MAX_SAFE_INTEGER));
 
-export const latestArtPieces = [...artPieces].sort((a, b) => b.id - a.id);
+export const chronologicalArtPieces = [...artPieces].sort((a, b) => b.id - a.id);
+
+export const latestArtPieces = [...chronologicalArtPieces].sort((a, b) => {
+    const thoughtsFirst = Number(Boolean(b.thoughts)) - Number(Boolean(a.thoughts));
+    return thoughtsFirst || b.id - a.id;
+});
 
 export function getArtPieceBySlug(slug: string) {
     return artPieces.find((piece) => piece.slug === slug);
 }
 
 export function getAdjacentArtPieces(slug: string) {
-    const index = latestArtPieces.findIndex((piece) => piece.slug === slug);
+    const index = chronologicalArtPieces.findIndex((piece) => piece.slug === slug);
 
     if (index === -1) {
         return { previous: undefined, next: undefined };
     }
 
     return {
-        previous: latestArtPieces[index + 1],
-        next: latestArtPieces[index - 1],
+        previous: chronologicalArtPieces[index - 1],
+        next: chronologicalArtPieces[index + 1],
     };
 }
 
 export function getLatestArtPieces(limit: number, excludeSlug?: string) {
-    return latestArtPieces.filter((piece) => piece.slug !== excludeSlug).slice(0, limit);
+    return chronologicalArtPieces.filter((piece) => piece.slug !== excludeSlug).slice(0, limit);
 }
 
 export default artPieces;
