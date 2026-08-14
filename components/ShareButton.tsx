@@ -52,7 +52,7 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
         <button
             type="button"
             onClick={share}
-            className="inline-flex min-h-11 items-center justify-center border border-foreground/25 px-5 font-sans text-xs uppercase tracking-[0.16em] transition-colors hover:border-foreground hover:bg-foreground hover:text-background"
+            className="inline-flex min-h-11 w-full items-center justify-center border border-foreground/25 px-4 font-sans text-xs uppercase tracking-[0.12em] transition-colors hover:border-foreground hover:bg-foreground hover:text-background sm:w-auto sm:px-5 sm:tracking-[0.16em]"
             aria-live="polite"
         >
             {status === "shared" ? "Shared" : status === "copied" ? "Link copied" : "Share artwork"}
