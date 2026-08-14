@@ -573,15 +573,15 @@ export function getArtPieceBySlug(slug: string) {
 }
 
 export function getAdjacentArtPieces(slug: string) {
-    const index = chronologicalArtPieces.findIndex((piece) => piece.slug === slug);
+    const index = latestArtPieces.findIndex((piece) => piece.slug === slug);
 
     if (index === -1) {
         return { previous: undefined, next: undefined };
     }
 
     return {
-        previous: chronologicalArtPieces[index - 1],
-        next: chronologicalArtPieces[index + 1],
+        previous: latestArtPieces[index - 1],
+        next: latestArtPieces[index + 1],
     };
 }
 
