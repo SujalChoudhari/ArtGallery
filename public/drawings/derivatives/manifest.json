@@ -1,0 +1,1809 @@
+{
+  "version": 1,
+  "presets": {
+    "thumb": {
+      "width": 640,
+      "quality": 78
+    },
+    "detail": {
+      "width": 1800,
+      "quality": 84
+    }
+  },
+  "assets": {
+    "/drawings/01_Chhatrapati_Shivaji_Terminus.jpg": {
+      "original": {
+        "path": "/drawings/01_Chhatrapati_Shivaji_Terminus.jpg",
+        "width": 2620,
+        "height": 1294,
+        "bytes": 704130,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/01_Chhatrapati_Shivaji_Terminus-0f185991.thumb.webp",
+        "width": 640,
+        "height": 316,
+        "bytes": 30598,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/01_Chhatrapati_Shivaji_Terminus-0f185991.detail.webp",
+        "width": 1800,
+        "height": 889,
+        "bytes": 214118,
+        "format": "webp"
+      }
+    },
+    "/drawings/02_Detailed_Robot_Head_Study.jpg": {
+      "original": {
+        "path": "/drawings/02_Detailed_Robot_Head_Study.jpg",
+        "width": 1992,
+        "height": 2572,
+        "bytes": 1055871,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/02_Detailed_Robot_Head_Study-52771904.thumb.webp",
+        "width": 496,
+        "height": 640,
+        "bytes": 24880,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/02_Detailed_Robot_Head_Study-52771904.detail.webp",
+        "width": 1394,
+        "height": 1800,
+        "bytes": 170132,
+        "format": "webp"
+      }
+    },
+    "/drawings/03_Venice_Canal_Perspective.jpg": {
+      "original": {
+        "path": "/drawings/03_Venice_Canal_Perspective.jpg",
+        "width": 2733,
+        "height": 1923,
+        "bytes": 1128899,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/03_Venice_Canal_Perspective-5f438ab4.thumb.webp",
+        "width": 640,
+        "height": 450,
+        "bytes": 46176,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/03_Venice_Canal_Perspective-5f438ab4.detail.webp",
+        "width": 1800,
+        "height": 1267,
+        "bytes": 337116,
+        "format": "webp"
+      }
+    },
+    "/drawings/04_Classic_Jack_O_Lantern.jpg": {
+      "original": {
+        "path": "/drawings/04_Classic_Jack_O_Lantern.jpg",
+        "width": 2170,
+        "height": 1456,
+        "bytes": 718775,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/04_Classic_Jack_O_Lantern-626e9908.thumb.webp",
+        "width": 640,
+        "height": 429,
+        "bytes": 38162,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/04_Classic_Jack_O_Lantern-626e9908.detail.webp",
+        "width": 1800,
+        "height": 1208,
+        "bytes": 307794,
+        "format": "webp"
+      }
+    },
+    "/drawings/05_Vibrant_Red_Hibiscus.jpg": {
+      "original": {
+        "path": "/drawings/05_Vibrant_Red_Hibiscus.jpg",
+        "width": 640,
+        "height": 480,
+        "bytes": 36705,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/05_Vibrant_Red_Hibiscus-ca268fb2.thumb.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 17932,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/05_Vibrant_Red_Hibiscus-ca268fb2.detail.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 25198,
+        "format": "webp"
+      }
+    },
+    "/drawings/06_Horned_Skull_With_Keys.jpg": {
+      "original": {
+        "path": "/drawings/06_Horned_Skull_With_Keys.jpg",
+        "width": 2700,
+        "height": 1909,
+        "bytes": 763034,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/06_Horned_Skull_With_Keys-f0072f1b.thumb.webp",
+        "width": 640,
+        "height": 452,
+        "bytes": 23568,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/06_Horned_Skull_With_Keys-f0072f1b.detail.webp",
+        "width": 1800,
+        "height": 1273,
+        "bytes": 182962,
+        "format": "webp"
+      }
+    },
+    "/drawings/07_Reaching_Zombie_Hand.jpg": {
+      "original": {
+        "path": "/drawings/07_Reaching_Zombie_Hand.jpg",
+        "width": 640,
+        "height": 528,
+        "bytes": 33603,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/07_Reaching_Zombie_Hand-294bc1c2.thumb.webp",
+        "width": 640,
+        "height": 528,
+        "bytes": 19948,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/07_Reaching_Zombie_Hand-294bc1c2.detail.webp",
+        "width": 640,
+        "height": 528,
+        "bytes": 26324,
+        "format": "webp"
+      }
+    },
+    "/drawings/08_Portrait_Man_With_Beard.jpg": {
+      "original": {
+        "path": "/drawings/08_Portrait_Man_With_Beard.jpg",
+        "width": 1703,
+        "height": 2570,
+        "bytes": 690114,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/08_Portrait_Man_With_Beard-082a9ec8.thumb.webp",
+        "width": 424,
+        "height": 640,
+        "bytes": 26154,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/08_Portrait_Man_With_Beard-082a9ec8.detail.webp",
+        "width": 1193,
+        "height": 1800,
+        "bytes": 201600,
+        "format": "webp"
+      }
+    },
+    "/drawings/09_Volcano_Eruption_Silhouette.jpg": {
+      "original": {
+        "path": "/drawings/09_Volcano_Eruption_Silhouette.jpg",
+        "width": 640,
+        "height": 360,
+        "bytes": 17931,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/09_Volcano_Eruption_Silhouette-f12c227f.thumb.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 8380,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/09_Volcano_Eruption_Silhouette-f12c227f.detail.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 11920,
+        "format": "webp"
+      }
+    },
+    "/drawings/10_Delicate_Pink_Star_Flower.jpg": {
+      "original": {
+        "path": "/drawings/10_Delicate_Pink_Star_Flower.jpg",
+        "width": 640,
+        "height": 480,
+        "bytes": 34268,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/10_Delicate_Pink_Star_Flower-d3769735.thumb.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 16378,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/10_Delicate_Pink_Star_Flower-d3769735.detail.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 22130,
+        "format": "webp"
+      }
+    },
+    "/drawings/11_Detailed_Pen_Sketch.jpg": {
+      "original": {
+        "path": "/drawings/11_Detailed_Pen_Sketch.jpg",
+        "width": 400,
+        "height": 300,
+        "bytes": 9518,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/11_Detailed_Pen_Sketch-a3496a35.thumb.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 4870,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/11_Detailed_Pen_Sketch-a3496a35.detail.webp",
+        "width": 400,
+        "height": 300,
+        "bytes": 6238,
+        "format": "webp"
+      }
+    },
+    "/drawings/12_Portrait_Woman_With_Glasses.jpg": {
+      "original": {
+        "path": "/drawings/12_Portrait_Woman_With_Glasses.jpg",
+        "width": 1780,
+        "height": 2488,
+        "bytes": 733754,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/12_Portrait_Woman_With_Glasses-b14fbd61.thumb.webp",
+        "width": 458,
+        "height": 640,
+        "bytes": 22070,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/12_Portrait_Woman_With_Glasses-b14fbd61.detail.webp",
+        "width": 1288,
+        "height": 1800,
+        "bytes": 217330,
+        "format": "webp"
+      }
+    },
+    "/drawings/13_Smiling_Woman_Portrait_Sketch.jpg": {
+      "original": {
+        "path": "/drawings/13_Smiling_Woman_Portrait_Sketch.jpg",
+        "width": 1952,
+        "height": 2752,
+        "bytes": 1406286,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/13_Smiling_Woman_Portrait_Sketch-0e068c31.thumb.webp",
+        "width": 454,
+        "height": 640,
+        "bytes": 30586,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/13_Smiling_Woman_Portrait_Sketch-0e068c31.detail.webp",
+        "width": 1277,
+        "height": 1800,
+        "bytes": 280456,
+        "format": "webp"
+      }
+    },
+    "/drawings/14_Skull_With_Flowing_Tentacles.jpg": {
+      "original": {
+        "path": "/drawings/14_Skull_With_Flowing_Tentacles.jpg",
+        "width": 1714,
+        "height": 2761,
+        "bytes": 952840,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/14_Skull_With_Flowing_Tentacles-fbed7aa2.thumb.webp",
+        "width": 397,
+        "height": 640,
+        "bytes": 35298,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/14_Skull_With_Flowing_Tentacles-fbed7aa2.detail.webp",
+        "width": 1117,
+        "height": 1800,
+        "bytes": 262238,
+        "format": "webp"
+      }
+    },
+    "/drawings/15_Train_Emerging_From_Tunnel.jpg": {
+      "original": {
+        "path": "/drawings/15_Train_Emerging_From_Tunnel.jpg",
+        "width": 596,
+        "height": 429,
+        "bytes": 111427,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/15_Train_Emerging_From_Tunnel-ecd46d35.thumb.webp",
+        "width": 596,
+        "height": 429,
+        "bytes": 66042,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/15_Train_Emerging_From_Tunnel-ecd46d35.detail.webp",
+        "width": 596,
+        "height": 429,
+        "bytes": 80070,
+        "format": "webp"
+      }
+    },
+    "/drawings/16_Realistic_Paintbrush_Study.jpg": {
+      "original": {
+        "path": "/drawings/16_Realistic_Paintbrush_Study.jpg",
+        "width": 2290,
+        "height": 1651,
+        "bytes": 382453,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/16_Realistic_Paintbrush_Study-8b826384.thumb.webp",
+        "width": 640,
+        "height": 461,
+        "bytes": 7772,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/16_Realistic_Paintbrush_Study-8b826384.detail.webp",
+        "width": 1800,
+        "height": 1298,
+        "bytes": 67944,
+        "format": "webp"
+      }
+    },
+    "/drawings/17_Clasped_Hands_Gesture.jpg": {
+      "original": {
+        "path": "/drawings/17_Clasped_Hands_Gesture.jpg",
+        "width": 640,
+        "height": 447,
+        "bytes": 26395,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/17_Clasped_Hands_Gesture-ff002588.thumb.webp",
+        "width": 640,
+        "height": 447,
+        "bytes": 11534,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/17_Clasped_Hands_Gesture-ff002588.detail.webp",
+        "width": 640,
+        "height": 447,
+        "bytes": 14590,
+        "format": "webp"
+      }
+    },
+    "/drawings/18_Shaded_Reaching_Hand_Study.jpg": {
+      "original": {
+        "path": "/drawings/18_Shaded_Reaching_Hand_Study.jpg",
+        "width": 640,
+        "height": 429,
+        "bytes": 32181,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/18_Shaded_Reaching_Hand_Study-d73ea7a9.thumb.webp",
+        "width": 640,
+        "height": 429,
+        "bytes": 14272,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/18_Shaded_Reaching_Hand_Study-d73ea7a9.detail.webp",
+        "width": 640,
+        "height": 429,
+        "bytes": 18778,
+        "format": "webp"
+      }
+    },
+    "/drawings/19_Charminar_Sketch_Hyderabad.jpg": {
+      "original": {
+        "path": "/drawings/19_Charminar_Sketch_Hyderabad.jpg",
+        "width": 1258,
+        "height": 1875,
+        "bytes": 620423,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/19_Charminar_Sketch_Hyderabad-23c9c7aa.thumb.webp",
+        "width": 429,
+        "height": 640,
+        "bytes": 50758,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/19_Charminar_Sketch_Hyderabad-23c9c7aa.detail.webp",
+        "width": 1208,
+        "height": 1800,
+        "bytes": 323690,
+        "format": "webp"
+      }
+    },
+    "/drawings/20_Gateway_Of_India_Sketch_Mumbai.jpg": {
+      "original": {
+        "path": "/drawings/20_Gateway_Of_India_Sketch_Mumbai.jpg",
+        "width": 1817,
+        "height": 1378,
+        "bytes": 607287,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/20_Gateway_Of_India_Sketch_Mumbai-7f8dd11e.thumb.webp",
+        "width": 640,
+        "height": 485,
+        "bytes": 50112,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/20_Gateway_Of_India_Sketch_Mumbai-7f8dd11e.detail.webp",
+        "width": 1800,
+        "height": 1365,
+        "bytes": 322750,
+        "format": "webp"
+      }
+    },
+    "/drawings/21_Tic_Tac_Mixers_Still_Life.jpg": {
+      "original": {
+        "path": "/drawings/21_Tic_Tac_Mixers_Still_Life.jpg",
+        "width": 640,
+        "height": 447,
+        "bytes": 26488,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/21_Tic_Tac_Mixers_Still_Life-7fab805e.thumb.webp",
+        "width": 640,
+        "height": 447,
+        "bytes": 14514,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/21_Tic_Tac_Mixers_Still_Life-7fab805e.detail.webp",
+        "width": 640,
+        "height": 447,
+        "bytes": 18594,
+        "format": "webp"
+      }
+    },
+    "/drawings/22_Misty_Lake_And_Solitary_Boat.jpg": {
+      "original": {
+        "path": "/drawings/22_Misty_Lake_And_Solitary_Boat.jpg",
+        "width": 2590,
+        "height": 1862,
+        "bytes": 893818,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/22_Misty_Lake_And_Solitary_Boat-8d204a53.thumb.webp",
+        "width": 640,
+        "height": 460,
+        "bytes": 20798,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/22_Misty_Lake_And_Solitary_Boat-8d204a53.detail.webp",
+        "width": 1800,
+        "height": 1294,
+        "bytes": 244108,
+        "format": "webp"
+      }
+    },
+    "/drawings/23_Nocturnal_Forest_With_Deer_Silhouette.jpg": {
+      "original": {
+        "path": "/drawings/23_Nocturnal_Forest_With_Deer_Silhouette.jpg",
+        "width": 400,
+        "height": 277,
+        "bytes": 21482,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/23_Nocturnal_Forest_With_Deer_Silhouette-847f3c68.thumb.webp",
+        "width": 400,
+        "height": 277,
+        "bytes": 14172,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/23_Nocturnal_Forest_With_Deer_Silhouette-847f3c68.detail.webp",
+        "width": 400,
+        "height": 277,
+        "bytes": 18192,
+        "format": "webp"
+      }
+    },
+    "/drawings/24_Traditional_Warli_Folk_Art.jpg": {
+      "original": {
+        "path": "/drawings/24_Traditional_Warli_Folk_Art.jpg",
+        "width": 2116,
+        "height": 3060,
+        "bytes": 1418477,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/24_Traditional_Warli_Folk_Art-d6507683.thumb.webp",
+        "width": 640,
+        "height": 443,
+        "bytes": 43786,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/24_Traditional_Warli_Folk_Art-d6507683.detail.webp",
+        "width": 1800,
+        "height": 1245,
+        "bytes": 242890,
+        "format": "webp"
+      }
+    },
+    "/drawings/25_Cosmic_View_Galaxy_And_Planets.jpg": {
+      "original": {
+        "path": "/drawings/25_Cosmic_View_Galaxy_And_Planets.jpg",
+        "width": 640,
+        "height": 480,
+        "bytes": 95683,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/25_Cosmic_View_Galaxy_And_Planets-03f77631.thumb.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 86524,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/25_Cosmic_View_Galaxy_And_Planets-03f77631.detail.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 103656,
+        "format": "webp"
+      }
+    },
+    "/drawings/26_Celestial_Collision_Colorful_Space_Art.jpg": {
+      "original": {
+        "path": "/drawings/26_Celestial_Collision_Colorful_Space_Art.jpg",
+        "width": 640,
+        "height": 463,
+        "bytes": 70248,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/26_Celestial_Collision_Colorful_Space_Art-b8998333.thumb.webp",
+        "width": 640,
+        "height": 463,
+        "bytes": 57194,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/26_Celestial_Collision_Colorful_Space_Art-b8998333.detail.webp",
+        "width": 640,
+        "height": 463,
+        "bytes": 71598,
+        "format": "webp"
+      }
+    },
+    "/drawings/27_Perspective_Path_Lined_With_Trees.jpg": {
+      "original": {
+        "path": "/drawings/27_Perspective_Path_Lined_With_Trees.jpg",
+        "width": 640,
+        "height": 480,
+        "bytes": 63682,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/27_Perspective_Path_Lined_With_Trees-a54f902f.thumb.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 41764,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/27_Perspective_Path_Lined_With_Trees-a54f902f.detail.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 53992,
+        "format": "webp"
+      }
+    },
+    "/drawings/28_Lakeside_Dock_Pencil_Landscape.jpg": {
+      "original": {
+        "path": "/drawings/28_Lakeside_Dock_Pencil_Landscape.jpg",
+        "width": 400,
+        "height": 282,
+        "bytes": 36546,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/28_Lakeside_Dock_Pencil_Landscape-59f409d0.thumb.webp",
+        "width": 400,
+        "height": 282,
+        "bytes": 19260,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/28_Lakeside_Dock_Pencil_Landscape-59f409d0.detail.webp",
+        "width": 400,
+        "height": 282,
+        "bytes": 23676,
+        "format": "webp"
+      }
+    },
+    "/drawings/29_Lakeside_Dock_Watercolor_Landscape.jpg": {
+      "original": {
+        "path": "/drawings/29_Lakeside_Dock_Watercolor_Landscape.jpg",
+        "width": 1680,
+        "height": 1121,
+        "bytes": 574237,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/29_Lakeside_Dock_Watercolor_Landscape-7388c84a.thumb.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 62624,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/29_Lakeside_Dock_Watercolor_Landscape-7388c84a.detail.webp",
+        "width": 1680,
+        "height": 1121,
+        "bytes": 344484,
+        "format": "webp"
+      }
+    },
+    "/drawings/30_Winter_Lake_And_Bare_Trees.jpg": {
+      "original": {
+        "path": "/drawings/30_Winter_Lake_And_Bare_Trees.jpg",
+        "width": 492,
+        "height": 308,
+        "bytes": 45075,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/30_Winter_Lake_And_Bare_Trees-2850657f.thumb.webp",
+        "width": 492,
+        "height": 308,
+        "bytes": 18348,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/30_Winter_Lake_And_Bare_Trees-2850657f.detail.webp",
+        "width": 492,
+        "height": 308,
+        "bytes": 23788,
+        "format": "webp"
+      }
+    },
+    "/drawings/31_Iron_Man_Iconic_Quote.jpg": {
+      "original": {
+        "path": "/drawings/31_Iron_Man_Iconic_Quote.jpg",
+        "width": 360,
+        "height": 640,
+        "bytes": 16981,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/31_Iron_Man_Iconic_Quote-35c81076.thumb.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 8474,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/31_Iron_Man_Iconic_Quote-35c81076.detail.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 11112,
+        "format": "webp"
+      }
+    },
+    "/drawings/32_Captain_America_Endurance_Quote.jpg": {
+      "original": {
+        "path": "/drawings/32_Captain_America_Endurance_Quote.jpg",
+        "width": 1776,
+        "height": 2266,
+        "bytes": 659110,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/32_Captain_America_Endurance_Quote-23f10986.thumb.webp",
+        "width": 502,
+        "height": 640,
+        "bytes": 24906,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/32_Captain_America_Endurance_Quote-23f10986.detail.webp",
+        "width": 1411,
+        "height": 1800,
+        "bytes": 203838,
+        "format": "webp"
+      }
+    },
+    "/drawings/33_Thor_God_Of_Thunder_Quote.jpg": {
+      "original": {
+        "path": "/drawings/33_Thor_God_Of_Thunder_Quote.jpg",
+        "width": 1541,
+        "height": 2315,
+        "bytes": 520458,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/33_Thor_God_Of_Thunder_Quote-d40e245f.thumb.webp",
+        "width": 426,
+        "height": 640,
+        "bytes": 14776,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/33_Thor_God_Of_Thunder_Quote-d40e245f.detail.webp",
+        "width": 1198,
+        "height": 1800,
+        "bytes": 118518,
+        "format": "webp"
+      }
+    },
+    "/drawings/34_Stormy_Seas_And_Boat_Sketch.jpg": {
+      "original": {
+        "path": "/drawings/34_Stormy_Seas_And_Boat_Sketch.jpg",
+        "width": 2302,
+        "height": 1730,
+        "bytes": 814566,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/34_Stormy_Seas_And_Boat_Sketch-c31e6cee.thumb.webp",
+        "width": 640,
+        "height": 481,
+        "bytes": 47890,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/34_Stormy_Seas_And_Boat_Sketch-c31e6cee.detail.webp",
+        "width": 1800,
+        "height": 1353,
+        "bytes": 305198,
+        "format": "webp"
+      }
+    },
+    "/drawings/35_Assorted_Vegetables_And_Fruit_Study.jpg": {
+      "original": {
+        "path": "/drawings/35_Assorted_Vegetables_And_Fruit_Study.jpg",
+        "width": 845,
+        "height": 486,
+        "bytes": 76307,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/35_Assorted_Vegetables_And_Fruit_Study-187de09e.thumb.webp",
+        "width": 640,
+        "height": 368,
+        "bytes": 13606,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/35_Assorted_Vegetables_And_Fruit_Study-187de09e.detail.webp",
+        "width": 845,
+        "height": 486,
+        "bytes": 29630,
+        "format": "webp"
+      }
+    },
+    "/drawings/36_Woman_With_Sunglasses_Profile_Sketch.jpg": {
+      "original": {
+        "path": "/drawings/36_Woman_With_Sunglasses_Profile_Sketch.jpg",
+        "width": 1479,
+        "height": 2156,
+        "bytes": 600171,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/36_Woman_With_Sunglasses_Profile_Sketch-cd97f772.thumb.webp",
+        "width": 439,
+        "height": 640,
+        "bytes": 34070,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/36_Woman_With_Sunglasses_Profile_Sketch-cd97f772.detail.webp",
+        "width": 1235,
+        "height": 1800,
+        "bytes": 234448,
+        "format": "webp"
+      }
+    },
+    "/drawings/37_Abstract_Noire_Et_Blanc_Spirals.jpg": {
+      "original": {
+        "path": "/drawings/37_Abstract_Noire_Et_Blanc_Spirals.jpg",
+        "width": 1608,
+        "height": 1938,
+        "bytes": 431597,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/37_Abstract_Noire_Et_Blanc_Spirals-e8ad63c1.thumb.webp",
+        "width": 531,
+        "height": 640,
+        "bytes": 30722,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/37_Abstract_Noire_Et_Blanc_Spirals-e8ad63c1.detail.webp",
+        "width": 1493,
+        "height": 1800,
+        "bytes": 131546,
+        "format": "webp"
+      }
+    },
+    "/drawings/38_Patriotic_Eagle_Star_Composition.jpg": {
+      "original": {
+        "path": "/drawings/38_Patriotic_Eagle_Star_Composition.jpg",
+        "width": 624,
+        "height": 479,
+        "bytes": 46198,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/38_Patriotic_Eagle_Star_Composition-80486139.thumb.webp",
+        "width": 624,
+        "height": 479,
+        "bytes": 25206,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/38_Patriotic_Eagle_Star_Composition-80486139.detail.webp",
+        "width": 624,
+        "height": 479,
+        "bytes": 32848,
+        "format": "webp"
+      }
+    },
+    "/drawings/39_Primary_Color_Conundrum.jpg": {
+      "original": {
+        "path": "/drawings/39_Primary_Color_Conundrum.jpg",
+        "width": 502,
+        "height": 640,
+        "bytes": 58397,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/39_Primary_Color_Conundrum-71428967.thumb.webp",
+        "width": 502,
+        "height": 640,
+        "bytes": 35530,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/39_Primary_Color_Conundrum-71428967.detail.webp",
+        "width": 502,
+        "height": 640,
+        "bytes": 45346,
+        "format": "webp"
+      }
+    },
+    "/drawings/40_Fragmented_Rainbow_Shards.jpg": {
+      "original": {
+        "path": "/drawings/40_Fragmented_Rainbow_Shards.jpg",
+        "width": 2708,
+        "height": 1988,
+        "bytes": 1986525,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/40_Fragmented_Rainbow_Shards-31e1ae10.thumb.webp",
+        "width": 640,
+        "height": 470,
+        "bytes": 79896,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/40_Fragmented_Rainbow_Shards-31e1ae10.detail.webp",
+        "width": 1800,
+        "height": 1321,
+        "bytes": 411714,
+        "format": "webp"
+      }
+    },
+    "/drawings/41_Ornate_Teal_Textile_Pattern.jpg": {
+      "original": {
+        "path": "/drawings/41_Ornate_Teal_Textile_Pattern.jpg",
+        "width": 1852,
+        "height": 2828,
+        "bytes": 1495327,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/41_Ornate_Teal_Textile_Pattern-278676d1.thumb.webp",
+        "width": 640,
+        "height": 419,
+        "bytes": 35704,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/41_Ornate_Teal_Textile_Pattern-278676d1.detail.webp",
+        "width": 1800,
+        "height": 1179,
+        "bytes": 203548,
+        "format": "webp"
+      }
+    },
+    "/drawings/42_Purple_And_Gold_Floral_Mandala.jpg": {
+      "original": {
+        "path": "/drawings/42_Purple_And_Gold_Floral_Mandala.jpg",
+        "width": 2060,
+        "height": 2186,
+        "bytes": 659521,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/42_Purple_And_Gold_Floral_Mandala-507c3d27.thumb.webp",
+        "width": 603,
+        "height": 640,
+        "bytes": 30154,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/42_Purple_And_Gold_Floral_Mandala-507c3d27.detail.webp",
+        "width": 1696,
+        "height": 1800,
+        "bytes": 175116,
+        "format": "webp"
+      }
+    },
+    "/drawings/43_Symmetrical_Butterfly_Bloom_Mandala.jpg": {
+      "original": {
+        "path": "/drawings/43_Symmetrical_Butterfly_Bloom_Mandala.jpg",
+        "width": 1876,
+        "height": 1835,
+        "bytes": 569067,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/43_Symmetrical_Butterfly_Bloom_Mandala-7a9ee87c.thumb.webp",
+        "width": 640,
+        "height": 626,
+        "bytes": 39010,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/43_Symmetrical_Butterfly_Bloom_Mandala-7a9ee87c.detail.webp",
+        "width": 1800,
+        "height": 1761,
+        "bytes": 192132,
+        "format": "webp"
+      }
+    },
+    "/drawings/44_Decorative_Hand_Fan_Floral_Design.jpg": {
+      "original": {
+        "path": "/drawings/44_Decorative_Hand_Fan_Floral_Design.jpg",
+        "width": 1804,
+        "height": 2400,
+        "bytes": 865256,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/44_Decorative_Hand_Fan_Floral_Design-08b1ec32.thumb.webp",
+        "width": 481,
+        "height": 640,
+        "bytes": 24176,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/44_Decorative_Hand_Fan_Floral_Design-08b1ec32.detail.webp",
+        "width": 1353,
+        "height": 1800,
+        "bytes": 138656,
+        "format": "webp"
+      }
+    },
+    "/drawings/45_Aquatic_Floral_Lampshade_Fantasy.jpg": {
+      "original": {
+        "path": "/drawings/45_Aquatic_Floral_Lampshade_Fantasy.jpg",
+        "width": 1840,
+        "height": 2680,
+        "bytes": 683982,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/45_Aquatic_Floral_Lampshade_Fantasy-62fc9997.thumb.webp",
+        "width": 439,
+        "height": 640,
+        "bytes": 22650,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/45_Aquatic_Floral_Lampshade_Fantasy-62fc9997.detail.webp",
+        "width": 1236,
+        "height": 1800,
+        "bytes": 138200,
+        "format": "webp"
+      }
+    },
+    "/drawings/46_Tribal_Inspired_Fish_Graphic.jpg": {
+      "original": {
+        "path": "/drawings/46_Tribal_Inspired_Fish_Graphic.jpg",
+        "width": 1621,
+        "height": 1157,
+        "bytes": 219170,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/46_Tribal_Inspired_Fish_Graphic-89c7bf68.thumb.webp",
+        "width": 640,
+        "height": 457,
+        "bytes": 14586,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/46_Tribal_Inspired_Fish_Graphic-89c7bf68.detail.webp",
+        "width": 1621,
+        "height": 1157,
+        "bytes": 68762,
+        "format": "webp"
+      }
+    },
+    "/drawings/47_Moonlit_Silhouette_Cat_On_Fence.jpg": {
+      "original": {
+        "path": "/drawings/47_Moonlit_Silhouette_Cat_On_Fence.jpg",
+        "width": 1988,
+        "height": 1452,
+        "bytes": 809965,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/47_Moonlit_Silhouette_Cat_On_Fence-71b035e5.thumb.webp",
+        "width": 640,
+        "height": 467,
+        "bytes": 37336,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/47_Moonlit_Silhouette_Cat_On_Fence-71b035e5.detail.webp",
+        "width": 1800,
+        "height": 1315,
+        "bytes": 229872,
+        "format": "webp"
+      }
+    },
+    "/drawings/48_Pensive_Man_In_Blue_Watercolor.jpg": {
+      "original": {
+        "path": "/drawings/48_Pensive_Man_In_Blue_Watercolor.jpg",
+        "width": 1184,
+        "height": 1683,
+        "bytes": 341548,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/48_Pensive_Man_In_Blue_Watercolor-de4297c6.thumb.webp",
+        "width": 450,
+        "height": 640,
+        "bytes": 30366,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/48_Pensive_Man_In_Blue_Watercolor-de4297c6.detail.webp",
+        "width": 1184,
+        "height": 1683,
+        "bytes": 156716,
+        "format": "webp"
+      }
+    },
+    "/drawings/49_Bamboo_And_Leaf_Handicraft_Wreath.jpg": {
+      "original": {
+        "path": "/drawings/49_Bamboo_And_Leaf_Handicraft_Wreath.jpg",
+        "width": 640,
+        "height": 480,
+        "bytes": 31642,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/49_Bamboo_And_Leaf_Handicraft_Wreath-abbba608.thumb.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 17812,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/49_Bamboo_And_Leaf_Handicraft_Wreath-abbba608.detail.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 24086,
+        "format": "webp"
+      }
+    },
+    "/drawings/50_Impasto_Chromatic_Explosion.jpg": {
+      "original": {
+        "path": "/drawings/50_Impasto_Chromatic_Explosion.jpg",
+        "width": 1710,
+        "height": 2330,
+        "bytes": 1013811,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/50_Impasto_Chromatic_Explosion-d0d5078a.thumb.webp",
+        "width": 470,
+        "height": 640,
+        "bytes": 68780,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/50_Impasto_Chromatic_Explosion-d0d5078a.detail.webp",
+        "width": 1321,
+        "height": 1800,
+        "bytes": 385506,
+        "format": "webp"
+      }
+    },
+    "/drawings/51_Tropical_Island_Beach_TShirt_Art.jpg": {
+      "original": {
+        "path": "/drawings/51_Tropical_Island_Beach_TShirt_Art.jpg",
+        "width": 480,
+        "height": 557,
+        "bytes": 55221,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/51_Tropical_Island_Beach_TShirt_Art-52e3c2c9.thumb.webp",
+        "width": 480,
+        "height": 557,
+        "bytes": 21348,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/51_Tropical_Island_Beach_TShirt_Art-52e3c2c9.detail.webp",
+        "width": 480,
+        "height": 557,
+        "bytes": 27904,
+        "format": "webp"
+      }
+    },
+    "/drawings/52_Journey_Through_The_Skies_And_Space.jpg": {
+      "original": {
+        "path": "/drawings/52_Journey_Through_The_Skies_And_Space.jpg",
+        "width": 1736,
+        "height": 2392,
+        "bytes": 1239098,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/52_Journey_Through_The_Skies_And_Space-f22619ad.thumb.webp",
+        "width": 640,
+        "height": 464,
+        "bytes": 38796,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/52_Journey_Through_The_Skies_And_Space-f22619ad.detail.webp",
+        "width": 1800,
+        "height": 1306,
+        "bytes": 293796,
+        "format": "webp"
+      }
+    },
+    "/drawings/53_Farmers_Life_Illustrated_Typography.jpg": {
+      "original": {
+        "path": "/drawings/53_Farmers_Life_Illustrated_Typography.jpg",
+        "width": 2760,
+        "height": 1686,
+        "bytes": 693981,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/53_Farmers_Life_Illustrated_Typography-2cfe884b.thumb.webp",
+        "width": 640,
+        "height": 391,
+        "bytes": 25818,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/53_Farmers_Life_Illustrated_Typography-2cfe884b.detail.webp",
+        "width": 1800,
+        "height": 1100,
+        "bytes": 145242,
+        "format": "webp"
+      }
+    },
+    "/drawings/54_Street_Scene_Covid_Sanitization_Effort.jpg": {
+      "original": {
+        "path": "/drawings/54_Street_Scene_Covid_Sanitization_Effort.jpg",
+        "width": 1815,
+        "height": 2383,
+        "bytes": 803582,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/54_Street_Scene_Covid_Sanitization_Effort-40ffeeda.thumb.webp",
+        "width": 487,
+        "height": 640,
+        "bytes": 39770,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/54_Street_Scene_Covid_Sanitization_Effort-40ffeeda.detail.webp",
+        "width": 1371,
+        "height": 1800,
+        "bytes": 198224,
+        "format": "webp"
+      }
+    },
+    "/drawings/55_Vibrant_Indian_Railway_Station_Scene.jpg": {
+      "original": {
+        "path": "/drawings/55_Vibrant_Indian_Railway_Station_Scene.jpg",
+        "width": 2892,
+        "height": 2111,
+        "bytes": 1276236,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/55_Vibrant_Indian_Railway_Station_Scene-207e48c8.thumb.webp",
+        "width": 640,
+        "height": 467,
+        "bytes": 48214,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/55_Vibrant_Indian_Railway_Station_Scene-207e48c8.detail.webp",
+        "width": 1800,
+        "height": 1314,
+        "bytes": 325362,
+        "format": "webp"
+      }
+    },
+    "/drawings/56_Optical_Gradient_Chevron_Waves.jpg": {
+      "original": {
+        "path": "/drawings/56_Optical_Gradient_Chevron_Waves.jpg",
+        "width": 2616,
+        "height": 1735,
+        "bytes": 1014226,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/56_Optical_Gradient_Chevron_Waves-5e44f017.thumb.webp",
+        "width": 640,
+        "height": 424,
+        "bytes": 46650,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/56_Optical_Gradient_Chevron_Waves-5e44f017.detail.webp",
+        "width": 1800,
+        "height": 1194,
+        "bytes": 335226,
+        "format": "webp"
+      }
+    },
+    "/drawings/57_Daydreaming_In_A_Sunflower_Field.jpg": {
+      "original": {
+        "path": "/drawings/57_Daydreaming_In_A_Sunflower_Field.jpg",
+        "width": 1757,
+        "height": 2468,
+        "bytes": 959708,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/57_Daydreaming_In_A_Sunflower_Field-611e676c.thumb.webp",
+        "width": 455,
+        "height": 640,
+        "bytes": 48848,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/57_Daydreaming_In_A_Sunflower_Field-611e676c.detail.webp",
+        "width": 1281,
+        "height": 1800,
+        "bytes": 326488,
+        "format": "webp"
+      }
+    },
+    "/drawings/58_Joyful_Holi_Festival_Colors.jpg": {
+      "original": {
+        "path": "/drawings/58_Joyful_Holi_Festival_Colors.jpg",
+        "width": 1808,
+        "height": 2424,
+        "bytes": 1251768,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/58_Joyful_Holi_Festival_Colors-f00bfaac.thumb.webp",
+        "width": 640,
+        "height": 477,
+        "bytes": 43942,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/58_Joyful_Holi_Festival_Colors-f00bfaac.detail.webp",
+        "width": 1800,
+        "height": 1343,
+        "bytes": 265686,
+        "format": "webp"
+      }
+    },
+    "/drawings/59_Abstract_Carnival_Of_Shapes.jpg": {
+      "original": {
+        "path": "/drawings/59_Abstract_Carnival_Of_Shapes.jpg",
+        "width": 1432,
+        "height": 2444,
+        "bytes": 1008915,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/59_Abstract_Carnival_Of_Shapes-c908013a.thumb.webp",
+        "width": 640,
+        "height": 375,
+        "bytes": 37972,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/59_Abstract_Carnival_Of_Shapes-c908013a.detail.webp",
+        "width": 1800,
+        "height": 1055,
+        "bytes": 197510,
+        "format": "webp"
+      }
+    },
+    "/drawings/60_Psychedelic_Soundwaves_Aura.jpg": {
+      "original": {
+        "path": "/drawings/60_Psychedelic_Soundwaves_Aura.jpg",
+        "width": 1862,
+        "height": 2798,
+        "bytes": 1148944,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/60_Psychedelic_Soundwaves_Aura-a2933639.thumb.webp",
+        "width": 426,
+        "height": 640,
+        "bytes": 37188,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/60_Psychedelic_Soundwaves_Aura-a2933639.detail.webp",
+        "width": 1198,
+        "height": 1800,
+        "bytes": 262634,
+        "format": "webp"
+      }
+    },
+    "/drawings/61_Fluid_Forms_Of_Rainbow_Creature.jpg": {
+      "original": {
+        "path": "/drawings/61_Fluid_Forms_Of_Rainbow_Creature.jpg",
+        "width": 2547,
+        "height": 1532,
+        "bytes": 676501,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/61_Fluid_Forms_Of_Rainbow_Creature-06e597c9.thumb.webp",
+        "width": 640,
+        "height": 385,
+        "bytes": 24226,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/61_Fluid_Forms_Of_Rainbow_Creature-06e597c9.detail.webp",
+        "width": 1800,
+        "height": 1083,
+        "bytes": 186622,
+        "format": "webp"
+      }
+    },
+    "/drawings/62_Sunflower_And_Vine_Roundel_Design.jpg": {
+      "original": {
+        "path": "/drawings/62_Sunflower_And_Vine_Roundel_Design.jpg",
+        "width": 1716,
+        "height": 2592,
+        "bytes": 947414,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/62_Sunflower_And_Vine_Roundel_Design-7cb9aa11.thumb.webp",
+        "width": 424,
+        "height": 640,
+        "bytes": 23042,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/62_Sunflower_And_Vine_Roundel_Design-7cb9aa11.detail.webp",
+        "width": 1192,
+        "height": 1800,
+        "bytes": 138136,
+        "format": "webp"
+      }
+    },
+    "/drawings/63_Eco_Message_Against_Deforestation_Art.jpg": {
+      "original": {
+        "path": "/drawings/63_Eco_Message_Against_Deforestation_Art.jpg",
+        "width": 2144,
+        "height": 3488,
+        "bytes": 1724492,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/63_Eco_Message_Against_Deforestation_Art-4ff14f8f.thumb.webp",
+        "width": 640,
+        "height": 393,
+        "bytes": 21658,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/63_Eco_Message_Against_Deforestation_Art-4ff14f8f.detail.webp",
+        "width": 1800,
+        "height": 1106,
+        "bytes": 168530,
+        "format": "webp"
+      }
+    },
+    "/drawings/64_Girl_in_rain_Wet_lamp_post.jpg": {
+      "original": {
+        "path": "/drawings/64_Girl_in_rain_Wet_lamp_post.jpg",
+        "width": 3268,
+        "height": 2296,
+        "bytes": 1397553,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/64_Girl_in_rain_Wet_lamp_post-c36bc89d.thumb.webp",
+        "width": 640,
+        "height": 450,
+        "bytes": 35070,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/64_Girl_in_rain_Wet_lamp_post-c36bc89d.detail.webp",
+        "width": 1800,
+        "height": 1265,
+        "bytes": 336694,
+        "format": "webp"
+      }
+    },
+    "/drawings/65_Women_Closeup.jpg": {
+      "original": {
+        "path": "/drawings/65_Women_Closeup.jpg",
+        "width": 1419,
+        "height": 1721,
+        "bytes": 538912,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/65_Women_Closeup-61bde370.thumb.webp",
+        "width": 528,
+        "height": 640,
+        "bytes": 53448,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/65_Women_Closeup-61bde370.detail.webp",
+        "width": 1419,
+        "height": 1721,
+        "bytes": 307084,
+        "format": "webp"
+      }
+    },
+    "/drawings/66_Nana.jpg": {
+      "original": {
+        "path": "/drawings/66_Nana.jpg",
+        "width": 2281,
+        "height": 3102,
+        "bytes": 1360194,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/66_Nana-07c4e04a.thumb.webp",
+        "width": 470,
+        "height": 640,
+        "bytes": 44442,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/66_Nana-07c4e04a.detail.webp",
+        "width": 1324,
+        "height": 1800,
+        "bytes": 329556,
+        "format": "webp"
+      }
+    },
+    "/drawings/67_Vari_nighali_pandhari.jpg": {
+      "original": {
+        "path": "/drawings/67_Vari_nighali_pandhari.jpg",
+        "width": 3122,
+        "height": 2272,
+        "bytes": 1372759,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/67_Vari_nighali_pandhari-c423f42a.thumb.webp",
+        "width": 640,
+        "height": 466,
+        "bytes": 39546,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/67_Vari_nighali_pandhari-c423f42a.detail.webp",
+        "width": 1800,
+        "height": 1310,
+        "bytes": 286074,
+        "format": "webp"
+      }
+    },
+    "/drawings/68_Ganpati_Bappa_morya.jpg": {
+      "original": {
+        "path": "/drawings/68_Ganpati_Bappa_morya.jpg",
+        "width": 3965,
+        "height": 5581,
+        "bytes": 3736536,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/68_Ganpati_Bappa_morya-e6a60e5c.thumb.webp",
+        "width": 455,
+        "height": 640,
+        "bytes": 45590,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/68_Ganpati_Bappa_morya-e6a60e5c.detail.webp",
+        "width": 1279,
+        "height": 1800,
+        "bytes": 399244,
+        "format": "webp"
+      }
+    },
+    "/drawings/69_Self_Portrait.jpg": {
+      "original": {
+        "path": "/drawings/69_Self_Portrait.jpg",
+        "width": 4768,
+        "height": 6841,
+        "bytes": 5159142,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/69_Self_Portrait-1a895893.thumb.webp",
+        "width": 446,
+        "height": 640,
+        "bytes": 43272,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/69_Self_Portrait-1a895893.detail.webp",
+        "width": 1255,
+        "height": 1800,
+        "bytes": 381074,
+        "format": "webp"
+      }
+    },
+    "/drawings/70_Infinity_Castle.jpg": {
+      "original": {
+        "path": "/drawings/70_Infinity_Castle.jpg",
+        "width": 3487,
+        "height": 2542,
+        "bytes": 3165533,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/70_Infinity_Castle-f5eed62c.thumb.webp",
+        "width": 640,
+        "height": 467,
+        "bytes": 101430,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/70_Infinity_Castle-f5eed62c.detail.webp",
+        "width": 1800,
+        "height": 1312,
+        "bytes": 767962,
+        "format": "webp"
+      }
+    },
+    "/drawings/71_Her_Eyes.jpg": {
+      "original": {
+        "path": "/drawings/71_Her_Eyes.jpg",
+        "width": 2992,
+        "height": 1848,
+        "bytes": 2300335,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/71_Her_Eyes-8531649d.thumb.webp",
+        "width": 640,
+        "height": 395,
+        "bytes": 80078,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/71_Her_Eyes-8531649d.detail.webp",
+        "width": 1800,
+        "height": 1112,
+        "bytes": 780508,
+        "format": "webp"
+      }
+    },
+    "/drawings/72_Kanheri_Warli_Cave_Painting.jpg": {
+      "original": {
+        "path": "/drawings/72_Kanheri_Warli_Cave_Painting.jpg",
+        "width": 1195,
+        "height": 793,
+        "bytes": 489100,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/72_Kanheri_Warli_Cave_Painting-cb8b8697.thumb.webp",
+        "width": 640,
+        "height": 425,
+        "bytes": 98414,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/72_Kanheri_Warli_Cave_Painting-cb8b8697.detail.webp",
+        "width": 1195,
+        "height": 793,
+        "bytes": 358368,
+        "format": "webp"
+      }
+    },
+    "/drawings/73_Govardhan_Parvat.jpg": {
+      "original": {
+        "path": "/drawings/73_Govardhan_Parvat.jpg",
+        "width": 1280,
+        "height": 872,
+        "bytes": 347148,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/73_Govardhan_Parvat-52ba011c.thumb.webp",
+        "width": 640,
+        "height": 436,
+        "bytes": 76762,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/73_Govardhan_Parvat-52ba011c.detail.webp",
+        "width": 1280,
+        "height": 872,
+        "bytes": 261648,
+        "format": "webp"
+      }
+    },
+    "/drawings/74_Vasu_Dev.jpg": {
+      "original": {
+        "path": "/drawings/74_Vasu_Dev.jpg",
+        "width": 949,
+        "height": 1280,
+        "bytes": 259570,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/74_Vasu_Dev-163c5800.thumb.webp",
+        "width": 475,
+        "height": 640,
+        "bytes": 32082,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/74_Vasu_Dev-163c5800.detail.webp",
+        "width": 949,
+        "height": 1280,
+        "bytes": 176584,
+        "format": "webp"
+      }
+    },
+    "/drawings/75_Shivaji_Maharaj.jpg": {
+      "original": {
+        "path": "/drawings/75_Shivaji_Maharaj.jpg",
+        "width": 661,
+        "height": 951,
+        "bytes": 204615,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/75_Shivaji_Maharaj-70bbd754.thumb.webp",
+        "width": 445,
+        "height": 640,
+        "bytes": 50120,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/75_Shivaji_Maharaj-70bbd754.detail.webp",
+        "width": 661,
+        "height": 951,
+        "bytes": 140796,
+        "format": "webp"
+      }
+    },
+    "/drawings/76_Split.jpg": {
+      "original": {
+        "path": "/drawings/76_Split.jpg",
+        "width": 7943,
+        "height": 5768,
+        "bytes": 6872589,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/76_Split-8508055d.thumb.webp",
+        "width": 640,
+        "height": 465,
+        "bytes": 41356,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/76_Split-8508055d.detail.webp",
+        "width": 1800,
+        "height": 1307,
+        "bytes": 441296,
+        "format": "webp"
+      }
+    },
+    "/drawings/77_The_Dark_Lily.jpg": {
+      "original": {
+        "path": "/drawings/77_The_Dark_Lily.jpg",
+        "width": 1280,
+        "height": 901,
+        "bytes": 272405,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/77_The_Dark_Lily-9cc2c0c7.thumb.webp",
+        "width": 640,
+        "height": 451,
+        "bytes": 55668,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/77_The_Dark_Lily-9cc2c0c7.detail.webp",
+        "width": 1280,
+        "height": 901,
+        "bytes": 245076,
+        "format": "webp"
+      }
+    },
+    "/drawings/78_After_the_Fall.jpg": {
+      "original": {
+        "path": "/drawings/78_After_the_Fall.jpg",
+        "width": 1280,
+        "height": 815,
+        "bytes": 257008,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/78_After_the_Fall-414a0a4f.thumb.webp",
+        "width": 640,
+        "height": 408,
+        "bytes": 57266,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/78_After_the_Fall-414a0a4f.detail.webp",
+        "width": 1280,
+        "height": 815,
+        "bytes": 229916,
+        "format": "webp"
+      }
+    }
+  }
+}
