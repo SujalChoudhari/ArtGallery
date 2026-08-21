@@ -555,9 +555,10 @@ const artPieces: ArtPiece[] = [
     },
     {
         id: 80,
+        slug: "a-quiet-brightness",
         title: "A Quiet Brightness",
         image: "/drawings/80_A_Quiet_Brightness.jpg",
-    } as ArtPiece,
+    },
 ];
 
 export const allArtPieces = artPieces;
