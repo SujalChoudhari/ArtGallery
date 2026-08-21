@@ -1827,6 +1827,29 @@
         "bytes": 121458,
         "format": "webp"
       }
+    },
+    "/drawings/80_A_Quiet_Brightness.jpg": {
+      "original": {
+        "path": "/drawings/80_A_Quiet_Brightness.jpg",
+        "width": 905,
+        "height": 1280,
+        "bytes": 226054,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/80_A_Quiet_Brightness-dae5e5ad.thumb.webp",
+        "width": 453,
+        "height": 640,
+        "bytes": 42730,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/80_A_Quiet_Brightness-dae5e5ad.detail.webp",
+        "width": 905,
+        "height": 1280,
+        "bytes": 174200,
+        "format": "webp"
+      }
     }
   }
 }

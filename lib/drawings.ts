@@ -553,6 +553,11 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/79_Oranges.jpg",
         thoughts: "Aug 2026. Some seasons are meant to be left behind. What emerges from them is brighter, more beautiful, and finally ready to take flight.",
     },
+    {
+        id: 80,
+        title: "A Quiet Brightness",
+        image: "/drawings/80_A_Quiet_Brightness.jpg",
+    } as ArtPiece,
 ];
 
 export const allArtPieces = artPieces;
