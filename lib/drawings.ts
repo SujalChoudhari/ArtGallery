@@ -49,7 +49,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/06_Horned_Skull_With_Keys.jpg",
         isFeatured: true,
         featuredOrder: 15,
-        thoughts: "2020. Depression has its own aesthetic. Dark, ornate, a little dangerous. A skull crowned with horns and tentacles. I didn't plan it. It just came out of wherever I was.",
+        thoughts: "2020. The dark had a language of horns and tangled lines, ornate and a little dangerous. I followed it until the page showed me there was still a way toward light.",
     },
     {
         id: 7,
@@ -100,7 +100,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/14_Skull_With_Flowing_Tentacles.jpg",
         isFeatured: true,
         featuredOrder: 2,
-        thoughts: "This is the last drawing I made before I turned to programming to escape my own mind. Those aren't tentacles, they're the heavy weight of overthinking, cracking the skull from the inside. This was 2018, at its lowest.",
+        thoughts: "2018. The noise in my head grew heavy, pressing against the inside of the skull. I found another language and let its clean lines carry some of the weight.",
     },
     {
         id: 15,
@@ -109,7 +109,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/15_Train_Emerging_From_Tunnel.jpg",
         isFeatured: true,
         featuredOrder: 3,
-        thoughts: "An old, muddy train pushing through the dark. That was me in 2020. I was still feeling down, not fully healed, but I was actively hoping things would get better. I was slowly but surely moving towards the light",
+        thoughts: "2020. The train came out carrying the mud of the tunnel, not clean, not finished, but moving. I couldn't see the light yet, though I had begun to trust it was there.",
     },
     {
         id: 16,
@@ -133,7 +133,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/18_Shaded_Reaching_Hand_Study.jpg",
         isFeatured: true,
         featuredOrder: 17,
-        thoughts: "Same era, different feeling. A hand stretched out. Not reaching for something, but trying to stop something from leaving. It was never a relationship. Just a crush. Maybe a first love. The simplest drawing with the strangest story.",
+        thoughts: "2018. A hand reaches into the space where something is already leaving. It was never about possession, only the quiet wish to keep a moment from becoming a distance.",
     },
     {
         id: 19,
@@ -142,7 +142,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/19_Charminar_Sketch_Hyderabad.jpg",
         isFeatured: true,
         featuredOrder: 4,
-        thoughts: "Late 2025. I picked up the pencil again after years away. The church in Vasai Fort wasn't a subject. It was a mirror. Ruins still standing. Solitary but still there. That's what I was drawing.",
+        thoughts: "Late 2025. After a long silence, I returned to the pencil and found the ruins still standing. In their solitude, I recognized the shape of something that had not disappeared.",
     },
     {
         id: 20,
@@ -247,7 +247,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/36_Woman_With_Sunglasses_Profile_Sketch.jpg",
         isFeatured: true,
         featuredOrder: 12,
-        thoughts: "College era. I was still in that familiar fog. A different person this time, not the first love, but real enough. The glasses aren't a detail. They're a disguise. I painted her without painting her.",
+        thoughts: "College era. Some portraits are made by hiding the face behind a veil. The lenses were a disguise, and the blank spaces carried what I couldn't put on paper.",
     },
     {
         id: 37,
@@ -322,7 +322,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/48_Pensive_Man_In_Blue_Watercolor.jpg",
         isFeatured: true,
         featuredOrder: 11,
-        thoughts: "Late 2025. Small drawing. Has color. That's how I knew things were different. I actually wanted color in life. I made this in a moment of pure, unexpected happiness.",
+        thoughts: "Late 2025. Color returned to the page without asking permission. I took it as a small, unexpected sign that joy was finding its way back.",
     },
     {
         id: 49,
@@ -424,7 +424,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/64_Girl_in_rain_Wet_lamp_post.jpg",
         isFeatured: true,
         featuredOrder: 19,
-        thoughts: "Mid 2024. Rain has a way of making everything feel more honest. She's standing in it, not running from it. The lamp beside her is the only warm thing in the frame. There's something quietly brave about someone who lets themselves get rained on.",
+        thoughts: "Mid 2024. Rain makes the world honest. Beside one small pool of warmth, standing still becomes its own kind of bravery.",
     },
     {
         id: 65,
@@ -433,7 +433,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/65_Women_Closeup.jpg",
         isFeatured: true,
         featuredOrder: 6,
-        thoughts: "Made in late 2025, but the memory of her. This is what she looked like. Not exactly. I can't replicate something that felt like that. But this is close enough to make me remember.",
+        thoughts: "Late 2025. A face can remain long after the distance has settled in. I couldn't reproduce it exactly, only get close enough to remember what it felt like.",
     },
     {
         id: 66,
@@ -463,7 +463,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/69_Self_Portrait.jpg",
         isFeatured: true,
         featuredOrder: 21,
-        thoughts: "Late 2025. Still Alive. Lost in love, sure. But somewhere along the way I built something. I coded, I wrote, I grew. This is me looking back at all of it and deciding I'm not too bad after all.",
+        thoughts: "Late 2025. I looked back and found more than the wreckage I expected. The code, the words, and the simple act of staying had given shape to a self I could finally recognize.",
     },
     {
         id: 70,
@@ -481,7 +481,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/71_Her_Eyes.jpg",
         isFeatured: true,
         featuredOrder: 1,
-        thoughts: "This is where it started. A close-up of the eyes that made me fall in love. The absolute glow and warmth they carried. I still remember the exact moment I first saw them. This drawing is that moment. Everything else in this collection exists in the shadow of this one.",
+        thoughts: "This is where the light began. A pair of eyes held a warmth I could not name, and every later line seems to lead back to that glow.",
     },
     {
         id: 72,
@@ -526,7 +526,7 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/76_Split.jpg",
         isFeatured: true,
         featuredOrder: 5,
-        thoughts: "2026. To the world I am an emotionless machine. An utility, a tool. They choose to ignore the person behind the keyboard. That person is far more vibrant than what people see.",
+        thoughts: "2026. To the world, I can look like a machine built only for use. Behind the keys, a warmer, more unruly life keeps moving, mostly unseen.",
     },
     {
         id: 77,
@@ -551,7 +551,7 @@ const artPieces: ArtPiece[] = [
         slug: "oranges",
         title: "Oranges",
         image: "/drawings/79_Oranges.jpg",
-        thoughts: "Aug 2026. Some seasons are meant to be left behind. What emerges from them is brighter, more beautiful, and finally ready to take flight.",
+        thoughts: "Aug 2026. A season can end without taking the whole tree with it. New color gathers on the branches where the old leaves fell, and sooner or later, something is ready for flight.",
     },
     {
         id: 80,
