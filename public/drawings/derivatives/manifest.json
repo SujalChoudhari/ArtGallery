@@ -1850,6 +1850,29 @@
         "bytes": 174200,
         "format": "webp"
       }
+    },
+    "/drawings/81_The_Display.jpg": {
+      "original": {
+        "path": "/drawings/81_The_Display.jpg",
+        "width": 1280,
+        "height": 964,
+        "bytes": 268702,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/81_The_Display-47a52360.thumb.webp",
+        "width": 640,
+        "height": 482,
+        "bytes": 46634,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/81_The_Display-47a52360.detail.webp",
+        "width": 1280,
+        "height": 964,
+        "bytes": 225700,
+        "format": "webp"
+      }
     }
   }
 }

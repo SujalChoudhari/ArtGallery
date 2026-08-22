@@ -559,6 +559,13 @@ const artPieces: ArtPiece[] = [
         title: "A Quiet Brightness",
         image: "/drawings/80_A_Quiet_Brightness.jpg",
     },
+    {
+        id: 81,
+        slug: "the-display",
+        title: "The Display",
+        image: "/drawings/81_The_Display.jpg",
+        thoughts: "2026. After watching Silo, I felt like drawing what might be on the other side of the display. Something green, open, and still worth walking toward.",
+    },
 ];
 
 export const allArtPieces = artPieces;
