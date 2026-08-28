@@ -1873,6 +1873,29 @@
         "bytes": 225700,
         "format": "webp"
       }
+    },
+    "/drawings/82_Didi.jpg": {
+      "original": {
+        "path": "/drawings/82_Didi.jpg",
+        "width": 950,
+        "height": 1280,
+        "bytes": 234602,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/82_Didi-c5d2d533.thumb.webp",
+        "width": 475,
+        "height": 640,
+        "bytes": 41292,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/82_Didi-c5d2d533.detail.webp",
+        "width": 950,
+        "height": 1280,
+        "bytes": 186392,
+        "format": "webp"
+      }
     }
   }
 }

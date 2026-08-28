@@ -566,6 +566,12 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/81_The_Display.jpg",
         thoughts: "2026. After watching Silo, I felt like drawing what might be on the other side of the display. Something green, open, and still worth walking toward.",
     },
+    {
+        id: 82,
+        slug: "didi",
+        title: "Didi",
+        image: "/drawings/82_Didi.jpg",
+    },
 ];
 
 export const allArtPieces = artPieces;
