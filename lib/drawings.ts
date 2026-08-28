@@ -568,9 +568,12 @@ const artPieces: ArtPiece[] = [
     },
     {
         id: 82,
-        slug: "didi",
-        title: "Didi",
+        slug: "the-thread-that-holds",
+        title: "The Thread That Holds",
         image: "/drawings/82_Didi.jpg",
+        isFeatured: true,
+        featuredOrder: 24,
+        thoughts: "2026. Raksha Bandhan reminds me that some bonds are tied once and carried for a lifetime. This one is for my sister, and for the quiet certainty that love can always find its way home.",
     },
 ];
 
