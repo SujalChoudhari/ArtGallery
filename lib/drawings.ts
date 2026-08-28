@@ -15,7 +15,7 @@ const artPieces: ArtPiece[] = [
         title: "The Terminus",
         image: "/drawings/01_Chhatrapati_Shivaji_Terminus.jpg",
         isFeatured: true,
-        featuredOrder: 18,
+        featuredOrder: 19,
         thoughts: "School days. A building so grand it made a kid pick up a pencil and try. Every arch, every tower, every gothic detail felt like a challenge. I didn't know then that this was the beginning of something. I just wanted to get it right.",
     },
     {
@@ -48,7 +48,7 @@ const artPieces: ArtPiece[] = [
         title: "Horns & Darkness",
         image: "/drawings/06_Horned_Skull_With_Keys.jpg",
         isFeatured: true,
-        featuredOrder: 15,
+        featuredOrder: 16,
         thoughts: "2020. The dark had a language of horns and tangled lines, ornate and a little dangerous. I followed it until the page showed me there was still a way toward light.",
     },
     {
@@ -123,7 +123,7 @@ const artPieces: ArtPiece[] = [
         title: "When We Held On",
         image: "/drawings/17_Clasped_Hands_Gesture.jpg",
         isFeatured: true,
-        featuredOrder: 16,
+        featuredOrder: 17,
         thoughts: "2018. Two people holding hands. The third image in the hand series, and the warmest one. I drew what I felt. Wanting to be close, wanting it to last.",
     },
     {
@@ -132,7 +132,7 @@ const artPieces: ArtPiece[] = [
         title: "Don't Go",
         image: "/drawings/18_Shaded_Reaching_Hand_Study.jpg",
         isFeatured: true,
-        featuredOrder: 17,
+        featuredOrder: 18,
         thoughts: "2018. A hand reaches into the space where something is already leaving. It was never about possession, only the quiet wish to keep a moment from becoming a distance.",
     },
     {
@@ -246,7 +246,7 @@ const artPieces: ArtPiece[] = [
         title: "She Had Glasses",
         image: "/drawings/36_Woman_With_Sunglasses_Profile_Sketch.jpg",
         isFeatured: true,
-        featuredOrder: 12,
+        featuredOrder: 13,
         thoughts: "College era. Some portraits are made by hiding the face behind a veil. The lenses were a disguise, and the blank spaces carried what I couldn't put on paper.",
     },
     {
@@ -321,7 +321,7 @@ const artPieces: ArtPiece[] = [
         title: "When I Was Happy",
         image: "/drawings/48_Pensive_Man_In_Blue_Watercolor.jpg",
         isFeatured: true,
-        featuredOrder: 11,
+        featuredOrder: 12,
         thoughts: "Late 2025. Color returned to the page without asking permission. I took it as a small, unexpected sign that joy was finding its way back.",
     },
     {
@@ -396,7 +396,7 @@ const artPieces: ArtPiece[] = [
         title: "Vibrance Of The Tunes",
         image: "/drawings/60_Psychedelic_Soundwaves_Aura.jpg",
         isFeatured: true,
-        featuredOrder: 7,
+        featuredOrder: 8,
         thoughts: "Music doesn't just play. It lifts something. A quiet confidence, a sudden warmth. This is what the rhythm and melody look like from the inside.",
     },
     {
@@ -423,7 +423,7 @@ const artPieces: ArtPiece[] = [
         title: "Rain & Lamplight",
         image: "/drawings/64_Girl_in_rain_Wet_lamp_post.jpg",
         isFeatured: true,
-        featuredOrder: 19,
+        featuredOrder: 20,
         thoughts: "Mid 2024. Rain makes the world honest. Beside one small pool of warmth, standing still becomes its own kind of bravery.",
     },
     {
@@ -432,7 +432,7 @@ const artPieces: ArtPiece[] = [
         title: "Now It's A Memory",
         image: "/drawings/65_Women_Closeup.jpg",
         isFeatured: true,
-        featuredOrder: 6,
+        featuredOrder: 7,
         thoughts: "Late 2025. A face can remain long after the distance has settled in. I couldn't reproduce it exactly, only get close enough to remember what it felt like.",
     },
     {
@@ -453,7 +453,7 @@ const artPieces: ArtPiece[] = [
         title: "Bappa, Buffed",
         image: "/drawings/68_Ganpati_Bappa_morya.jpg",
         isFeatured: true,
-        featuredOrder: 8,
+        featuredOrder: 9,
         thoughts: "The best drawing I think I have ever made. Ganpati Bappa, but not the gentle serene version. This one is powerful. Every muscle deliberate. I wanted to draw divinity the way strength actually feels.",
     },
     {
@@ -462,7 +462,7 @@ const artPieces: ArtPiece[] = [
         title: "Self Portrait",
         image: "/drawings/69_Self_Portrait.jpg",
         isFeatured: true,
-        featuredOrder: 21,
+        featuredOrder: 22,
         thoughts: "Late 2025. I looked back and found more than the wreckage I expected. The code, the words, and the simple act of staying had given shape to a self I could finally recognize.",
     },
     {
@@ -471,7 +471,7 @@ const artPieces: ArtPiece[] = [
         title: "Infinity Castle",
         image: "/drawings/70_Infinity_Castle.jpg",
         isFeatured: true,
-        featuredOrder: 10,
+        featuredOrder: 11,
         thoughts: "Late 2025. I was deep into Demon Slayer. The Infinity Castle obsessed me. The geometry, the impossible angles, the sense of falling forever. I spent a long time on the details. Tanjiro mid-fall, corridors going nowhere.",
     },
     {
@@ -489,7 +489,7 @@ const artPieces: ArtPiece[] = [
         title: "Kanheri, in Warli",
         image: "/drawings/72_Kanheri_Warli_Cave_Painting.jpg",
         isFeatured: true,
-        featuredOrder: 9,
+        featuredOrder: 10,
         thoughts: "The Kanheri caves in SGNP, drawn in the style of Warli. Trees, pillars, floors, walls, all in that ancient tribal language of lines. The image you see here is inverted. The original was black on white, but the negative feels more honest. Like looking at a photograph of something that happened a long time ago.",
     },
     {
@@ -498,7 +498,7 @@ const artPieces: ArtPiece[] = [
         title: "Krishna Lifts Govardhan",
         image: "/drawings/73_Govardhan_Parvat.jpg",
         isFeatured: true,
-        featuredOrder: 13,
+        featuredOrder: 14,
         thoughts: "Madhubani style. A folk art language that turns myth into geometry. Krishna lifting an entire mountain. The style demanded patience; every fill, every border had its own rhythm.",
     },
     {
@@ -507,7 +507,7 @@ const artPieces: ArtPiece[] = [
         title: "Vasudev",
         image: "/drawings/74_Vasu_Dev.jpg",
         isFeatured: true,
-        featuredOrder: 14,
+        featuredOrder: 15,
         thoughts: "Made for Maharashtra Din. Vasudev, the wandering folk performer, bells in hand, a living tradition. Something about drawing him felt like an act of preservation.",
     },
     {
@@ -516,7 +516,7 @@ const artPieces: ArtPiece[] = [
         title: "Shivaji Maharaj",
         image: "/drawings/75_Shivaji_Maharaj.jpg",
         isFeatured: true,
-        featuredOrder: 20,
+        featuredOrder: 21,
         thoughts: "A portrait on a hundred. Chhatrapati Shivaji Maharaj deserved more than a quick sketch. I wanted to get the weight of him right, the sharpness in the eyes, the quiet authority. Some subjects demand your full attention. This was one of them.",
     },
     {
@@ -534,7 +534,7 @@ const artPieces: ArtPiece[] = [
         title: "The Dark Lily",
         image: "/drawings/77_The_Dark_Lily.jpg",
         isFeatured: true,
-        featuredOrder: 22,
+        featuredOrder: 23,
         thoughts: "2026. We only ever frame the bright days. The low ones get buried, like they don't count. They do. The downs are worth sitting with too.",
     },
     {
@@ -543,7 +543,7 @@ const artPieces: ArtPiece[] = [
         title: "After the Fall",
         image: "/drawings/78_After_the_Fall.jpg",
         isFeatured: true,
-        featuredOrder: 23,
+        featuredOrder: 24,
         thoughts: "2026. I wanted to paint the moment after surrender, when the thing you built is burning and you finally stop trying to save it. Somehow, the end still feels like freedom.",
     },
     {
@@ -572,7 +572,7 @@ const artPieces: ArtPiece[] = [
         title: "The Thread That Holds",
         image: "/drawings/82_Didi.jpg",
         isFeatured: true,
-        featuredOrder: 24,
+        featuredOrder: 6,
         thoughts: "2026. Raksha Bandhan reminds me that some bonds are tied once and carried for a lifetime. This one is for my sister, and for the quiet certainty that love can always find its way home.",
     },
 ];
