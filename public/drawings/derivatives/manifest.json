@@ -1896,6 +1896,29 @@
         "bytes": 186392,
         "format": "webp"
       }
+    },
+    "/drawings/83_Jack_of_All.jpg": {
+      "original": {
+        "path": "/drawings/83_Jack_of_All.jpg",
+        "width": 964,
+        "height": 1280,
+        "bytes": 184984,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/83_Jack_of_All-a78e6e62.thumb.webp",
+        "width": 482,
+        "height": 640,
+        "bytes": 34554,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/83_Jack_of_All-a78e6e62.detail.webp",
+        "width": 964,
+        "height": 1280,
+        "bytes": 124476,
+        "format": "webp"
+      }
     }
   }
 }

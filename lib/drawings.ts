@@ -575,6 +575,13 @@ const artPieces: ArtPiece[] = [
         featuredOrder: 6,
         thoughts: "2026. Raksha Bandhan reminds me that some bonds are tied once and carried for a lifetime. This one is for my sister, and for the quiet certainty that love can always find its way home.",
     },
+    {
+        id: 83,
+        slug: "jack-of-all",
+        title: "Jack of All",
+        image: "/drawings/83_Jack_of_All.jpg",
+        thoughts: "2026. I am a jack of all trades, master of none, though oftentimes better than master of one.",
+    },
 ];
 
 export const allArtPieces = artPieces;
