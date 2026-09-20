@@ -582,6 +582,12 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/83_Jack_of_All.jpg",
         thoughts: "2026. I am a jack of all trades, master of none, though oftentimes better than master of one.",
     },
+    {
+        id: 84,
+        slug: "kevat",
+        title: "Kevat",
+        image: "/drawings/84_Kevat.jpg",
+    },
 ];
 
 export const allArtPieces = artPieces;

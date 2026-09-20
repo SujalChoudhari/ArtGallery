@@ -1919,6 +1919,29 @@
         "bytes": 124476,
         "format": "webp"
       }
+    },
+    "/drawings/84_Kevat.jpg": {
+      "original": {
+        "path": "/drawings/84_Kevat.jpg",
+        "width": 802,
+        "height": 1280,
+        "bytes": 182250,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/84_Kevat-f0dac06c.thumb.webp",
+        "width": 401,
+        "height": 640,
+        "bytes": 25640,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/84_Kevat-f0dac06c.detail.webp",
+        "width": 802,
+        "height": 1280,
+        "bytes": 144474,
+        "format": "webp"
+      }
     }
   }
 }
