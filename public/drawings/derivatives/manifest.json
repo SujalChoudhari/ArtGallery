@@ -1942,6 +1942,29 @@
         "bytes": 144474,
         "format": "webp"
       }
+    },
+    "/drawings/85_Clouds.jpg": {
+      "original": {
+        "path": "/drawings/85_Clouds.jpg",
+        "width": 1280,
+        "height": 843,
+        "bytes": 212470,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/85_Clouds-ff986fc7.thumb.webp",
+        "width": 640,
+        "height": 422,
+        "bytes": 39340,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/85_Clouds-ff986fc7.detail.webp",
+        "width": 1280,
+        "height": 843,
+        "bytes": 159434,
+        "format": "webp"
+      }
     }
   }
 }

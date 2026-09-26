@@ -588,6 +588,12 @@ const artPieces: ArtPiece[] = [
         title: "Kevat",
         image: "/drawings/84_Kevat.jpg",
     },
+    {
+        id: 85,
+        slug: "clouds",
+        title: "Clouds",
+        image: "/drawings/85_Clouds.jpg",
+    },
 ];
 
 export const allArtPieces = artPieces;
