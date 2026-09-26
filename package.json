@@ -9,7 +9,8 @@
     "lint": "next lint",
     "images:generate": "node scripts/generate-image-derivatives.mjs",
     "images:report": "node scripts/report-image-derivatives.mjs",
-    "images:check": "node scripts/check-image-derivatives.mjs"
+    "images:check": "node scripts/check-image-derivatives.mjs",
+    "artwork:add": "node scripts/add-artwork.mjs"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
