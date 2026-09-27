@@ -594,6 +594,13 @@ const artPieces: ArtPiece[] = [
         title: "Clouds",
         image: "/drawings/85_Clouds.jpg",
     },
+    {
+        id: 86,
+        slug: "what-fades-feels-real",
+        title: "What Fades, Feels Real",
+        image: "/drawings/86_What_Fades_Feels_Real.jpg",
+        thoughts: "The necklace will persist. The rose will not. Both are signs of love. Why do we prefer one over the other? What does it mean to love something that stays? What does it mean to love something that fades?",
+    },
 ];
 
 export const allArtPieces = artPieces;

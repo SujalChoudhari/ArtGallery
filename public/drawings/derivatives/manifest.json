@@ -1965,6 +1965,29 @@
         "bytes": 159434,
         "format": "webp"
       }
+    },
+    "/drawings/86_What_Fades_Feels_Real.jpg": {
+      "original": {
+        "path": "/drawings/86_What_Fades_Feels_Real.jpg",
+        "width": 1441,
+        "height": 2560,
+        "bytes": 610014,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/86_What_Fades_Feels_Real-2fc21ff6.thumb.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 18264,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/86_What_Fades_Feels_Real-2fc21ff6.detail.webp",
+        "width": 1013,
+        "height": 1800,
+        "bytes": 172658,
+        "format": "webp"
+      }
     }
   }
 }
