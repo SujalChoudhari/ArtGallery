@@ -600,7 +600,7 @@ const artPieces: ArtPiece[] = [
         title: "What Fades, Feels Real",
         image: "/drawings/86_What_Fades_Feels_Real.jpg",
         isFeatured: true,
-        featuredOrder: 25,
+        featuredOrder: 0,
         thoughts: "The necklace will persist. The rose will not. Both are signs of love. Why do we prefer one over the other? What does it mean to love something that stays? What does it mean to love something that fades?",
     },
 ];
