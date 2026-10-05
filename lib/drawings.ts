@@ -610,7 +610,7 @@ const artPieces: ArtPiece[] = [
         title: "Papletwali",
         image: "/drawings/87_Papletwali.jpg",
         alt: "Close-up painted portrait showing expressive eyes and ornate white-and-gold nose and necklace jewelry.",
-        thoughts: "A study of the accessories featured in the song, where jewelry and adornment become part of the story.",
+        thoughts: "A reference to the accessories shown in the song.",
     },
 ];
 
