@@ -1988,6 +1988,29 @@
         "bytes": 172658,
         "format": "webp"
       }
+    },
+    "/drawings/87_Papletwali.jpg": {
+      "original": {
+        "path": "/drawings/87_Papletwali.jpg",
+        "width": 3147,
+        "height": 2296,
+        "bytes": 1313835,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/87_Papletwali-a21e9bdf.thumb.webp",
+        "width": 640,
+        "height": 467,
+        "bytes": 32068,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/87_Papletwali-a21e9bdf.detail.webp",
+        "width": 1800,
+        "height": 1313,
+        "bytes": 314902,
+        "format": "webp"
+      }
     }
   }
 }

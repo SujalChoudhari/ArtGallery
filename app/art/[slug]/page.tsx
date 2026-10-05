@@ -32,6 +32,7 @@ export function generateMetadata({ params }: ArtworkPageProps): Metadata {
     }
 
     const description = piece.thoughts ?? `${piece.title}, from the Lines & Feelings collection.`;
+    const alt = piece.alt ?? piece.title;
     const imageAsset = getImageAsset(piece.image);
     const url = `${SITE_URL}/art/${piece.slug}`;
 
@@ -44,7 +45,7 @@ export function generateMetadata({ params }: ArtworkPageProps): Metadata {
             title: piece.title,
             description,
             url,
-            images: [{ url: imageAsset.detail.path, alt: piece.title }],
+            images: [{ url: imageAsset.detail.path, alt }],
         },
         twitter: {
             card: "summary_large_image",
@@ -89,7 +90,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                         >
                             <ArtworkImage
                                 asset={imageAsset}
-                                alt={piece.title}
+                                alt={piece.alt ?? piece.title}
                                 variant="detail"
                                 priority
                                 sizes="(min-width: 1024px) 65vw, calc(100vw - 2rem)"

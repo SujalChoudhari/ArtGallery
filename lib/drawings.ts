@@ -3,6 +3,7 @@ export type ArtPiece = {
     slug: string;
     title: string;
     image: string;
+    alt?: string;
     isFeatured?: boolean;
     featuredOrder?: number;
     thoughts?: string;
@@ -602,6 +603,14 @@ const artPieces: ArtPiece[] = [
         isFeatured: true,
         featuredOrder: 0,
         thoughts: "The necklace will persist. The rose will not. Both are signs of love. Why do we prefer one over the other? What does it mean to love something that stays? What does it mean to love something that fades?",
+    },
+    {
+        id: 87,
+        slug: "papletwali",
+        title: "Papletwali",
+        image: "/drawings/87_Papletwali.jpg",
+        alt: "Close-up painted portrait showing expressive eyes and ornate white-and-gold nose and necklace jewelry.",
+        thoughts: "A study of the accessories featured in the song, where jewelry and adornment become part of the story.",
     },
 ];
 

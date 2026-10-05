@@ -20,7 +20,7 @@ export default function ArtworkCard({ piece, priority = false }: ArtworkCardProp
                 <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
                     <ArtworkImage
                         asset={asset}
-                        alt={piece.title}
+                        alt={piece.alt ?? piece.title}
                         priority={priority}
                         sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
                     />
