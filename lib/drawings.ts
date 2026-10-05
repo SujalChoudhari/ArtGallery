@@ -612,6 +612,13 @@ const artPieces: ArtPiece[] = [
         alt: "Close-up painted portrait showing expressive eyes and ornate white-and-gold nose and necklace jewelry.",
         thoughts: "A reference to the accessories shown in the song.",
     },
+    {
+        id: 88,
+        slug: "parvati",
+        title: "Parvati",
+        image: "/drawings/88_Parvati.png",
+        thoughts: "It's a song from the Hanuman Ansh movie; I haven't watched it yet.",
+    },
 ];
 
 export const allArtPieces = artPieces;
