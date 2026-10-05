@@ -27,7 +27,6 @@ export default function ArtworkCard({ piece, priority = false }: ArtworkCardProp
                 </div>
                 <figcaption className="border-b border-foreground/10 px-1 py-4">
                     <h3 className="break-words font-serif text-xl leading-tight text-foreground sm:text-2xl">{piece.title}</h3>
-                    <p className="mt-2 font-sans text-xs uppercase tracking-[0.16em] text-foreground/50">View work</p>
                 </figcaption>
             </figure>
         </Link>

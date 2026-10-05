@@ -50,9 +50,9 @@ export default function HomePage() {
                     </div>
                 </div>
                 <div className="relative flex items-end justify-between gap-3 px-4 pb-5 font-sans text-xs tracking-wide text-white/55 sm:gap-6 sm:px-10 sm:pb-7 lg:px-12">
-                    <span>Selected work · {heroPiece.title}</span>
+                    <span>{heroPiece.title}</span>
                     <a href="#selected-works" className="hidden items-center gap-2 uppercase tracking-[0.18em] transition-colors hover:text-white sm:flex">
-                        Scroll to selected works <span aria-hidden="true">↓</span>
+                        See a few drawings <span aria-hidden="true">↓</span>
                     </a>
                 </div>
             </section>
@@ -61,11 +61,11 @@ export default function HomePage() {
                 <section id="selected-works" className="mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-28 lg:px-12" aria-labelledby="selected-title">
                     <div className="mb-10 flex flex-col justify-between gap-5 border-b border-foreground/15 pb-6 sm:mb-12 sm:gap-6 sm:pb-8 sm:flex-row sm:items-end">
                         <div>
-                            <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/50 sm:tracking-[0.28em]">A considered selection</p>
-                            <h2 id="selected-title" className="mt-3 text-3xl leading-tight sm:text-6xl">Selected works</h2>
+                            <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/50 sm:tracking-[0.28em]">From the studio</p>
+                            <h2 id="selected-title" className="mt-3 text-3xl leading-tight sm:text-6xl">A few things I’ve made</h2>
                         </div>
                         <p className="max-w-sm font-sans text-sm leading-relaxed text-foreground/60">
-                            A small doorway into the collection. Each work has its own page, story, and place in the archive.
+                            Start with these, then wander through the rest.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3">
@@ -78,8 +78,8 @@ export default function HomePage() {
                 <section className="border-y border-foreground/15 bg-zinc-950 px-4 py-16 text-white sm:px-8 sm:py-28 lg:px-12" aria-labelledby="archive-invite-title">
                     <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
                         <div className="max-w-2xl">
-                            <p className="font-sans text-xs uppercase tracking-[0.2em] text-white/45 sm:tracking-[0.28em]">The complete collection</p>
-                            <h2 id="archive-invite-title" className="mt-4 text-3xl leading-tight sm:text-6xl">Take the long way through.</h2>
+                            <p className="font-sans text-xs uppercase tracking-[0.2em] text-white/45 sm:tracking-[0.28em]">More to see</p>
+                            <h2 id="archive-invite-title" className="mt-4 text-3xl leading-tight sm:text-6xl">Browse all the drawings.</h2>
                             <p className="mt-5 max-w-xl font-sans text-base leading-relaxed text-white/65">
                                 Browse all 78 documented works, from early studies to the pieces that brought the pencil back.
                             </p>

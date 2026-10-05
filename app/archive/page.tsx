@@ -37,7 +37,7 @@ export default function ArchivePage() {
                     <p className="mt-5 max-w-2xl font-sans text-base leading-relaxed text-foreground/65 sm:mt-6 sm:text-lg">
                         Every documented work in one quiet, searchable place. Follow a title to spend more time with the image and the thoughts behind it.
                     </p>
-                    <p className="mt-4 font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:mt-5 sm:tracking-[0.18em]">{latestArtPieces.length} works · thoughts first · newest within each group</p>
+                    <p className="mt-4 font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:mt-5 sm:tracking-[0.18em]">{latestArtPieces.length} drawings</p>
                 </div>
                 <section className="mt-10 sm:mt-14" aria-labelledby="archive-grid-title">
                     <h2 id="archive-grid-title" className="sr-only">All works</h2>

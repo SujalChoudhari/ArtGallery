@@ -97,7 +97,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                             />
                         </div>
                         <div className="flex min-w-0 flex-col lg:sticky lg:top-8">
-                            <p className="font-sans text-xs uppercase tracking-[0.18em] text-foreground/45 sm:tracking-[0.28em]">Lines &amp; Feelings · {piece.id}</p>
+                            <p className="font-sans text-xs uppercase tracking-[0.18em] text-foreground/45 sm:tracking-[0.28em]">Drawing no. {piece.id}</p>
                             <h1 className="mt-3 break-words text-4xl leading-[0.98] sm:mt-4 sm:text-7xl">{piece.title}</h1>
                             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
                                 <ShareButton title={piece.title} url={canonicalUrl} />
@@ -112,7 +112,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                             </div>
                             {piece.thoughts && (
                                 <div className="mt-8 border-l border-foreground/25 pl-4 sm:mt-12 sm:pl-7">
-                                    <p className="mb-3 font-sans text-xs uppercase tracking-[0.2em] text-foreground/45">Thoughts</p>
+                                    <p className="mb-3 font-sans text-xs uppercase tracking-[0.2em] text-foreground/45">About this drawing</p>
                                     <blockquote className="font-sans text-[0.95rem] leading-relaxed text-foreground/70 sm:text-lg">
                                         {piece.thoughts}
                                     </blockquote>
@@ -140,8 +140,8 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                 <section className="mt-14" aria-labelledby="related-title">
                     <div className="mb-6 flex items-end justify-between gap-4 border-b border-foreground/15 pb-4 sm:mb-8 sm:gap-6 sm:pb-5">
                         <div>
-                            <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/45 sm:tracking-[0.25em]">Keep looking</p>
-                            <h2 id="related-title" className="mt-2 text-3xl sm:text-4xl">Latest works</h2>
+                            <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/45 sm:tracking-[0.25em]">More from the studio</p>
+                            <h2 id="related-title" className="mt-2 text-3xl sm:text-4xl">More drawings</h2>
                         </div>
                         <Link href="/archive" className="inline-flex min-h-11 shrink-0 items-center font-sans text-xs uppercase tracking-[0.12em] underline underline-offset-4 sm:tracking-[0.16em]">View all</Link>
                     </div>
