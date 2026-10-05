@@ -2011,6 +2011,29 @@
         "bytes": 314902,
         "format": "webp"
       }
+    },
+    "/drawings/88_Parvati.png": {
+      "original": {
+        "path": "/drawings/88_Parvati.png",
+        "width": 2296,
+        "height": 4080,
+        "bytes": 6675354,
+        "format": "png"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/88_Parvati-43325579.thumb.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 17932,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/88_Parvati-43325579.detail.webp",
+        "width": 1013,
+        "height": 1800,
+        "bytes": 115338,
+        "format": "webp"
+      }
     }
   }
 }
