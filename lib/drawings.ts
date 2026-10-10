@@ -619,6 +619,13 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/88_Parvati.png",
         thoughts: "It's a song from the Hanuman Ansh movie; I haven't watched it yet.",
     },
+    {
+        id: 89,
+        slug: "from-the-cliffs-of-tapovan",
+        title: "From the cliffs of Tapovan",
+        image: "/drawings/89_From_the_cliffs_of_Tapovan.jpg",
+        thoughts: "Made for the book cover of Samharas Daughter.",
+    },
 ];
 
 export const allArtPieces = artPieces;

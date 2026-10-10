@@ -2034,6 +2034,29 @@
         "bytes": 115338,
         "format": "webp"
       }
+    },
+    "/drawings/89_From_the_cliffs_of_Tapovan.jpg": {
+      "original": {
+        "path": "/drawings/89_From_the_cliffs_of_Tapovan.jpg",
+        "width": 1422,
+        "height": 1004,
+        "bytes": 418290,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/89_From_the_cliffs_of_Tapovan-4cc9f6df.thumb.webp",
+        "width": 640,
+        "height": 452,
+        "bytes": 45700,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/89_From_the_cliffs_of_Tapovan-4cc9f6df.detail.webp",
+        "width": 1422,
+        "height": 1004,
+        "bytes": 247000,
+        "format": "webp"
+      }
     }
   }
 }
