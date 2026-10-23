@@ -622,7 +622,7 @@ const artPieces: ArtPiece[] = [
     {
         id: 89,
         slug: "from-the-cliffs-of-tapovan",
-        title: "From the cliffs of Tapovan",
+        title: "Tapovan Cover",
         image: "/drawings/89_From_the_cliffs_of_Tapovan.jpg",
         thoughts: "Made for the book cover of Samharas Daughter.",
     },
