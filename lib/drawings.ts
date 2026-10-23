@@ -626,6 +626,21 @@ const artPieces: ArtPiece[] = [
         image: "/drawings/89_From_the_cliffs_of_Tapovan.jpg",
         thoughts: "Made for the book cover of Samharas Daughter.",
     },
+    {
+        id: 90,
+        slug: "icarus",
+        title: "Icarus",
+        image: "/drawings/90_Icarus.jpeg",
+        isFeatured: true,
+        featuredOrder: -1,
+        thoughts: "A winged figure hangs between falling and flight, one hand reaching upward. Against the rough, bright ground, the image turns a fall into a dare.",
+    },
+    {
+        id: 91,
+        slug: "a-study-in-blue",
+        title: "A Study in Blue",
+        image: "/drawings/91_A_Study_in_Blue.jpeg",
+    },
 ];
 
 export const allArtPieces = artPieces;

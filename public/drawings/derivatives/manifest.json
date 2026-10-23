@@ -2057,6 +2057,52 @@
         "bytes": 247000,
         "format": "webp"
       }
+    },
+    "/drawings/90_Icarus.jpeg": {
+      "original": {
+        "path": "/drawings/90_Icarus.jpeg",
+        "width": 2263,
+        "height": 3105,
+        "bytes": 544066,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/90_Icarus-e4c70888.thumb.webp",
+        "width": 466,
+        "height": 640,
+        "bytes": 52058,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/90_Icarus-e4c70888.detail.webp",
+        "width": 1312,
+        "height": 1800,
+        "bytes": 356820,
+        "format": "webp"
+      }
+    },
+    "/drawings/91_A_Study_in_Blue.jpeg": {
+      "original": {
+        "path": "/drawings/91_A_Study_in_Blue.jpeg",
+        "width": 6144,
+        "height": 8160,
+        "bytes": 1523588,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/91_A_Study_in_Blue-0a78bf0b.thumb.webp",
+        "width": 482,
+        "height": 640,
+        "bytes": 32984,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/91_A_Study_in_Blue-0a78bf0b.detail.webp",
+        "width": 1355,
+        "height": 1800,
+        "bytes": 266674,
+        "format": "webp"
+      }
     }
   }
 }
