@@ -641,6 +641,12 @@ const artPieces: ArtPiece[] = [
         title: "A Study in Blue",
         image: "/drawings/91_A_Study_in_Blue.jpeg",
     },
+    {
+        id: 92,
+        slug: "road-roller",
+        title: "Road roller",
+        image: "/drawings/92_Road_roller.jpeg",
+    },
 ];
 
 export const allArtPieces = artPieces;

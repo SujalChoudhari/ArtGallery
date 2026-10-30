@@ -2103,6 +2103,29 @@
         "bytes": 266674,
         "format": "webp"
       }
+    },
+    "/drawings/92_Road_roller.jpeg": {
+      "original": {
+        "path": "/drawings/92_Road_roller.jpeg",
+        "width": 3076,
+        "height": 2238,
+        "bytes": 669938,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/92_Road_roller-fd479fa4.thumb.webp",
+        "width": 640,
+        "height": 466,
+        "bytes": 51426,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/92_Road_roller-fd479fa4.detail.webp",
+        "width": 1800,
+        "height": 1310,
+        "bytes": 443024,
+        "format": "webp"
+      }
     }
   }
 }
