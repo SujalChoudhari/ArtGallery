@@ -2126,6 +2126,29 @@
         "bytes": 443024,
         "format": "webp"
       }
+    },
+    "/drawings/93_Goku.jpeg": {
+      "original": {
+        "path": "/drawings/93_Goku.jpeg",
+        "width": 1974,
+        "height": 2821,
+        "bytes": 686747,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/93_Goku-1d84dd91.thumb.webp",
+        "width": 448,
+        "height": 640,
+        "bytes": 62410,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/93_Goku-1d84dd91.detail.webp",
+        "width": 1260,
+        "height": 1800,
+        "bytes": 558072,
+        "format": "webp"
+      }
     }
   }
 }

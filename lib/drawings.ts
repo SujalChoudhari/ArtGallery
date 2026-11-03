@@ -647,6 +647,15 @@ const artPieces: ArtPiece[] = [
         title: "Road roller",
         image: "/drawings/92_Road_roller.jpeg",
     },
+    {
+        id: 93,
+        slug: "goku",
+        title: "Goku",
+        image: "/drawings/93_Goku.jpeg",
+        isFeatured: true,
+        featuredOrder: 25,
+        thoughts: "I spent far too long on the background—probably the part no one will notice.",
+    },
 ];
 
 export const allArtPieces = artPieces;
