@@ -661,12 +661,18 @@ const artPieces: ArtPiece[] = [
         slug: "three-cherries",
         title: "Three Cherries",
         image: "/drawings/94_Three_Cherries.jpeg",
+        isFeatured: true,
+        featuredOrder: 26,
+        thoughts: "Three cherries, caught between deep red and the light on their skin.",
     },
     {
         id: 95,
         slug: "temple-spires",
         title: "Temple Spires",
         image: "/drawings/95_Temple_Spires.jpeg",
+        isFeatured: true,
+        featuredOrder: 27,
+        thoughts: "The temple spires rise above the rooftops, with saffron flags against the sky.",
     },
 ];
 
