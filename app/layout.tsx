@@ -1,26 +1,30 @@
 import type React from "react";
 import type { Metadata, Viewport } from "next";
-import { Dancing_Script, Lexend, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import clsx from "clsx";
 import "./globals.css";
 import { getArtPieceBySlug } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 
-const playfair = Playfair_Display({
-    subsets: ["latin"],
+const playfair = localFont({
+    src: "./fonts/playfair-display-latin.woff2",
+    weight: "400 900",
+    display: "swap",
     variable: "--font-serif",
 });
 
-const dancingScript = Dancing_Script({
-    subsets: ["latin"],
+const dancingScript = localFont({
+    src: "./fonts/dancing-script-latin.woff2",
+    weight: "400 700",
+    display: "swap",
     variable: "--font-dancing-script",
-    weight: ["400", "700"],
 });
 
-const lexend = Lexend({
-    subsets: ["latin"],
+const lexend = localFont({
+    src: "./fonts/lexend-latin.woff2",
+    weight: "300 700",
+    display: "swap",
     variable: "--font-sans",
-    weight: ["300", "400", "500", "700"],
 });
 
 const socialPiece = getArtPieceBySlug("kanheri-in-warli")!;
