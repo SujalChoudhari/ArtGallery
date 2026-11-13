@@ -656,6 +656,18 @@ const artPieces: ArtPiece[] = [
         featuredOrder: 25,
         thoughts: "I spent far too long on the background—probably the part no one will notice.",
     },
+    {
+        id: 94,
+        slug: "three-cherries",
+        title: "Three Cherries",
+        image: "/drawings/94_Three_Cherries.jpeg",
+    },
+    {
+        id: 95,
+        slug: "temple-spires",
+        title: "Temple Spires",
+        image: "/drawings/95_Temple_Spires.jpeg",
+    },
 ];
 
 export const allArtPieces = artPieces;

@@ -2149,6 +2149,52 @@
         "bytes": 558072,
         "format": "webp"
       }
+    },
+    "/drawings/94_Three_Cherries.jpeg": {
+      "original": {
+        "path": "/drawings/94_Three_Cherries.jpeg",
+        "width": 2121,
+        "height": 2396,
+        "bytes": 583929,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/94_Three_Cherries-102676ac.thumb.webp",
+        "width": 566,
+        "height": 640,
+        "bytes": 74438,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/94_Three_Cherries-102676ac.detail.webp",
+        "width": 1593,
+        "height": 1800,
+        "bytes": 596036,
+        "format": "webp"
+      }
+    },
+    "/drawings/95_Temple_Spires.jpeg": {
+      "original": {
+        "path": "/drawings/95_Temple_Spires.jpeg",
+        "width": 1829,
+        "height": 1498,
+        "bytes": 469146,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/95_Temple_Spires-a56074c1.thumb.webp",
+        "width": 640,
+        "height": 524,
+        "bytes": 88966,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/95_Temple_Spires-a56074c1.detail.webp",
+        "width": 1800,
+        "height": 1474,
+        "bytes": 680150,
+        "format": "webp"
+      }
     }
   }
 }
