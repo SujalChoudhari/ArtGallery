@@ -674,6 +674,15 @@ const artPieces: ArtPiece[] = [
         featuredOrder: 27,
         thoughts: "The temple spires rise above the rooftops, with saffron flags against the sky.",
     },
+    {
+        id: 96,
+        slug: "tree-at-sunset",
+        title: "Tree at Sunset",
+        image: "/drawings/96_Tree_at_Sunset.jpg",
+        isFeatured: true,
+        featuredOrder: 28,
+        thoughts: "The sun peeks through the jungle canopy, and the orange glow beneath the blue clouds gives the whole scene a vibrant atmosphere.",
+    },
 ];
 
 export const allArtPieces = artPieces;

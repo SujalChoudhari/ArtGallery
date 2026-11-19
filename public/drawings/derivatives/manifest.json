@@ -2195,6 +2195,29 @@
         "bytes": 680150,
         "format": "webp"
       }
+    },
+    "/drawings/96_Tree_at_Sunset.jpg": {
+      "original": {
+        "path": "/drawings/96_Tree_at_Sunset.jpg",
+        "width": 1985,
+        "height": 2460,
+        "bytes": 999920,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/96_Tree_at_Sunset-fecc0fd8.thumb.webp",
+        "width": 516,
+        "height": 640,
+        "bytes": 73486,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/96_Tree_at_Sunset-fecc0fd8.detail.webp",
+        "width": 1452,
+        "height": 1800,
+        "bytes": 813806,
+        "format": "webp"
+      }
     }
   }
 }
