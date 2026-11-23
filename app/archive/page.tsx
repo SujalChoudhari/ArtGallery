@@ -30,14 +30,14 @@ export default function ArchivePage() {
     return (
         <div className="min-h-screen overflow-x-clip bg-background text-foreground" data-mobile-shell="phone-first">
             <SiteHeader />
-            <main className="gallery-frame pb-12 pt-8 sm:pb-20 sm:pt-12">
-                <div className="max-w-3xl border-b border-foreground/15 pb-8 sm:pb-10">
+            <main className="gallery-frame pb-12 pt-5 sm:pb-20 sm:pt-12">
+                <div className="max-w-3xl border-b border-foreground/15 pb-4 sm:pb-10">
                     <h1 className="text-4xl leading-[0.98] sm:text-7xl">Archive</h1>
                     <p className="mt-4 font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:mt-5 sm:tracking-[0.18em]">{latestArtPieces.length} works</p>
                 </div>
                 <section className="mt-6 sm:mt-10" aria-labelledby="archive-grid-title">
                     <h2 id="archive-grid-title" className="sr-only">All works</h2>
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <div className="gallery-work-grid grid gap-4 lg:grid-cols-3 xl:grid-cols-4">
                         {latestArtPieces.map((piece) => (
                             <ArtworkCard key={piece.id} piece={piece} />
                         ))}

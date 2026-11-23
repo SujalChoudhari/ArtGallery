@@ -15,7 +15,7 @@ export default function ArtworkCard({ piece, priority = false }: ArtworkCardProp
     return (
         <Link
             href={`/art/${piece.slug}`}
-            className="gallery-card group h-full"
+            className="gallery-card gallery-grid-card group h-full"
         >
             <figure className="h-full">
                 <div className="relative aspect-[4/3] overflow-hidden gallery-image-stage">
@@ -23,7 +23,7 @@ export default function ArtworkCard({ piece, priority = false }: ArtworkCardProp
                         asset={asset}
                         alt={piece.alt ?? piece.title}
                         priority={priority}
-                        sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 360px) 50vw, 100vw"
                     />
                 </div>
                 <figcaption className="gallery-caption">

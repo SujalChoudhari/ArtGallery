@@ -15,15 +15,15 @@ export default function HomePage() {
         <>
             <SiteHeader />
             <main className="gallery-frame">
-                <section className="grid items-center gap-8 border-b border-border py-8 sm:py-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14" aria-labelledby="gallery-title">
+                <section className="grid min-w-0 items-center gap-5 border-b border-border py-5 sm:gap-8 sm:py-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14" aria-labelledby="gallery-title">
                     <div className="min-w-0">
-                        <h1 id="gallery-title" className="text-balance text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.92]">
+                        <h1 id="gallery-title" className="text-balance text-[clamp(2.25rem,8.5vw,6.5rem)] leading-[0.92]">
                             Lines <span className="gallery-accent">&amp;</span> Feelings
                         </h1>
-                        <p className="mt-5 max-w-sm text-base leading-relaxed text-foreground/70">
+                        <p className="mt-3 max-w-sm text-sm sm:mt-5 sm:text-base leading-relaxed text-foreground/70">
                             Drawings, paintings, and visual experiments by Sujal Choudhari.
                         </p>
-                        <div className="mt-6 flex flex-wrap gap-2">
+                        <div className="gallery-hero-actions mt-4 flex flex-wrap gap-2 sm:mt-6">
                             <Link href="/archive" className="gallery-action gallery-action-primary">
                                 Browse archive <ArrowUpRight size={16} aria-hidden="true" />
                             </Link>
@@ -34,7 +34,7 @@ export default function HomePage() {
                     </div>
                     <Link href={`/art/${heroPiece.slug}`} className="gallery-card group">
                         <figure>
-                            <div className="gallery-image-stage relative aspect-[4/3] overflow-hidden">
+                            <div className="gallery-hero-image gallery-image-stage relative aspect-[4/3] overflow-hidden">
                                 <ArtworkImage asset={heroAsset} alt={heroPiece.alt ?? heroPiece.title} variant="detail" priority sizes="(min-width: 1024px) 55vw, 100vw" />
                             </div>
                             <figcaption className="gallery-caption">
@@ -52,7 +52,7 @@ export default function HomePage() {
                             All {allArtPieces.length} works <ArrowUpRight size={16} aria-hidden="true" />
                         </Link>
                     </div>
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="gallery-work-grid grid gap-4 lg:grid-cols-3">
                         {selectedWorks.map((piece) => <ArtworkCard key={piece.id} piece={piece} />)}
                     </div>
                 </section>

@@ -82,8 +82,12 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
         <div className="min-h-screen overflow-x-clip bg-background text-foreground" data-mobile-shell="phone-first">
             <SiteHeader />
             <main className="gallery-frame pb-12 sm:pb-20">
-                <article className="pt-6 sm:pt-16">
-                    <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)] lg:gap-16">
+                <article className="pt-5 sm:pt-12">
+                    <div className="gallery-detail-grid">
+                        <div className="gallery-detail-heading min-w-0">
+                            <p className="font-sans text-xs uppercase tracking-[0.18em] text-foreground/65 sm:tracking-[0.28em]">Drawing no. {piece.id}</p>
+                            <h1 className="mt-2 break-words text-[clamp(1.9rem,6.5vw,4.5rem)] leading-[1.05] sm:mt-4">{piece.title}</h1>
+                        </div>
                         <div
                             className="artwork-detail-stage gallery-image-stage relative overflow-hidden border border-border"
                             data-mobile-artwork-stage="natural-aspect"
@@ -97,10 +101,8 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                                 sizes="(min-width: 1024px) 65vw, calc(100vw - 2rem)"
                             />
                         </div>
-                        <div className="flex min-w-0 flex-col lg:sticky lg:top-8">
-                            <p className="font-sans text-xs uppercase tracking-[0.18em] text-foreground/45 sm:tracking-[0.28em]">Drawing no. {piece.id}</p>
-                            <h1 className="mt-3 break-words text-4xl leading-[0.98] sm:mt-4 sm:text-7xl">{piece.title}</h1>
-                            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
+                        <div className="gallery-detail-copy min-w-0">
+                            <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
                                 <ShareButton title={piece.title} url={canonicalUrl} />
                                 <a
                                     href={piece.image}
@@ -123,29 +125,29 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                     </div>
                 </article>
 
-                <nav className="mt-12 grid border-y border-foreground/15 sm:mt-16 sm:grid-cols-2" aria-label="Artwork navigation">
+                <nav className="mt-8 grid grid-cols-2 gap-2 border-y border-foreground/15 sm:mt-16" aria-label="Artwork navigation">
                     {previous ? (
-                        <Link href={`/art/${previous.slug}`} className="group min-w-0 border-b border-foreground/15 px-1 py-5 sm:border-b-0 sm:border-r sm:py-7 sm:pr-8">
+                        <Link href={`/art/${previous.slug}`} className="group min-w-0 border-r border-foreground/15 px-1 py-3 sm:py-7 sm:pr-8">
                             <span className="inline-flex min-h-11 items-center font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:tracking-[0.18em] gap-2"><ArrowLeft size={16} aria-hidden="true" /> Previous work</span>
-                            <span className="mt-2 block break-words font-serif text-xl transition-transform group-hover:-translate-x-1 sm:mt-3 sm:text-3xl">{previous.title}</span>
+                            <span className="mt-2 block break-words font-sans text-sm font-semibold transition-transform group-hover:-translate-x-1 sm:mt-3 sm:text-3xl">{previous.title}</span>
                         </Link>
-                    ) : <span className="hidden sm:block" />}
+                    ) : <span className="block" />}
                     {next ? (
-                        <Link href={`/art/${next.slug}`} className="group min-w-0 px-1 py-5 text-left sm:py-7 sm:pl-8 sm:text-right">
+                        <Link href={`/art/${next.slug}`} className="group min-w-0 px-1 py-3 text-right sm:py-7 sm:pl-8">
                             <span className="inline-flex min-h-11 items-center font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:tracking-[0.18em] gap-2">Next work <ArrowRight size={16} aria-hidden="true" /></span>
-                            <span className="mt-2 block break-words font-serif text-xl transition-transform group-hover:translate-x-1 sm:mt-3 sm:text-3xl">{next.title}</span>
+                            <span className="mt-2 block break-words font-sans text-sm font-semibold transition-transform group-hover:translate-x-1 sm:mt-3 sm:text-3xl">{next.title}</span>
                         </Link>
                     ) : null}
                 </nav>
 
                 <section className="mt-14" aria-labelledby="related-title">
-                    <div className="mb-6 flex items-end justify-between gap-4 border-b border-foreground/15 pb-4 sm:mb-8 sm:gap-6 sm:pb-5">
+                    <div className="mb-6 flex flex-wrap items-end justify-between gap-4 border-b border-foreground/15 pb-4 sm:mb-8 sm:gap-6 sm:pb-5">
                         <div>
                             <h2 id="related-title" className="mt-2 text-3xl sm:text-4xl">More drawings</h2>
                         </div>
                         <Link href="/archive" className="inline-flex min-h-11 shrink-0 items-center font-sans text-xs uppercase tracking-[0.12em] underline underline-offset-4 sm:tracking-[0.16em]">View all</Link>
                     </div>
-                    <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="gallery-work-grid grid gap-4 lg:grid-cols-4">
                         {relatedPieces.map((relatedPiece) => (
                             <ArtworkCard key={relatedPiece.id} piece={relatedPiece} />
                         ))}

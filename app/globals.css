@@ -50,7 +50,6 @@
 
     body {
         @apply bg-background text-foreground;
-        min-width: 320px;
         overflow-x: hidden;
         font-family: var(--font-sans);
     }
@@ -97,12 +96,14 @@
 
     .artwork-detail-stage {
         aspect-ratio: var(--artwork-aspect-ratio, 4 / 3);
+        max-height: 72svh;
     }
 
     @media (min-width: 1024px) {
         .artwork-detail-stage {
             aspect-ratio: 4 / 3;
             min-height: 55svh;
+            max-height: none;
         }
     }
 
@@ -189,9 +190,35 @@
     .gallery-nav a:hover, .gallery-nav a:focus-visible,
     .gallery-brand:hover, .gallery-brand:focus-visible { color: #ff8d8d; }
 
-    @media (max-width: 520px) {
-        .gallery-header { padding-block: .5rem; }
-        .gallery-nav { justify-content: flex-start; }
+    @media (max-width: 640px) {
+        .gallery-header { padding-block: .35rem .15rem; gap: 0; }
+        .gallery-brand { display: flex; align-items: center; min-height: 44px; }
+        .gallery-nav { width: 100%; justify-content: flex-start; gap: .25rem; }
+        .gallery-nav a { padding-inline: .55rem; }
+        .gallery-nav a:first-child { margin-inline-start: -.55rem; }
+        .gallery-hero-actions .gallery-action { flex: 1 1 8rem; padding-inline: .35rem; }
+        .gallery-hero-image { max-height: 46svh; }
+        .gallery-work-grid .gallery-grid-card .gallery-caption { gap: .35rem; padding: .65rem; font-size: .85rem; }
+        .gallery-work-grid .gallery-caption svg { width: 14px; height: 14px; }
+    }
+
+    .gallery-work-grid { grid-template-columns: minmax(0, 1fr); }
+
+    @media (min-width: 360px) and (max-width: 1023px) {
+        .gallery-work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .gallery-detail-grid { display: grid; align-items: start; gap: 1rem; }
+
+    @media (min-width: 1024px) {
+        .gallery-detail-grid {
+            grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+            grid-template-rows: auto 1fr;
+            gap: 1.5rem 3rem;
+        }
+        .gallery-detail-heading { grid-column: 2; grid-row: 1; }
+        .gallery-detail-grid .artwork-detail-stage { grid-column: 1; grid-row: 1 / span 2; }
+        .gallery-detail-copy { grid-column: 2; grid-row: 2; }
     }
 
     .gallery-action {
