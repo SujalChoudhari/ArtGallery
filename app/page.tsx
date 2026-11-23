@@ -3,12 +3,24 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import ArtworkCard from "@/components/ArtworkCard";
 import ArtworkImage from "@/components/ArtworkImage";
 import SiteHeader from "@/components/SiteHeader";
-import { allArtPieces, featuredArtPieces, chronologicalArtPieces } from "@/lib/drawings";
+import { allArtPieces, chronologicalArtPieces, getArtPieceBySlug, getLatestArtPieces } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 
 const heroPiece = chronologicalArtPieces[0];
 const heroAsset = getImageAsset(heroPiece.image);
-const selectedWorks = featuredArtPieces.filter((piece) => piece.slug !== heroPiece.slug).slice(0, 6);
+const selectedWorks = [
+    "amaze-amaze-amaze",
+    "tree-at-sunset",
+    "goku",
+    "what-fades-feels-real",
+    "the-display",
+    "oranges",
+].map((slug) => {
+    const piece = getArtPieceBySlug(slug);
+    if (!piece) throw new Error(`Unknown homepage artwork: ${slug}`);
+    return piece;
+});
+const recentWorks = getLatestArtPieces(6);
 
 export default function HomePage() {
     return (
@@ -28,7 +40,7 @@ export default function HomePage() {
                                 Browse archive <ArrowUpRight size={16} aria-hidden="true" />
                             </Link>
                             <a href="#selected-works" className="gallery-action">
-                                Selected works <ArrowDown size={16} aria-hidden="true" />
+                                Featured <ArrowDown size={16} aria-hidden="true" />
                             </a>
                         </div>
                     </div>
@@ -47,13 +59,22 @@ export default function HomePage() {
 
                 <section id="selected-works" className="scroll-mt-6 py-8 sm:py-14" aria-labelledby="selected-title">
                     <div className="gallery-section-heading">
-                        <h2 id="selected-title" className="text-3xl sm:text-5xl">Selected works</h2>
+                        <h2 id="selected-title" className="text-3xl sm:text-5xl">Featured</h2>
                         <Link href="/archive" className="gallery-action">
                             All {allArtPieces.length} works <ArrowUpRight size={16} aria-hidden="true" />
                         </Link>
                     </div>
                     <div className="gallery-work-grid grid gap-4 lg:grid-cols-3">
                         {selectedWorks.map((piece) => <ArtworkCard key={piece.id} piece={piece} />)}
+                    </div>
+                </section>
+
+                <section className="border-t border-border py-8 sm:py-14" aria-labelledby="recent-title">
+                    <div className="gallery-section-heading">
+                        <h2 id="recent-title" className="text-3xl sm:text-5xl">Recent Works</h2>
+                    </div>
+                    <div className="gallery-work-grid grid gap-4 lg:grid-cols-3">
+                        {recentWorks.map((piece) => <ArtworkCard key={piece.id} piece={piece} />)}
                     </div>
                 </section>
             </main>
