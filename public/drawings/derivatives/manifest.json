@@ -2218,6 +2218,52 @@
         "bytes": 813806,
         "format": "webp"
       }
+    },
+    "/drawings/97_Pappa.jpg": {
+      "original": {
+        "path": "/drawings/97_Pappa.jpg",
+        "width": 2015,
+        "height": 2484,
+        "bytes": 878997,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/97_Pappa-b977c8d2.thumb.webp",
+        "width": 519,
+        "height": 640,
+        "bytes": 86710,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/97_Pappa-b977c8d2.detail.webp",
+        "width": 1460,
+        "height": 1800,
+        "bytes": 680614,
+        "format": "webp"
+      }
+    },
+    "/drawings/98_Amaze_Amaze_Amaze.jpg": {
+      "original": {
+        "path": "/drawings/98_Amaze_Amaze_Amaze.jpg",
+        "width": 2013,
+        "height": 2682,
+        "bytes": 1269546,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/98_Amaze_Amaze_Amaze-325a9b87.thumb.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 124616,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/98_Amaze_Amaze_Amaze-325a9b87.detail.webp",
+        "width": 1351,
+        "height": 1800,
+        "bytes": 929218,
+        "format": "webp"
+      }
     }
   }
 }

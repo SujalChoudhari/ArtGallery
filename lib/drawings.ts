@@ -683,6 +683,19 @@ const artPieces: ArtPiece[] = [
         featuredOrder: 28,
         thoughts: "The sun peeks through the jungle canopy, and the orange glow beneath the blue clouds gives the whole scene a vibrant atmosphere.",
     },
+    {
+        id: 97,
+        slug: "pappa",
+        title: "Pappa",
+        image: "/drawings/97_Pappa.jpg",
+    },
+    {
+        id: 98,
+        slug: "amaze-amaze-amaze",
+        title: "Amaze Amaze Amaze",
+        image: "/drawings/98_Amaze_Amaze_Amaze.jpg",
+        thoughts: "Getting the light on the planet right was the hardest part.",
+    },
 ];
 
 export const allArtPieces = artPieces;
