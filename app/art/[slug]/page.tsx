@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import ArtworkImage from "@/components/ArtworkImage";
@@ -80,11 +81,11 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
     return (
         <div className="min-h-screen overflow-x-clip bg-background text-foreground" data-mobile-shell="phone-first">
             <SiteHeader />
-            <main className="mx-auto max-w-7xl px-4 pb-16 sm:px-8 sm:pb-24 lg:px-12">
+            <main className="gallery-frame pb-12 sm:pb-20">
                 <article className="pt-6 sm:pt-16">
                     <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)] lg:gap-16">
                         <div
-                            className="artwork-detail-stage relative overflow-hidden bg-zinc-100"
+                            className="artwork-detail-stage gallery-image-stage relative overflow-hidden border border-border"
                             data-mobile-artwork-stage="natural-aspect"
                             style={{ "--artwork-aspect-ratio": `${imageAsset.detail.width} / ${imageAsset.detail.height}` } as CSSProperties}
                         >
@@ -111,7 +112,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                                 </a>
                             </div>
                             {piece.thoughts && (
-                                <div className="mt-8 border-l border-foreground/25 pl-4 sm:mt-12 sm:pl-7">
+                                <div className="mt-8 border-l border-[#b91c1c] pl-4 sm:mt-12 sm:pl-7">
                                     <p className="mb-3 font-sans text-xs uppercase tracking-[0.2em] text-foreground/45">About this drawing</p>
                                     <blockquote className="font-sans text-[0.95rem] leading-relaxed text-foreground/70 sm:text-lg">
                                         {piece.thoughts}
@@ -125,13 +126,13 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                 <nav className="mt-12 grid border-y border-foreground/15 sm:mt-16 sm:grid-cols-2" aria-label="Artwork navigation">
                     {previous ? (
                         <Link href={`/art/${previous.slug}`} className="group min-w-0 border-b border-foreground/15 px-1 py-5 sm:border-b-0 sm:border-r sm:py-7 sm:pr-8">
-                            <span className="inline-flex min-h-11 items-center font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:tracking-[0.18em]">← Previous work</span>
+                            <span className="inline-flex min-h-11 items-center font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:tracking-[0.18em] gap-2"><ArrowLeft size={16} aria-hidden="true" /> Previous work</span>
                             <span className="mt-2 block break-words font-serif text-xl transition-transform group-hover:-translate-x-1 sm:mt-3 sm:text-3xl">{previous.title}</span>
                         </Link>
                     ) : <span className="hidden sm:block" />}
                     {next ? (
                         <Link href={`/art/${next.slug}`} className="group min-w-0 px-1 py-5 text-left sm:py-7 sm:pl-8 sm:text-right">
-                            <span className="inline-flex min-h-11 items-center font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:tracking-[0.18em]">Next work →</span>
+                            <span className="inline-flex min-h-11 items-center font-sans text-xs uppercase tracking-[0.14em] text-foreground/45 sm:tracking-[0.18em] gap-2">Next work <ArrowRight size={16} aria-hidden="true" /></span>
                             <span className="mt-2 block break-words font-serif text-xl transition-transform group-hover:translate-x-1 sm:mt-3 sm:text-3xl">{next.title}</span>
                         </Link>
                     ) : null}
@@ -140,7 +141,6 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                 <section className="mt-14" aria-labelledby="related-title">
                     <div className="mb-6 flex items-end justify-between gap-4 border-b border-foreground/15 pb-4 sm:mb-8 sm:gap-6 sm:pb-5">
                         <div>
-                            <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/45 sm:tracking-[0.25em]">More from the studio</p>
                             <h2 id="related-title" className="mt-2 text-3xl sm:text-4xl">More drawings</h2>
                         </div>
                         <Link href="/archive" className="inline-flex min-h-11 shrink-0 items-center font-sans text-xs uppercase tracking-[0.12em] underline underline-offset-4 sm:tracking-[0.16em]">View all</Link>
@@ -152,7 +152,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                     </div>
                 </section>
             </main>
-            <footer className="border-t border-foreground/10 px-4 py-8 sm:px-8 sm:py-10 lg:px-12">
+            <footer className="gallery-frame border-t border-border py-6">
                 <div className="mx-auto flex max-w-7xl flex-col items-start gap-3 font-sans text-xs text-foreground/50 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
                     <Link href="/archive" className="underline underline-offset-4 transition-colors hover:text-foreground">Back to archive</Link>
                     <span>© Sujal Choudhari</span>

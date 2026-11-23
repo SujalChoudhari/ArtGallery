@@ -24,7 +24,7 @@ const lexend = localFont({
     src: "./fonts/lexend-latin.woff2",
     weight: "300 700",
     display: "swap",
-    variable: "--font-sans",
+    variable: "--font-gallery-fallback",
 });
 
 const socialPiece = getArtPieceBySlug("kanheri-in-warli")!;
@@ -65,7 +65,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className={clsx(playfair.variable, dancingScript.variable, lexend.variable)}>
-            <body className="font-serif antialiased">{children}</body>
+            <body className="font-sans antialiased">{children}</body>
         </html>
     );
 }

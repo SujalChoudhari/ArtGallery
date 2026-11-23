@@ -39,7 +39,7 @@ export default function ArtworkImage({
 
     if (phase === "error") {
         return (
-            <div className={cn("flex h-full w-full items-center justify-center bg-zinc-100 px-5 text-center font-sans text-xs uppercase tracking-[0.16em] text-foreground/50", className)} role="img" aria-label={alt}>
+            <div className={cn("flex h-full w-full items-center justify-center gallery-image-stage px-5 text-center font-sans text-xs uppercase tracking-[0.16em] text-foreground/50", className)} role="img" aria-label={alt}>
                 Image unavailable
             </div>
         );

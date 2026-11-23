@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import ArtworkImage from "@/components/ArtworkImage";
 import type { ArtPiece } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
@@ -14,19 +15,20 @@ export default function ArtworkCard({ piece, priority = false }: ArtworkCardProp
     return (
         <Link
             href={`/art/${piece.slug}`}
-            className="group block h-full min-w-0 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4"
+            className="gallery-card group h-full"
         >
             <figure className="h-full">
-                <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
+                <div className="relative aspect-[4/3] overflow-hidden gallery-image-stage">
                     <ArtworkImage
                         asset={asset}
                         alt={piece.alt ?? piece.title}
                         priority={priority}
-                        sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
+                        sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />
                 </div>
-                <figcaption className="border-b border-foreground/10 px-1 py-4">
-                    <h3 className="break-words font-serif text-xl leading-tight text-foreground sm:text-2xl">{piece.title}</h3>
+                <figcaption className="gallery-caption">
+                    <span>{piece.title}</span>
+                    <ArrowUpRight size={18} aria-hidden="true" />
                 </figcaption>
             </figure>
         </Link>
