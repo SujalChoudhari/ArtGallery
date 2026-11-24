@@ -40,18 +40,13 @@ export default function GalleryCard({
                 />
 
                 {status === "available" && price && (
-                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[11px] font-semibold text-foreground backdrop-blur-md border border-foreground/10 shadow-xs">
+                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[11px] font-medium text-foreground backdrop-blur-md border border-foreground/10 shadow-xs">
                         {currency}{price.toLocaleString("en-IN")}
                     </span>
                 )}
                 {status === "reserved" && (
-                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-amber-950/85 px-2 py-0.5 font-sans text-[10px] uppercase tracking-wider text-amber-200 backdrop-blur-md border border-amber-500/30">
+                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[10px] uppercase tracking-wider text-amber-500 backdrop-blur-md border border-amber-500/30">
                         Reserved
-                    </span>
-                )}
-                {status === "unavailable" && (
-                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/80 px-2 py-0.5 font-sans text-[10px] uppercase tracking-wider text-foreground/50 backdrop-blur-md border border-foreground/10">
-                        Unavailable
                     </span>
                 )}
 

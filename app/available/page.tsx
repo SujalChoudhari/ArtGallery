@@ -32,7 +32,7 @@ export default function AvailablePage() {
             <SiteHeader />
             <main className="gallery-frame pb-16 pt-6 sm:pb-24 sm:pt-12">
                 {/* Hero Header */}
-                <div className="border-b border-foreground/15 pb-6 sm:pb-10">
+                <div className="border-b border-foreground/15 pb-6 sm:pb-8">
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                         <div>
                             <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/50">
@@ -43,19 +43,13 @@ export default function AvailablePage() {
                             </h1>
                         </div>
                         <p className="font-sans text-xs uppercase tracking-[0.14em] text-foreground/50 sm:text-right">
-                            {availableArtPieces.length} available originals • {allArtPieces.length} catalogued
+                            {availableArtPieces.length} available • studio inquiry
                         </p>
                     </div>
 
-                    <p className="mt-4 max-w-2xl font-sans text-sm leading-relaxed text-foreground/70 sm:mt-5 sm:text-base">
-                        Every drawing is an original, hand-created physical work on paper or canvas. Click on{" "}
-                        <strong className="text-foreground">Inquire via WhatsApp</strong> to start a direct conversation with Sujal, pre-filled with the artwork reference and direct link.
+                    <p className="mt-3 max-w-xl font-sans text-sm text-foreground/60 sm:text-base">
+                        Original hand-drawn works on paper and canvas. Inquiries handled directly with Sujal via WhatsApp.
                     </p>
-
-                    <div className="mt-5 inline-flex flex-wrap items-center gap-3 rounded-none border border-foreground/15 bg-foreground/[0.02] px-4 py-2.5 font-sans text-xs text-foreground/75">
-                        <span className="font-semibold text-foreground">💡 Pricing & Purchasing:</span>
-                        <span>Prices include a 40% negotiation buffer and domestic packaging. Inquire directly to discuss framing or custom delivery.</span>
-                    </div>
                 </div>
 
                 {/* Explorer Section */}

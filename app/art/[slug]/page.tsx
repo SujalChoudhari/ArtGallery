@@ -92,94 +92,50 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                         <ArtworkDetailStage piece={piece} asset={imageAsset} />
                         <div className="gallery-detail-copy min-w-0">
                             {piece.status === "available" && (
-                                <div className="mb-6 border border-foreground/15 bg-foreground/[0.02] p-5 sm:p-6">
-                                    <div className="flex items-baseline justify-between gap-4">
-                                        <div>
-                                            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-sans text-emerald-600 dark:text-emerald-400 font-medium">
-                                                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                                                Available Original
-                                            </span>
-                                            <p className="mt-1 font-sans text-xs text-foreground/55">
-                                                {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
-                                            </p>
-                                        </div>
-                                        <div className="text-right">
-                                            <span className="font-sans text-2xl font-semibold tracking-tight sm:text-3xl">
+                                <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-foreground/15 pb-6">
+                                    <div>
+                                        <div className="flex items-center gap-2.5">
+                                            <span className="font-sans text-3xl font-semibold tracking-tight">
                                                 {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
                                             </span>
+                                            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2.5 py-0.5 font-sans text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+                                                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                                                Available
+                                            </span>
                                         </div>
-                                    </div>
-                                    <div className="mt-5">
-                                        <WhatsAppInquireButton piece={piece} label="Inquire to Purchase (WhatsApp)" />
-                                        <p className="mt-2 font-sans text-[11px] text-foreground/45">
-                                            Opens WhatsApp with a prefilled message & link for easy inquiry.
+                                        <p className="mt-1 font-sans text-xs text-foreground/50">
+                                            {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
                                         </p>
                                     </div>
+                                    <WhatsAppInquireButton piece={piece} label="Inquire" />
                                 </div>
                             )}
 
                             {piece.status === "reserved" && (
-                                <div className="mb-6 border border-foreground/15 bg-foreground/[0.02] p-5 sm:p-6">
-                                    <div className="flex items-baseline justify-between gap-4">
-                                        <div>
-                                            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-sans text-amber-500 font-medium">
-                                                <span className="h-2 w-2 rounded-full bg-amber-500" />
-                                                Reserved
-                                            </span>
-                                            <p className="mt-1 font-sans text-xs text-foreground/55">
-                                                {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
-                                            </p>
-                                        </div>
-                                        <div className="text-right">
-                                            <span className="font-sans text-2xl font-semibold tracking-tight sm:text-3xl text-foreground/75">
+                                <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-foreground/15 pb-6">
+                                    <div>
+                                        <div className="flex items-center gap-2.5">
+                                            <span className="font-sans text-2xl font-semibold tracking-tight text-foreground/75">
                                                 {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
                                             </span>
+                                            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-2.5 py-0.5 font-sans text-[11px] font-medium text-amber-500">
+                                                <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+                                                Reserved
+                                            </span>
                                         </div>
-                                    </div>
-                                    <div className="mt-5">
-                                        <WhatsAppInquireButton piece={piece} label="Inquire on WhatsApp (Waitlist)" variant="outline" />
-                                        <p className="mt-2 font-sans text-[11px] text-foreground/45">
-                                            Currently on hold. Inquire via WhatsApp to join the waitlist or request a similar piece.
+                                        <p className="mt-1 font-sans text-xs text-foreground/50">
+                                            {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
                                         </p>
                                     </div>
+                                    <WhatsAppInquireButton piece={piece} label="Waitlist" variant="outline" />
                                 </div>
                             )}
 
                             {piece.status === "unavailable" && (
-                                <div className="mb-6 border border-foreground/15 bg-foreground/[0.02] p-5">
-                                    <div className="flex items-center justify-between gap-3">
-                                        <div>
-                                            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-sans text-foreground/50 font-medium">
-                                                <span className="h-2 w-2 rounded-full bg-foreground/30" />
-                                                Original Unavailable
-                                            </span>
-                                            <p className="mt-1 font-sans text-xs text-foreground/55">
-                                                Early archival drawing — not currently available in studio.
-                                            </p>
-                                        </div>
-                                        <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-1 border border-foreground/20 text-foreground/60">
-                                            Unavailable
-                                        </span>
-                                    </div>
-                                </div>
-                            )}
-
-                            {piece.status === "sold" && (
-                                <div className="mb-6 border border-foreground/15 bg-foreground/[0.02] p-5">
-                                    <div className="flex items-center justify-between gap-3">
-                                        <div>
-                                            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-sans text-rose-500 font-medium">
-                                                <span className="h-2 w-2 rounded-full bg-rose-500" />
-                                                Sold
-                                            </span>
-                                            <p className="mt-1 font-sans text-xs text-foreground/55">
-                                                This original has found a home in a private collection.
-                                            </p>
-                                        </div>
-                                        <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-1 border border-foreground/20 text-foreground/60">
-                                            Sold
-                                        </span>
-                                    </div>
+                                <div className="mb-6 border-b border-foreground/15 pb-4">
+                                    <p className="font-sans text-xs uppercase tracking-[0.16em] text-foreground/45">
+                                        Studio Archive {piece.medium ? `• ${piece.medium}` : ""}
+                                    </p>
                                 </div>
                             )}
 
@@ -195,12 +151,15 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                                     Open original
                                 </a>
                             </div>
+
                             {piece.thoughts && (
                                 <div className="mt-8 border-l border-[#b91c1c] pl-4 sm:mt-12 sm:pl-7">
                                     <p className="mb-3 font-sans text-xs uppercase tracking-[0.2em] text-foreground/45">About this drawing</p>
-                                    <blockquote className="font-sans text-[0.95rem] leading-relaxed text-foreground/70 sm:text-lg">
-                                        {piece.thoughts}
-                                    </blockquote>
+                                    <div className="max-w-prose space-y-4 font-sans text-[0.95rem] leading-relaxed text-foreground/75 sm:text-lg">
+                                        {piece.thoughts.split(/\n\s*\n/).map((para, i) => (
+                                            <p key={i}>{para.trim()}</p>
+                                        ))}
+                                    </div>
                                 </div>
                             )}
                         </div>
