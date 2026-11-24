@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import clsx from "clsx";
 import "./globals.css";
-import { getArtPieceBySlug } from "@/lib/drawings";
+import { allArtPieces, getArtPieceBySlug } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 
 const playfair = localFont({
@@ -27,7 +27,7 @@ const lexend = localFont({
     variable: "--font-gallery-fallback",
 });
 
-const socialPiece = getArtPieceBySlug("kanheri-in-warli")!;
+const socialPiece = getArtPieceBySlug("kanheri-in-warli") ?? allArtPieces[0];
 const ROOT_SOCIAL_IMAGE = getImageAsset(socialPiece.image).detail.path;
 
 export const metadata: Metadata = {

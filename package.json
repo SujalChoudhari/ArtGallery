@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3002",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "catalog:check": "node scripts/check-catalog.mjs",
     "images:generate": "node scripts/generate-image-derivatives.mjs",
     "images:report": "node scripts/report-image-derivatives.mjs",
     "images:check": "node scripts/check-image-derivatives.mjs",

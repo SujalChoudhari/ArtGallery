@@ -5,7 +5,7 @@ import SiteHeader from "@/components/SiteHeader";
 import { allArtPieces, latestArtPieces, getArtPieceBySlug } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 
-const archivePiece = getArtPieceBySlug("kanheri-in-warli")!;
+const archivePiece = getArtPieceBySlug("kanheri-in-warli") ?? allArtPieces[0];
 const archiveImage = getImageAsset(archivePiece.image);
 
 export const metadata: Metadata = {

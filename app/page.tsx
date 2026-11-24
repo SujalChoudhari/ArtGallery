@@ -15,11 +15,9 @@ const selectedWorks = [
     "what-fades-feels-real",
     "the-display",
     "oranges",
-].map((slug) => {
-    const piece = getArtPieceBySlug(slug);
-    if (!piece) throw new Error(`Unknown homepage artwork: ${slug}`);
-    return piece;
-});
+]
+    .map((slug) => getArtPieceBySlug(slug))
+    .filter((piece): piece is NonNullable<typeof piece> => Boolean(piece));
 const recentWorks = getLatestArtPieces(6);
 
 export default function HomePage() {
