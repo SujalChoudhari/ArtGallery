@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
-import ArtworkImage from "@/components/ArtworkImage";
 import { notFound } from "next/navigation";
 import ArtworkCard from "@/components/ArtworkCard";
+import ArtworkDetailStage from "@/components/ArtworkDetailStage";
+import InspectTriggerButton from "@/components/InspectTriggerButton";
 import ShareButton from "@/components/ShareButton";
 import SiteHeader from "@/components/SiteHeader";
 import {
@@ -88,21 +88,10 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                             <p className="font-sans text-xs uppercase tracking-[0.18em] text-foreground/65 sm:tracking-[0.28em]">Drawing no. {piece.id}</p>
                             <h1 className="mt-2 break-words text-[clamp(1.9rem,6.5vw,4.5rem)] leading-[1.05] sm:mt-4">{piece.title}</h1>
                         </div>
-                        <div
-                            className="artwork-detail-stage gallery-image-stage relative overflow-hidden border border-border"
-                            data-mobile-artwork-stage="natural-aspect"
-                            style={{ "--artwork-aspect-ratio": `${imageAsset.detail.width} / ${imageAsset.detail.height}` } as CSSProperties}
-                        >
-                            <ArtworkImage
-                                asset={imageAsset}
-                                alt={piece.alt ?? piece.title}
-                                variant="detail"
-                                priority
-                                sizes="(min-width: 1024px) 65vw, calc(100vw - 2rem)"
-                            />
-                        </div>
+                        <ArtworkDetailStage piece={piece} asset={imageAsset} />
                         <div className="gallery-detail-copy min-w-0">
                             <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
+                                <InspectTriggerButton />
                                 <ShareButton title={piece.title} url={canonicalUrl} />
                                 <a
                                     href={piece.image}

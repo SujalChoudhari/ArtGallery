@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import ArtworkCard from "@/components/ArtworkCard";
 import SiteHeader from "@/components/SiteHeader";
+import ArchiveExplorer from "@/components/ArchiveExplorer";
 import { allArtPieces, latestArtPieces, getArtPieceBySlug } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 
@@ -37,11 +37,7 @@ export default function ArchivePage() {
                 </div>
                 <section className="mt-6 sm:mt-10" aria-labelledby="archive-grid-title">
                     <h2 id="archive-grid-title" className="sr-only">All works</h2>
-                    <div className="gallery-work-grid grid gap-4 lg:grid-cols-3 xl:grid-cols-4">
-                        {latestArtPieces.map((piece) => (
-                            <ArtworkCard key={piece.id} piece={piece} />
-                        ))}
-                    </div>
+                    <ArchiveExplorer pieces={latestArtPieces} />
                 </section>
             </main>
             <footer className="gallery-frame border-t border-border py-6">
