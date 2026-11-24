@@ -2,12 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import GalleryCard from "./GalleryCard";
-
-interface ArtPiece {
-    id: number;
-    title: string;
-    image: string;
-}
+import type { ArtPiece } from "@/lib/drawings";
 
 interface MasonryLayoutProps {
     items: ArtPiece[];
@@ -114,6 +109,9 @@ export default function MasonryLayout({ items, openLightbox }: MasonryLayoutProp
                                 title={piece.title}
                                 image={piece.image}
                                 index={originalIndex}
+                                price={piece.price}
+                                status={piece.status}
+                                currency={piece.currency}
                                 onClick={() => openLightbox(originalIndex)}
                             />
                         );

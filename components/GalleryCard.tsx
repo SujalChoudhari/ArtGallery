@@ -1,12 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { ArtworkStatus } from "@/lib/drawings";
 
 interface GalleryCardProps {
     id: number;
     title: string;
     image: string;
     index: number;
+    price?: number;
+    status?: ArtworkStatus;
+    currency?: string;
     onClick: () => void;
 }
 
@@ -14,6 +18,9 @@ export default function GalleryCard({
     title,
     image,
     index,
+    price,
+    status,
+    currency = "₹",
     onClick,
 }: GalleryCardProps) {
     return (
@@ -31,6 +38,22 @@ export default function GalleryCard({
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                 />
+
+                {status === "available" && price && (
+                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[11px] font-semibold text-foreground backdrop-blur-md border border-foreground/10 shadow-xs">
+                        {currency}{price.toLocaleString("en-IN")}
+                    </span>
+                )}
+                {status === "reserved" && (
+                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-amber-950/85 px-2 py-0.5 font-sans text-[10px] uppercase tracking-wider text-amber-200 backdrop-blur-md border border-amber-500/30">
+                        Reserved
+                    </span>
+                )}
+                {status === "unavailable" && (
+                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/80 px-2 py-0.5 font-sans text-[10px] uppercase tracking-wider text-foreground/50 backdrop-blur-md border border-foreground/10">
+                        Unavailable
+                    </span>
+                )}
 
                 {/* Hover overlay with title */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -18,6 +18,7 @@ export default function ArchiveExplorer({ pieces }: ArchiveExplorerProps) {
     const [selectedMedium, setSelectedMedium] = useState<MediumFilter>("all");
     const [selectedEra, setSelectedEra] = useState<EraFilter>("all");
     const [reflectionsOnly, setReflectionsOnly] = useState(false);
+    const [forSaleOnly, setForSaleOnly] = useState(false);
     const [sortOption, setSortOption] = useState<SortOption>("curated");
 
     const hasActiveFilters =
@@ -25,6 +26,7 @@ export default function ArchiveExplorer({ pieces }: ArchiveExplorerProps) {
         selectedMedium !== "all" ||
         selectedEra !== "all" ||
         reflectionsOnly ||
+        forSaleOnly ||
         sortOption !== "curated";
 
     const resetFilters = () => {
@@ -32,11 +34,17 @@ export default function ArchiveExplorer({ pieces }: ArchiveExplorerProps) {
         setSelectedMedium("all");
         setSelectedEra("all");
         setReflectionsOnly(false);
+        setForSaleOnly(false);
         setSortOption("curated");
     };
 
     const filteredPieces = useMemo(() => {
         return pieces.filter((piece) => {
+            // For sale only filter
+            if (forSaleOnly && piece.status !== "available") {
+                return false;
+            }
+
             // Search query filter
             if (searchQuery.trim() !== "") {
                 const query = searchQuery.toLowerCase();
@@ -197,6 +205,18 @@ export default function ArchiveExplorer({ pieces }: ArchiveExplorerProps) {
                             }`}
                         >
                             With Reflections Only
+                        </button>
+
+                        <button
+                            type="button"
+                            onClick={() => setForSaleOnly(!forSaleOnly)}
+                            className={`min-h-8 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
+                                forSaleOnly
+                                    ? "border border-emerald-500 bg-emerald-500/20 text-emerald-400 font-medium"
+                                    : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
+                            }`}
+                        >
+                            For Sale Only
                         </button>
 
                         {hasActiveFilters && (

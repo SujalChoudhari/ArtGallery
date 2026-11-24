@@ -7,6 +7,7 @@ import ArtworkDetailStage from "@/components/ArtworkDetailStage";
 import InspectTriggerButton from "@/components/InspectTriggerButton";
 import ShareButton from "@/components/ShareButton";
 import SiteHeader from "@/components/SiteHeader";
+import WhatsAppInquireButton from "@/components/WhatsAppInquireButton";
 import {
     allArtPieces,
     getAdjacentArtPieces,
@@ -90,6 +91,98 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                         </div>
                         <ArtworkDetailStage piece={piece} asset={imageAsset} />
                         <div className="gallery-detail-copy min-w-0">
+                            {piece.status === "available" && (
+                                <div className="mb-6 border border-foreground/15 bg-foreground/[0.02] p-5 sm:p-6">
+                                    <div className="flex items-baseline justify-between gap-4">
+                                        <div>
+                                            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-sans text-emerald-600 dark:text-emerald-400 font-medium">
+                                                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                                                Available Original
+                                            </span>
+                                            <p className="mt-1 font-sans text-xs text-foreground/55">
+                                                {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
+                                            </p>
+                                        </div>
+                                        <div className="text-right">
+                                            <span className="font-sans text-2xl font-semibold tracking-tight sm:text-3xl">
+                                                {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="mt-5">
+                                        <WhatsAppInquireButton piece={piece} label="Inquire to Purchase (WhatsApp)" />
+                                        <p className="mt-2 font-sans text-[11px] text-foreground/45">
+                                            Opens WhatsApp with a prefilled message & link for easy inquiry.
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+
+                            {piece.status === "reserved" && (
+                                <div className="mb-6 border border-foreground/15 bg-foreground/[0.02] p-5 sm:p-6">
+                                    <div className="flex items-baseline justify-between gap-4">
+                                        <div>
+                                            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-sans text-amber-500 font-medium">
+                                                <span className="h-2 w-2 rounded-full bg-amber-500" />
+                                                Reserved
+                                            </span>
+                                            <p className="mt-1 font-sans text-xs text-foreground/55">
+                                                {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
+                                            </p>
+                                        </div>
+                                        <div className="text-right">
+                                            <span className="font-sans text-2xl font-semibold tracking-tight sm:text-3xl text-foreground/75">
+                                                {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="mt-5">
+                                        <WhatsAppInquireButton piece={piece} label="Inquire on WhatsApp (Waitlist)" variant="outline" />
+                                        <p className="mt-2 font-sans text-[11px] text-foreground/45">
+                                            Currently on hold. Inquire via WhatsApp to join the waitlist or request a similar piece.
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+
+                            {piece.status === "unavailable" && (
+                                <div className="mb-6 border border-foreground/15 bg-foreground/[0.02] p-5">
+                                    <div className="flex items-center justify-between gap-3">
+                                        <div>
+                                            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-sans text-foreground/50 font-medium">
+                                                <span className="h-2 w-2 rounded-full bg-foreground/30" />
+                                                Original Unavailable
+                                            </span>
+                                            <p className="mt-1 font-sans text-xs text-foreground/55">
+                                                Early archival drawing — not currently available in studio.
+                                            </p>
+                                        </div>
+                                        <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-1 border border-foreground/20 text-foreground/60">
+                                            Unavailable
+                                        </span>
+                                    </div>
+                                </div>
+                            )}
+
+                            {piece.status === "sold" && (
+                                <div className="mb-6 border border-foreground/15 bg-foreground/[0.02] p-5">
+                                    <div className="flex items-center justify-between gap-3">
+                                        <div>
+                                            <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] font-sans text-rose-500 font-medium">
+                                                <span className="h-2 w-2 rounded-full bg-rose-500" />
+                                                Sold
+                                            </span>
+                                            <p className="mt-1 font-sans text-xs text-foreground/55">
+                                                This original has found a home in a private collection.
+                                            </p>
+                                        </div>
+                                        <span className="font-sans text-[10px] uppercase tracking-widest px-2.5 py-1 border border-foreground/20 text-foreground/60">
+                                            Sold
+                                        </span>
+                                    </div>
+                                </div>
+                            )}
+
                             <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
                                 <InspectTriggerButton />
                                 <ShareButton title={piece.title} url={canonicalUrl} />
