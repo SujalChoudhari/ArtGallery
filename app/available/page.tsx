@@ -30,16 +30,14 @@ export default function AvailablePage() {
     return (
         <div className="min-h-screen overflow-x-clip bg-background text-foreground" data-mobile-shell="phone-first">
             <SiteHeader />
-            <main className="gallery-frame pb-16 pt-6 sm:pb-24 sm:pt-12">
-                {/* Hero Header */}
-                <div className="border-b border-foreground/15 pb-4 sm:pb-8">
-                    <h1 className="text-4xl leading-[0.98] sm:text-7xl font-serif">
-                        Works for Sale
-                    </h1>
+            <main className="gallery-frame pb-12 pt-5 sm:pb-20 sm:pt-12">
+                {/* Hero Header matching Archive page */}
+                <div className="max-w-3xl border-b border-foreground/15 pb-4 sm:pb-10">
+                    <h1 className="text-4xl leading-[0.98] sm:text-7xl">Works for Sale</h1>
                 </div>
 
                 {/* Explorer Section */}
-                <section className="mt-8 sm:mt-12" aria-labelledby="works-catalog-title">
+                <section className="mt-6 sm:mt-10" aria-labelledby="works-catalog-title">
                     <h2 id="works-catalog-title" className="sr-only">Available Artworks Catalog</h2>
                     <WorksForSaleExplorer pieces={allArtPieces} />
                 </section>

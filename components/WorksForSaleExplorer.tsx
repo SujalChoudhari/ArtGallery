@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Search, X, ChevronDown, ChevronUp, ArrowUpRight } from "lucide-react";
 import type { ArtPiece } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 import ArtworkImage from "@/components/ArtworkImage";
@@ -67,16 +67,17 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
     // When no artworks are currently listed for sale
     if (listedPieces.length === 0) {
         return (
-            <div className="py-20 sm:py-28 text-center">
-                <p className="font-serif text-2xl sm:text-3xl text-foreground/80">Nothing currently for sale.</p>
-                <div className="mt-6">
-                    <Link
-                        href="/archive"
-                        className="inline-flex min-h-10 items-center justify-center border border-foreground/20 px-5 font-sans text-xs uppercase tracking-[0.14em] text-foreground transition-colors hover:border-foreground hover:bg-foreground hover:text-background"
-                    >
-                        Browse Archive
-                    </Link>
-                </div>
+            <div className="flex flex-col items-center justify-center border border-border/60 bg-[#0d0d0d] py-16 px-4 text-center sm:py-24">
+                <h3 className="text-2xl font-bold sm:text-3xl">Nothing currently for sale</h3>
+                <p className="mt-2 max-w-md font-sans text-sm text-foreground/60">
+                    Original drawings and studio studies will appear here when listed.
+                </p>
+                <Link
+                    href="/archive"
+                    className="gallery-action gallery-action-primary mt-6"
+                >
+                    Browse archive <ArrowUpRight size={16} aria-hidden="true" />
+                </Link>
             </div>
         );
     }
@@ -84,18 +85,18 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
     return (
         <div className="space-y-6 sm:space-y-8">
             {/* Filter & Search Bar */}
-            <div className="flex flex-col gap-4 border-b border-foreground/15 pb-5 sm:flex-row sm:items-center sm:justify-between">
-                {/* Status Tabs */}
+            <div className="flex flex-col gap-4 border-b border-border/80 pb-5 sm:flex-row sm:items-center sm:justify-between">
+                {/* Status Tabs styled consistently with Archive filter chips */}
                 <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter works">
                     <button
                         type="button"
                         role="tab"
                         aria-selected={statusFilter === "available"}
                         onClick={() => setStatusFilter("available")}
-                        className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 font-sans text-xs uppercase tracking-[0.14em] transition-colors border ${
+                        className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
                             statusFilter === "available"
-                                ? "border-foreground bg-foreground text-background font-medium"
-                                : "border-border text-foreground/65 hover:border-foreground/40 hover:text-foreground"
+                                ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
+                                : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
                         }`}
                     >
                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
@@ -107,10 +108,10 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                         role="tab"
                         aria-selected={statusFilter === "reserved"}
                         onClick={() => setStatusFilter("reserved")}
-                        className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 font-sans text-xs uppercase tracking-[0.14em] transition-colors border ${
+                        className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
                             statusFilter === "reserved"
-                                ? "border-foreground bg-foreground text-background font-medium"
-                                : "border-border text-foreground/65 hover:border-foreground/40 hover:text-foreground"
+                                ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
+                                : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
                         }`}
                     >
                         <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
@@ -122,10 +123,10 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                         role="tab"
                         aria-selected={statusFilter === "all"}
                         onClick={() => setStatusFilter("all")}
-                        className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 font-sans text-xs uppercase tracking-[0.14em] transition-colors border ${
+                        className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
                             statusFilter === "all"
-                                ? "border-foreground bg-foreground text-background font-medium"
-                                : "border-border text-foreground/65 hover:border-foreground/40 hover:text-foreground"
+                                ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
+                                : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
                         }`}
                     >
                         All ({listedPieces.length})
@@ -144,8 +145,8 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                             type="text"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search..."
-                            className="h-9 w-full border border-border bg-background pl-8 pr-7 font-sans text-xs text-foreground placeholder:text-foreground/40 transition-colors hover:border-foreground/40 focus:border-foreground focus:outline-none"
+                            placeholder="Search by title, medium..."
+                            className="h-9 w-full border border-border bg-[#0d0d0d] pl-8 pr-7 font-sans text-xs text-foreground placeholder:text-foreground/40 transition-colors focus:border-[#b91c1c] focus:outline-none"
                         />
                         {searchQuery && (
                             <button
@@ -164,7 +165,7 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                         value={sortOption}
                         onChange={(e) => setSortOption(e.target.value as SortOption)}
                         aria-label="Sort artworks"
-                        className="h-9 border border-border bg-background px-2.5 font-sans text-xs uppercase tracking-wider text-foreground transition-colors hover:border-foreground/40 focus:border-foreground focus:outline-none"
+                        className="h-9 border border-border bg-[#0d0d0d] px-2.5 font-sans text-xs uppercase tracking-wider text-foreground transition-colors focus:border-[#b91c1c] focus:outline-none"
                     >
                         <option value="curated">Curated</option>
                         <option value="price-asc">Price ↑</option>
@@ -176,21 +177,21 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
 
             {/* Artwork Grid */}
             {filteredPieces.length === 0 ? (
-                <div className="py-16 text-center border border-dashed border-border p-8">
-                    <p className="font-serif text-lg text-foreground/60">No drawings found matching your filter.</p>
+                <div className="flex flex-col items-center justify-center border border-border/60 bg-[#0d0d0d] py-16 px-4 text-center sm:py-24">
+                    <h3 className="text-2xl font-bold sm:text-3xl">No drawings match your filter</h3>
                     <button
                         type="button"
                         onClick={() => {
                             setSearchQuery("");
                             setStatusFilter("available");
                         }}
-                        className="mt-3 inline-flex items-center font-sans text-xs uppercase tracking-wider underline underline-offset-4 text-foreground/70 hover:text-foreground"
+                        className="mt-6 inline-flex min-h-10 items-center gap-2 border border-[#b91c1c] bg-[#b91c1c] px-5 font-sans text-xs uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#991b1b]"
                     >
                         Reset filters
                     </button>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="gallery-work-grid grid gap-4 lg:grid-cols-3">
                     {filteredPieces.map((piece, index) => (
                         <SaleCard key={piece.id} piece={piece} priority={index < 3} />
                     ))}
@@ -218,9 +219,9 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
         : null;
 
     return (
-        <article className="group flex flex-col justify-between border border-foreground/10 bg-background transition-shadow hover:shadow-xs">
-            {/* Image Preview - Pure art, no duplicate price stickers */}
-            <div className="relative aspect-[4/3] overflow-hidden gallery-image-stage bg-muted/20">
+        <article className="gallery-card group flex flex-col justify-between">
+            {/* Image Preview */}
+            <div className="relative aspect-[4/3] overflow-hidden gallery-image-stage">
                 <Link href={`/art/${piece.slug}`} className="block h-full w-full">
                     <ArtworkImage
                         asset={asset}
@@ -234,35 +235,35 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
             {/* Card Body */}
             <div className="flex flex-1 flex-col justify-between p-4 sm:p-5">
                 <div>
-                    {/* Title & Price Header - Price shown ONCE, cleanly alongside the title */}
+                    {/* Title & Price Header - Epilogue font (no font-serif!), hover accent */}
                     <div className="flex items-baseline justify-between gap-3">
-                        <h2 className="text-xl font-serif tracking-tight leading-snug">
-                            <Link href={`/art/${piece.slug}`} className="hover:underline underline-offset-4">
+                        <h2 className="text-lg sm:text-xl font-bold tracking-tight leading-snug group-hover:text-[var(--gallery-hover)] transition-colors">
+                            <Link href={`/art/${piece.slug}`}>
                                 {piece.title}
                             </Link>
                         </h2>
                         <div className="shrink-0 flex items-baseline gap-2">
                             {piece.price !== undefined && (
-                                <span className="font-sans text-sm font-semibold tracking-tight text-foreground/90">
+                                <span className="font-mono text-sm font-semibold tracking-tight text-foreground/90">
                                     {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
                                 </span>
                             )}
                             {piece.status === "reserved" && (
-                                <span className="font-sans text-[10px] uppercase tracking-wider text-amber-600 dark:text-amber-400 font-medium">
+                                <span className="font-mono text-[10px] uppercase tracking-wider text-amber-500 font-medium">
                                     Reserved
                                 </span>
                             )}
                         </div>
                     </div>
 
-                    {/* Metadata Subline - only real art attributes, no internal catalog IDs */}
+                    {/* Metadata Subline */}
                     {(piece.medium || piece.dimensions) && (
-                        <p className="mt-1 font-sans text-xs text-foreground/50">
+                        <p className="mt-1 font-mono text-[11px] uppercase tracking-wider text-foreground/45">
                             {[piece.medium, piece.dimensions].filter(Boolean).join(" • ")}
                         </p>
                     )}
 
-                    {/* Story / Thoughts (Engineered for Long Paragraphs) */}
+                    {/* Story / Thoughts */}
                     {paragraphs.length > 0 && (
                         <div className="mt-3.5 border-l-2 border-[#b91c1c] pl-3 py-0.5">
                             {!isStoryOpen ? (
@@ -274,7 +275,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                                         <button
                                             type="button"
                                             onClick={() => setIsStoryOpen(true)}
-                                            className="mt-1.5 inline-flex items-center gap-1 font-sans text-[11px] font-medium text-foreground/55 hover:text-foreground transition-colors"
+                                            className="mt-1.5 inline-flex items-center gap-1 font-mono text-[11px] text-foreground/50 hover:text-foreground transition-colors"
                                         >
                                             <span>Read story</span>
                                             <ChevronDown size={12} />
@@ -291,7 +292,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                                     <button
                                         type="button"
                                         onClick={() => setIsStoryOpen(false)}
-                                        className="mt-1 inline-flex items-center gap-1 font-sans text-[11px] font-medium text-foreground/55 hover:text-foreground transition-colors"
+                                        className="mt-1 inline-flex items-center gap-1 font-mono text-[11px] text-foreground/50 hover:text-foreground transition-colors"
                                     >
                                         <span>Show less</span>
                                         <ChevronUp size={12} />
@@ -303,7 +304,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                 </div>
 
                 {/* Direct Action Button */}
-                <div className="mt-4 border-t border-foreground/10 pt-3">
+                <div className="mt-4 border-t border-border pt-3">
                     {piece.status === "available" ? (
                         <WhatsAppInquireButton
                             piece={piece}
