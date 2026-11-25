@@ -46,10 +46,6 @@ export default function AvailablePage() {
                             {availableArtPieces.length} available • studio inquiry
                         </p>
                     </div>
-
-                    <p className="mt-3 max-w-xl font-sans text-sm text-foreground/60 sm:text-base">
-                        Original hand-drawn works on paper and canvas. Inquiries handled directly with Sujal via WhatsApp.
-                    </p>
                 </div>
 
                 {/* Explorer Section */}
