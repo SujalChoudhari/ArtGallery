@@ -45,6 +45,7 @@ export default function SalePage() {
                 <div className="mx-auto flex max-w-7xl flex-col items-start gap-3 font-sans text-xs text-foreground/50 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
                     <div className="flex items-center gap-4">
                         <Link href="/" className="underline underline-offset-4 transition-colors hover:text-foreground">Back home</Link>
+                        <Link href="/archive" className="underline underline-offset-4 transition-colors hover:text-foreground">Archive</Link>
                     </div>
                     <span>© Sujal Choudhari</span>
                 </div>

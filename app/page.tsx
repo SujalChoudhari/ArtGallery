@@ -57,8 +57,14 @@ export default function HomePage() {
                     </div>
                 </section>
             </main>
-            <footer className="gallery-frame border-t border-border py-6 text-sm text-foreground/65">
-                © Sujal Choudhari
+            <footer className="gallery-frame border-t border-border py-6">
+                <div className="flex flex-col items-start gap-3 font-sans text-xs text-foreground/50 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
+                    <div className="flex items-center gap-4">
+                        <Link href="/sale" className="underline underline-offset-4 transition-colors hover:text-foreground">Works for Sale</Link>
+                        <Link href="/archive" className="underline underline-offset-4 transition-colors hover:text-foreground">Archive</Link>
+                    </div>
+                    <span>© Sujal Choudhari</span>
+                </div>
             </footer>
         </>
     );

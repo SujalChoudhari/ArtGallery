@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [
         { url: SITE_URL },
         { url: `${SITE_URL}/sale` },
+        { url: `${SITE_URL}/archive` },
         ...allArtPieces.map((piece) => ({
             url: `${SITE_URL}/art/${piece.slug}`,
         })),

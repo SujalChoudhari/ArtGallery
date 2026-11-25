@@ -196,6 +196,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                     <div className="flex items-center gap-4">
                         <Link href="/" className="underline underline-offset-4 transition-colors hover:text-foreground">Home</Link>
                         <Link href="/sale" className="underline underline-offset-4 transition-colors hover:text-foreground">Works for Sale</Link>
+                        <Link href="/archive" className="underline underline-offset-4 transition-colors hover:text-foreground">Archive</Link>
                     </div>
                     <span>© Sujal Choudhari</span>
                 </div>
