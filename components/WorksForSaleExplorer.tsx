@@ -2,13 +2,14 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, X, ChevronDown, ChevronUp, ArrowUpRight } from "lucide-react";
+import { Search, X, ChevronDown, ChevronUp, ArrowUpRight, RotateCcw } from "lucide-react";
 import type { ArtPiece } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 import ArtworkImage from "@/components/ArtworkImage";
 import WhatsAppInquireButton from "@/components/WhatsAppInquireButton";
 
 type StatusTab = "available" | "reserved" | "all";
+type MediumFilter = "all" | "canvas" | "ink" | "pencil" | "color";
 type SortOption = "curated" | "price-asc" | "price-desc" | "newest" | "oldest";
 
 interface WorksForSaleExplorerProps {
@@ -16,30 +17,61 @@ interface WorksForSaleExplorerProps {
 }
 
 export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerProps) {
-    // Only artworks that are actively listed for sale with a price
+    // Only artworks actively listed for sale with a price
     const listedPieces = useMemo(() => {
         return pieces.filter((p) => (p.status === "available" || p.status === "reserved") && p.price !== undefined);
     }, [pieces]);
 
     const [statusFilter, setStatusFilter] = useState<StatusTab>("available");
+    const [mediumFilter, setMediumFilter] = useState<MediumFilter>("all");
     const [searchQuery, setSearchQuery] = useState("");
     const [sortOption, setSortOption] = useState<SortOption>("curated");
 
     const availableCount = useMemo(() => listedPieces.filter((p) => p.status === "available").length, [listedPieces]);
     const reservedCount = useMemo(() => listedPieces.filter((p) => p.status === "reserved").length, [listedPieces]);
 
+    const hasActiveFilters =
+        searchQuery.trim() !== "" ||
+        mediumFilter !== "all" ||
+        statusFilter !== "available" ||
+        sortOption !== "curated";
+
+    const resetFilters = () => {
+        setSearchQuery("");
+        setMediumFilter("all");
+        setStatusFilter("available");
+        setSortOption("curated");
+    };
+
     const filteredPieces = useMemo(() => {
         return listedPieces
             .filter((piece) => {
+                // Status Filter
                 if (statusFilter === "available" && piece.status !== "available") return false;
                 if (statusFilter === "reserved" && piece.status !== "reserved") return false;
 
+                // Medium Filter
+                if (mediumFilter !== "all") {
+                    const text = `${piece.medium ?? ""} ${piece.title} ${piece.thoughts ?? ""}`.toLowerCase();
+                    if (mediumFilter === "canvas") {
+                        if (!/canvas|acrylic|stretched/.test(text)) return false;
+                    } else if (mediumFilter === "ink") {
+                        if (!/ink|pen|liner|crosshatch|warli/.test(text)) return false;
+                    } else if (mediumFilter === "pencil") {
+                        if (!/pencil|graphite|charcoal|sketch/.test(text)) return false;
+                    } else if (mediumFilter === "color") {
+                        if (!/color|colour|watercolor|acrylic|mixed media|pigment/.test(text)) return false;
+                    }
+                }
+
+                // Search Query Filter
                 if (searchQuery.trim() !== "") {
                     const q = searchQuery.toLowerCase();
                     const titleMatch = piece.title.toLowerCase().includes(q);
                     const thoughtsMatch = piece.thoughts?.toLowerCase().includes(q) ?? false;
                     const mediumMatch = piece.medium?.toLowerCase().includes(q) ?? false;
-                    if (!titleMatch && !thoughtsMatch && !mediumMatch) return false;
+                    const idMatch = String(piece.id) === q || `no. ${piece.id}` === q;
+                    if (!titleMatch && !thoughtsMatch && !mediumMatch && !idMatch) return false;
                 }
 
                 return true;
@@ -57,14 +89,15 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                 if (sortOption === "oldest") {
                     return a.id - b.id;
                 }
-                const featuredA = a.isFeatured ? 1 : 0;
-                const featuredB = b.isFeatured ? 1 : 0;
-                if (featuredB !== featuredA) return featuredB - featuredA;
+                // Curated default: stories first, then newest
+                const thoughtsA = a.thoughts ? 1 : 0;
+                const thoughtsB = b.thoughts ? 1 : 0;
+                if (thoughtsB !== thoughtsA) return thoughtsB - thoughtsA;
                 return b.id - a.id;
             });
-    }, [listedPieces, statusFilter, searchQuery, sortOption]);
+    }, [listedPieces, statusFilter, mediumFilter, searchQuery, sortOption]);
 
-    // When no artworks are currently listed for sale
+    // When no artworks are listed
     if (listedPieces.length === 0) {
         return (
             <div className="flex flex-col items-center justify-center border border-border/60 bg-[#0d0d0d] py-16 px-4 text-center sm:py-24">
@@ -73,10 +106,10 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                     Original drawings and studio studies will appear here when listed.
                 </p>
                 <Link
-                    href="/archive"
+                    href="/"
                     className="gallery-action gallery-action-primary mt-6"
                 >
-                    Browse archive <ArrowUpRight size={16} aria-hidden="true" />
+                    Back home <ArrowUpRight size={16} aria-hidden="true" />
                 </Link>
             </div>
         );
@@ -85,109 +118,168 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
     return (
         <div className="space-y-6 sm:space-y-8">
             {/* Filter & Search Bar */}
-            <div className="flex flex-col gap-4 border-b border-border/80 pb-5 sm:flex-row sm:items-center sm:justify-between">
-                {/* Status Tabs styled consistently with Archive filter chips */}
-                <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter works">
-                    <button
-                        type="button"
-                        role="tab"
-                        aria-selected={statusFilter === "available"}
-                        onClick={() => setStatusFilter("available")}
-                        className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
-                            statusFilter === "available"
-                                ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
-                                : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
-                        }`}
-                    >
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                        Available ({availableCount})
-                    </button>
-
-                    <button
-                        type="button"
-                        role="tab"
-                        aria-selected={statusFilter === "reserved"}
-                        onClick={() => setStatusFilter("reserved")}
-                        className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
-                            statusFilter === "reserved"
-                                ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
-                                : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
-                        }`}
-                    >
-                        <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                        Reserved ({reservedCount})
-                    </button>
-
-                    <button
-                        type="button"
-                        role="tab"
-                        aria-selected={statusFilter === "all"}
-                        onClick={() => setStatusFilter("all")}
-                        className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
-                            statusFilter === "all"
-                                ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
-                                : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
-                        }`}
-                    >
-                        All ({listedPieces.length})
-                    </button>
-                </div>
-
-                {/* Search & Sort Controls */}
-                <div className="flex items-center gap-2.5">
-                    <div className="relative flex-1 sm:w-64">
+            <div className="flex flex-col gap-4 border-b border-border/80 pb-6 sm:pb-8">
+                {/* Search Bar + Sort */}
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="relative flex-1 max-w-lg">
                         <Search
-                            size={14}
-                            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40"
+                            size={16}
+                            className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-foreground/40"
                             aria-hidden="true"
                         />
                         <input
                             type="text"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search by title, medium..."
-                            className="h-9 w-full border border-border bg-[#0d0d0d] pl-8 pr-7 font-sans text-xs text-foreground placeholder:text-foreground/40 transition-colors focus:border-[#b91c1c] focus:outline-none"
+                            placeholder="Search by title, medium, story..."
+                            className="w-full border border-border bg-[#0d0d0d] py-2.5 pl-10 pr-9 font-sans text-xs sm:text-sm text-foreground placeholder:text-foreground/40 focus:border-[#b91c1c] focus:outline-none"
+                            aria-label="Search artworks"
                         />
                         {searchQuery && (
                             <button
                                 type="button"
                                 onClick={() => setSearchQuery("")}
-                                className="absolute right-2 top-1/2 -translate-y-1/2 p-0.5 text-foreground/40 hover:text-foreground"
-                                aria-label="Clear search"
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/40 hover:text-foreground"
+                                aria-label="Clear search query"
                             >
-                                <X size={12} />
+                                <X size={14} />
                             </button>
                         )}
                     </div>
 
-                    <select
-                        id="works-sort"
-                        value={sortOption}
-                        onChange={(e) => setSortOption(e.target.value as SortOption)}
-                        aria-label="Sort artworks"
-                        className="h-9 border border-border bg-[#0d0d0d] px-2.5 font-sans text-xs uppercase tracking-wider text-foreground transition-colors focus:border-[#b91c1c] focus:outline-none"
-                    >
-                        <option value="curated">Curated</option>
-                        <option value="price-asc">Price ↑</option>
-                        <option value="price-desc">Price ↓</option>
-                        <option value="newest">Newest</option>
-                    </select>
+                    <div className="flex items-center gap-2">
+                        <label htmlFor="works-sort" className="shrink-0 font-sans text-xs uppercase tracking-wider text-foreground/50">
+                            Sort:
+                        </label>
+                        <select
+                            id="works-sort"
+                            value={sortOption}
+                            onChange={(e) => setSortOption(e.target.value as SortOption)}
+                            className="border border-border bg-[#0d0d0d] px-3 py-2 font-sans text-xs uppercase tracking-wider text-foreground focus:border-[#b91c1c] focus:outline-none"
+                        >
+                            <option value="curated">Curated (Stories First)</option>
+                            <option value="price-asc">Price ↑ (Low to High)</option>
+                            <option value="price-desc">Price ↓ (High to Low)</option>
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                {/* Filter Groups: Status & Medium */}
+                <div className="flex flex-col gap-3 sm:gap-4">
+                    {/* Status Tabs */}
+                    <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter by availability">
+                        <span className="mr-1 font-sans text-xs uppercase tracking-wider text-foreground/40">Status:</span>
+                        <button
+                            type="button"
+                            role="tab"
+                            aria-selected={statusFilter === "available"}
+                            onClick={() => setStatusFilter("available")}
+                            className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
+                                statusFilter === "available"
+                                    ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
+                                    : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
+                            }`}
+                        >
+                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                            Available ({availableCount})
+                        </button>
+
+                        <button
+                            type="button"
+                            role="tab"
+                            aria-selected={statusFilter === "reserved"}
+                            onClick={() => setStatusFilter("reserved")}
+                            className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
+                                statusFilter === "reserved"
+                                    ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
+                                    : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
+                            }`}
+                        >
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+                            Reserved ({reservedCount})
+                        </button>
+
+                        <button
+                            type="button"
+                            role="tab"
+                            aria-selected={statusFilter === "all"}
+                            onClick={() => setStatusFilter("all")}
+                            className={`min-h-8 inline-flex items-center gap-1.5 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
+                                statusFilter === "all"
+                                    ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
+                                    : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
+                            }`}
+                        >
+                            All ({listedPieces.length})
+                        </button>
+                    </div>
+
+                    {/* Medium Filter Chips */}
+                    <div className="flex flex-wrap items-center gap-2">
+                        <span className="mr-1 font-sans text-xs uppercase tracking-wider text-foreground/40">Medium:</span>
+                        {[
+                            { id: "all", label: "All Mediums" },
+                            { id: "canvas", label: "Canvas" },
+                            { id: "ink", label: "Ink & Pen" },
+                            { id: "pencil", label: "Pencil" },
+                            { id: "color", label: "Color" },
+                        ].map((m) => (
+                            <button
+                                key={m.id}
+                                type="button"
+                                onClick={() => setMediumFilter(m.id as MediumFilter)}
+                                className={`min-h-8 px-3 py-1 font-sans text-xs uppercase tracking-[0.12em] transition-colors ${
+                                    mediumFilter === m.id
+                                        ? "border border-[#b91c1c] bg-[#b91c1c]/15 text-white font-medium"
+                                        : "border border-border bg-[#0d0d0d] text-foreground/60 hover:border-foreground/30 hover:text-foreground"
+                                }`}
+                            >
+                                {m.label}
+                            </button>
+                        ))}
+
+                        {hasActiveFilters && (
+                            <button
+                                type="button"
+                                onClick={resetFilters}
+                                className="inline-flex min-h-8 items-center gap-1 border border-border/70 px-2.5 py-1 font-sans text-xs uppercase tracking-[0.12em] text-[#ff8d8d] hover:border-[#b91c1c] hover:bg-[#b91c1c]/10"
+                                title="Reset all applied filters"
+                            >
+                                <RotateCcw size={12} />
+                                Reset
+                            </button>
+                        )}
+                    </div>
+                </div>
+
+                {/* Counter status */}
+                <div className="flex items-center justify-between font-sans text-xs text-foreground/45">
+                    <span>
+                        Showing {filteredPieces.length} of {listedPieces.length} works
+                    </span>
+                    {hasActiveFilters && (
+                        <span className="text-[#ff8d8d]">Filters active</span>
+                    )}
                 </div>
             </div>
 
             {/* Artwork Grid */}
             {filteredPieces.length === 0 ? (
                 <div className="flex flex-col items-center justify-center border border-border/60 bg-[#0d0d0d] py-16 px-4 text-center sm:py-24">
-                    <h3 className="text-2xl font-bold sm:text-3xl">No drawings match your filter</h3>
+                    <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/40">No Matches Found</p>
+                    <h3 className="mt-2 text-2xl font-bold sm:text-3xl">No drawings match your filters</h3>
+                    <p className="mt-2 max-w-md font-sans text-sm text-foreground/60">
+                        Try searching for another term, selecting a different medium, or resetting all active filters.
+                    </p>
                     <button
                         type="button"
-                        onClick={() => {
-                            setSearchQuery("");
-                            setStatusFilter("available");
-                        }}
+                        onClick={resetFilters}
                         className="mt-6 inline-flex min-h-10 items-center gap-2 border border-[#b91c1c] bg-[#b91c1c] px-5 font-sans text-xs uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#991b1b]"
                     >
-                        Reset filters
+                        <RotateCcw size={14} />
+                        Reset All Filters
                     </button>
                 </div>
             ) : (
@@ -235,7 +327,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
             {/* Card Body */}
             <div className="flex flex-1 flex-col justify-between p-4 sm:p-5">
                 <div>
-                    {/* Title & Price Header - Epilogue font (no font-serif!), hover accent */}
+                    {/* Title & Price Header - Epilogue font, hover accent */}
                     <div className="flex items-baseline justify-between gap-3">
                         <h2 className="text-lg sm:text-xl font-bold tracking-tight leading-snug group-hover:text-[var(--gallery-hover)] transition-colors">
                             <Link href={`/art/${piece.slug}`}>

@@ -3,22 +3,12 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import ArtworkCard from "@/components/ArtworkCard";
 import ArtworkImage from "@/components/ArtworkImage";
 import SiteHeader from "@/components/SiteHeader";
-import { allArtPieces, chronologicalArtPieces, getArtPieceBySlug, getLatestArtPieces } from "@/lib/drawings";
+import { chronologicalArtPieces, getLatestArtPieces } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 
 const heroPiece = chronologicalArtPieces[0];
 const heroAsset = getImageAsset(heroPiece.image);
-const selectedWorks = [
-    "amaze-amaze-amaze",
-    "tree-at-sunset",
-    "goku",
-    "what-fades-feels-real",
-    "the-display",
-    "oranges",
-]
-    .map((slug) => getArtPieceBySlug(slug))
-    .filter((piece): piece is NonNullable<typeof piece> => Boolean(piece));
-const recentWorks = getLatestArtPieces(6);
+const recentWorks = getLatestArtPieces(9);
 
 export default function HomePage() {
     return (
@@ -34,11 +24,11 @@ export default function HomePage() {
                             Drawings, paintings, and visual experiments by Sujal Choudhari.
                         </p>
                         <div className="gallery-hero-actions mt-4 flex flex-wrap gap-2 sm:mt-6">
-                            <Link href="/archive" className="gallery-action gallery-action-primary">
-                                Browse archive <ArrowUpRight size={16} aria-hidden="true" />
+                            <Link href="/sale" className="gallery-action gallery-action-primary">
+                                Works for Sale <ArrowUpRight size={16} aria-hidden="true" />
                             </Link>
-                            <a href="#selected-works" className="gallery-action">
-                                Featured <ArrowDown size={16} aria-hidden="true" />
+                            <a href="#recent-works" className="gallery-action">
+                                Recent Works <ArrowDown size={16} aria-hidden="true" />
                             </a>
                         </div>
                     </div>
@@ -55,21 +45,12 @@ export default function HomePage() {
                     </Link>
                 </section>
 
-                <section id="selected-works" className="scroll-mt-6 py-8 sm:py-14" aria-labelledby="selected-title">
-                    <div className="gallery-section-heading">
-                        <h2 id="selected-title" className="text-3xl sm:text-5xl">Featured</h2>
-                        <Link href="/archive" className="gallery-action">
-                            All {allArtPieces.length} works <ArrowUpRight size={16} aria-hidden="true" />
-                        </Link>
-                    </div>
-                    <div className="gallery-work-grid grid gap-4 lg:grid-cols-3">
-                        {selectedWorks.map((piece) => <ArtworkCard key={piece.id} piece={piece} />)}
-                    </div>
-                </section>
-
-                <section className="border-t border-border py-8 sm:py-14" aria-labelledby="recent-title">
+                <section id="recent-works" className="scroll-mt-6 py-8 sm:py-14" aria-labelledby="recent-title">
                     <div className="gallery-section-heading">
                         <h2 id="recent-title" className="text-3xl sm:text-5xl">Recent Works</h2>
+                        <Link href="/sale" className="gallery-action">
+                            Works for Sale <ArrowUpRight size={16} aria-hidden="true" />
+                        </Link>
                     </div>
                     <div className="gallery-work-grid grid gap-4 lg:grid-cols-3">
                         {recentWorks.map((piece) => <ArtworkCard key={piece.id} piece={piece} />)}

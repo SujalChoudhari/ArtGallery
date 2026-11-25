@@ -182,7 +182,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                         <div>
                             <h2 id="related-title" className="mt-2 text-3xl sm:text-4xl">More drawings</h2>
                         </div>
-                        <Link href="/archive" className="inline-flex min-h-11 shrink-0 items-center font-sans text-xs uppercase tracking-[0.12em] underline underline-offset-4 sm:tracking-[0.16em]">View all</Link>
+                        <Link href="/sale" className="inline-flex min-h-11 shrink-0 items-center font-sans text-xs uppercase tracking-[0.12em] underline underline-offset-4 sm:tracking-[0.16em]">Works for Sale</Link>
                     </div>
                     <div className="gallery-work-grid grid gap-4 lg:grid-cols-4">
                         {relatedPieces.map((relatedPiece) => (
@@ -193,7 +193,10 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
             </main>
             <footer className="gallery-frame border-t border-border py-6">
                 <div className="mx-auto flex max-w-7xl flex-col items-start gap-3 font-sans text-xs text-foreground/50 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
-                    <Link href="/archive" className="underline underline-offset-4 transition-colors hover:text-foreground">Back to archive</Link>
+                    <div className="flex items-center gap-4">
+                        <Link href="/" className="underline underline-offset-4 transition-colors hover:text-foreground">Home</Link>
+                        <Link href="/sale" className="underline underline-offset-4 transition-colors hover:text-foreground">Works for Sale</Link>
+                    </div>
                     <span>© Sujal Choudhari</span>
                 </div>
             </footer>

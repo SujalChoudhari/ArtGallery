@@ -12,17 +12,22 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/available",
+        destination: "/sale",
+        permanent: true,
+      },
+      {
         source: "/for-sale",
-        destination: "/available",
+        destination: "/sale",
         permanent: true,
       },
       {
         source: "/shop",
-        destination: "/available",
+        destination: "/sale",
         permanent: true,
       },
     ];
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
