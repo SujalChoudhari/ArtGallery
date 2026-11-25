@@ -91,7 +91,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                         </div>
                         <ArtworkDetailStage piece={piece} asset={imageAsset} />
                         <div className="gallery-detail-copy min-w-0">
-                            {piece.status === "available" && (
+                            {piece.status === "available" && piece.price && (
                                 <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-foreground/15 pb-6">
                                     <div>
                                         <div className="flex items-center gap-2.5">
@@ -111,7 +111,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                                 </div>
                             )}
 
-                            {piece.status === "reserved" && (
+                            {piece.status === "reserved" && piece.price && (
                                 <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-foreground/15 pb-6">
                                     <div>
                                         <div className="flex items-center gap-2.5">

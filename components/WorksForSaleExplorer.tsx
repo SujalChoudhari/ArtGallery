@@ -16,21 +16,24 @@ interface WorksForSaleExplorerProps {
 }
 
 export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerProps) {
+    // Only artworks that are actively listed for sale with a price
+    const listedPieces = useMemo(() => {
+        return pieces.filter((p) => (p.status === "available" || p.status === "reserved") && p.price !== undefined);
+    }, [pieces]);
+
     const [statusFilter, setStatusFilter] = useState<StatusTab>("available");
     const [searchQuery, setSearchQuery] = useState("");
     const [sortOption, setSortOption] = useState<SortOption>("curated");
 
-    const availableCount = useMemo(() => pieces.filter((p) => p.status === "available").length, [pieces]);
-    const reservedCount = useMemo(() => pieces.filter((p) => p.status === "reserved").length, [pieces]);
+    const availableCount = useMemo(() => listedPieces.filter((p) => p.status === "available").length, [listedPieces]);
+    const reservedCount = useMemo(() => listedPieces.filter((p) => p.status === "reserved").length, [listedPieces]);
 
     const filteredPieces = useMemo(() => {
-        return pieces
+        return listedPieces
             .filter((piece) => {
-                // Status tab filter
                 if (statusFilter === "available" && piece.status !== "available") return false;
                 if (statusFilter === "reserved" && piece.status !== "reserved") return false;
 
-                // Search query filter
                 if (searchQuery.trim() !== "") {
                     const q = searchQuery.toLowerCase();
                     const titleMatch = piece.title.toLowerCase().includes(q);
@@ -43,10 +46,10 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
             })
             .sort((a, b) => {
                 if (sortOption === "price-asc") {
-                    return a.price - b.price;
+                    return (a.price ?? 0) - (b.price ?? 0);
                 }
                 if (sortOption === "price-desc") {
-                    return b.price - a.price;
+                    return (b.price ?? 0) - (a.price ?? 0);
                 }
                 if (sortOption === "newest") {
                     return b.id - a.id;
@@ -59,7 +62,27 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                 if (featuredB !== featuredA) return featuredB - featuredA;
                 return b.id - a.id;
             });
-    }, [pieces, statusFilter, searchQuery, sortOption]);
+    }, [listedPieces, statusFilter, searchQuery, sortOption]);
+
+    // When no artworks are currently listed for sale
+    if (listedPieces.length === 0) {
+        return (
+            <div className="py-16 sm:py-24 text-center border border-dashed border-foreground/15 p-8 max-w-lg mx-auto">
+                <p className="font-serif text-2xl sm:text-3xl text-foreground">No Artworks Currently Listed</p>
+                <p className="mt-3 font-sans text-xs sm:text-sm text-foreground/60 leading-relaxed">
+                    Original drawings and studio studies will be listed here with prices and stories soon. In the meantime, you can explore the full collection in the archive.
+                </p>
+                <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+                    <Link
+                        href="/archive"
+                        className="inline-flex min-h-10 items-center justify-center border border-foreground bg-foreground px-5 font-sans text-xs uppercase tracking-[0.14em] text-background transition-opacity hover:opacity-90"
+                    >
+                        Browse Archive
+                    </Link>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="space-y-6 sm:space-y-8">
@@ -104,11 +127,11 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                         onClick={() => setStatusFilter("all")}
                         className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 font-sans text-xs uppercase tracking-[0.14em] transition-colors border ${
                             statusFilter === "all"
-                                ? "border-foreground bg-foreground text-background font-semibold"
+                                ? "border-foreground bg-foreground text-background font-medium"
                                 : "border-border text-foreground/65 hover:border-foreground/40 hover:text-foreground"
                         }`}
                     >
-                        All ({pieces.length})
+                        All ({listedPieces.length})
                     </button>
                 </div>
 
@@ -211,7 +234,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                 </Link>
 
                 {/* Minimal Floating Status/Price Pill */}
-                {piece.status === "available" && (
+                {piece.status === "available" && piece.price && (
                     <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-xs font-medium text-foreground backdrop-blur-md border border-foreground/10 shadow-xs">
                         {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
                     </span>
@@ -233,7 +256,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                                 {piece.title}
                             </Link>
                         </h2>
-                        {piece.status === "available" && (
+                        {piece.status === "available" && piece.price && (
                             <span className="font-sans text-sm font-semibold tracking-tight text-foreground/80">
                                 {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
                             </span>
@@ -242,7 +265,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
 
                     {/* Metadata Subline */}
                     <p className="mt-1 font-sans text-xs text-foreground/50">
-                        No. {piece.id} • {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
+                        No. {piece.id} {piece.medium ? `• ${piece.medium}` : ""} {piece.dimensions ? `• ${piece.dimensions}` : ""}
                     </p>
 
                     {/* Story / Thoughts (Engineered for Long Paragraphs) */}
