@@ -103,9 +103,11 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                                                 Available
                                             </span>
                                         </div>
-                                        <p className="mt-1 font-sans text-xs text-foreground/50">
-                                            {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
-                                        </p>
+                                        {(piece.medium || piece.dimensions) && (
+                                            <p className="mt-1 font-sans text-xs text-foreground/50">
+                                                {[piece.medium, piece.dimensions].filter(Boolean).join(" • ")}
+                                            </p>
+                                        )}
                                     </div>
                                     <WhatsAppInquireButton piece={piece} label="Inquire" />
                                 </div>
@@ -123,19 +125,13 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                                                 Reserved
                                             </span>
                                         </div>
-                                        <p className="mt-1 font-sans text-xs text-foreground/50">
-                                            {piece.medium} {piece.dimensions ? `• ${piece.dimensions}` : ""}
-                                        </p>
+                                        {(piece.medium || piece.dimensions) && (
+                                            <p className="mt-1 font-sans text-xs text-foreground/50">
+                                                {[piece.medium, piece.dimensions].filter(Boolean).join(" • ")}
+                                            </p>
+                                        )}
                                     </div>
                                     <WhatsAppInquireButton piece={piece} label="Waitlist" variant="outline" />
-                                </div>
-                            )}
-
-                            {piece.status === "unavailable" && (
-                                <div className="mb-6 border-b border-foreground/15 pb-4">
-                                    <p className="font-sans text-xs uppercase tracking-[0.16em] text-foreground/45">
-                                        Studio Archive {piece.medium ? `• ${piece.medium}` : ""}
-                                    </p>
                                 </div>
                             )}
 

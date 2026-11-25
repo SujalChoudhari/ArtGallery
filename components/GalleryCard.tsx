@@ -39,17 +39,6 @@ export default function GalleryCard({
                     loading="lazy"
                 />
 
-                {status === "available" && price && (
-                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[11px] font-medium text-foreground backdrop-blur-md border border-foreground/10 shadow-xs">
-                        {currency}{price.toLocaleString("en-IN")}
-                    </span>
-                )}
-                {status === "reserved" && (
-                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[10px] uppercase tracking-wider text-amber-500 backdrop-blur-md border border-amber-500/30">
-                        Reserved
-                    </span>
-                )}
-
                 {/* Hover overlay with title */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">

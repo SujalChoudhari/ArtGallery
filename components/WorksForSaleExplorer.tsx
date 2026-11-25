@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, X, ChevronDown, ChevronUp, ArrowUpRight } from "lucide-react";
+import { Search, X, ChevronDown, ChevronUp } from "lucide-react";
 import type { ArtPiece } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 import ArtworkImage from "@/components/ArtworkImage";
@@ -67,15 +67,12 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
     // When no artworks are currently listed for sale
     if (listedPieces.length === 0) {
         return (
-            <div className="py-16 sm:py-24 text-center border border-dashed border-foreground/15 p-8 max-w-lg mx-auto">
-                <p className="font-serif text-2xl sm:text-3xl text-foreground">No Artworks Currently Listed</p>
-                <p className="mt-3 font-sans text-xs sm:text-sm text-foreground/60 leading-relaxed">
-                    Original drawings and studio studies will be listed here with prices and stories soon. In the meantime, you can explore the full collection in the archive.
-                </p>
-                <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <div className="py-20 sm:py-28 text-center">
+                <p className="font-serif text-2xl sm:text-3xl text-foreground/80">Nothing currently for sale.</p>
+                <div className="mt-6">
                     <Link
                         href="/archive"
-                        className="inline-flex min-h-10 items-center justify-center border border-foreground bg-foreground px-5 font-sans text-xs uppercase tracking-[0.14em] text-background transition-opacity hover:opacity-90"
+                        className="inline-flex min-h-10 items-center justify-center border border-foreground/20 px-5 font-sans text-xs uppercase tracking-[0.14em] text-foreground transition-colors hover:border-foreground hover:bg-foreground hover:text-background"
                     >
                         Browse Archive
                     </Link>
@@ -222,7 +219,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
 
     return (
         <article className="group flex flex-col justify-between border border-foreground/10 bg-background transition-shadow hover:shadow-xs">
-            {/* Image Preview */}
+            {/* Image Preview - Pure art, no duplicate price stickers */}
             <div className="relative aspect-[4/3] overflow-hidden gallery-image-stage bg-muted/20">
                 <Link href={`/art/${piece.slug}`} className="block h-full w-full">
                     <ArtworkImage
@@ -232,41 +229,38 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />
                 </Link>
-
-                {/* Minimal Floating Status/Price Pill */}
-                {piece.status === "available" && piece.price && (
-                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-xs font-medium text-foreground backdrop-blur-md border border-foreground/10 shadow-xs">
-                        {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
-                    </span>
-                )}
-                {piece.status === "reserved" && (
-                    <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[10px] uppercase tracking-wider text-amber-500 backdrop-blur-md border border-amber-500/30">
-                        Reserved
-                    </span>
-                )}
             </div>
 
             {/* Card Body */}
             <div className="flex flex-1 flex-col justify-between p-4 sm:p-5">
                 <div>
-                    {/* Title & Price Header */}
-                    <div className="flex items-baseline justify-between gap-2">
+                    {/* Title & Price Header - Price shown ONCE, cleanly alongside the title */}
+                    <div className="flex items-baseline justify-between gap-3">
                         <h2 className="text-xl font-serif tracking-tight leading-snug">
                             <Link href={`/art/${piece.slug}`} className="hover:underline underline-offset-4">
                                 {piece.title}
                             </Link>
                         </h2>
-                        {piece.status === "available" && piece.price && (
-                            <span className="font-sans text-sm font-semibold tracking-tight text-foreground/80">
-                                {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
-                            </span>
-                        )}
+                        <div className="shrink-0 flex items-baseline gap-2">
+                            {piece.price !== undefined && (
+                                <span className="font-sans text-sm font-semibold tracking-tight text-foreground/90">
+                                    {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
+                                </span>
+                            )}
+                            {piece.status === "reserved" && (
+                                <span className="font-sans text-[10px] uppercase tracking-wider text-amber-600 dark:text-amber-400 font-medium">
+                                    Reserved
+                                </span>
+                            )}
+                        </div>
                     </div>
 
-                    {/* Metadata Subline */}
-                    <p className="mt-1 font-sans text-xs text-foreground/50">
-                        No. {piece.id} {piece.medium ? `• ${piece.medium}` : ""} {piece.dimensions ? `• ${piece.dimensions}` : ""}
-                    </p>
+                    {/* Metadata Subline - only real art attributes, no internal catalog IDs */}
+                    {(piece.medium || piece.dimensions) && (
+                        <p className="mt-1 font-sans text-xs text-foreground/50">
+                            {[piece.medium, piece.dimensions].filter(Boolean).join(" • ")}
+                        </p>
+                    )}
 
                     {/* Story / Thoughts (Engineered for Long Paragraphs) */}
                     {paragraphs.length > 0 && (
@@ -282,7 +276,7 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                                             onClick={() => setIsStoryOpen(true)}
                                             className="mt-1.5 inline-flex items-center gap-1 font-sans text-[11px] font-medium text-foreground/55 hover:text-foreground transition-colors"
                                         >
-                                            <span>Read full story</span>
+                                            <span>Read story</span>
                                             <ChevronDown size={12} />
                                         </button>
                                     )}
@@ -308,35 +302,23 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                     )}
                 </div>
 
-                {/* Actions: WhatsApp & Inspect */}
-                <div className="mt-4 flex items-center justify-between gap-2 border-t border-foreground/10 pt-3">
+                {/* Direct Action Button */}
+                <div className="mt-4 border-t border-foreground/10 pt-3">
                     {piece.status === "available" ? (
                         <WhatsAppInquireButton
                             piece={piece}
                             label="Inquire"
                             variant="compact"
+                            className="w-full"
                         />
                     ) : piece.status === "reserved" ? (
                         <WhatsAppInquireButton
                             piece={piece}
                             label="Waitlist"
                             variant="outline"
-                            className="px-3 py-1 text-[11px]"
+                            className="w-full"
                         />
-                    ) : (
-                        <span className="font-sans text-[11px] text-foreground/45">
-                            Archival
-                        </span>
-                    )}
-
-                    <Link
-                        href={`/art/${piece.slug}`}
-                        className="inline-flex items-center gap-1 font-sans text-xs text-foreground/60 hover:text-foreground transition-colors"
-                        aria-label={`View details of ${piece.title}`}
-                    >
-                        <span>Inspect</span>
-                        <ArrowUpRight size={13} aria-hidden="true" />
-                    </Link>
+                    ) : null}
                 </div>
             </div>
         </article>

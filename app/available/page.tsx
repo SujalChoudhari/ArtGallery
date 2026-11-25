@@ -32,20 +32,10 @@ export default function AvailablePage() {
             <SiteHeader />
             <main className="gallery-frame pb-16 pt-6 sm:pb-24 sm:pt-12">
                 {/* Hero Header */}
-                <div className="border-b border-foreground/15 pb-6 sm:pb-8">
-                    <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                        <div>
-                            <p className="font-sans text-xs uppercase tracking-[0.2em] text-foreground/50">
-                                Original Physical Artworks
-                            </p>
-                            <h1 className="mt-2 text-4xl leading-[0.98] sm:text-6xl font-serif">
-                                Works for Sale
-                            </h1>
-                        </div>
-                        <p className="font-sans text-xs uppercase tracking-[0.14em] text-foreground/50 sm:text-right">
-                            {availableArtPieces.length} available • studio inquiry
-                        </p>
-                    </div>
+                <div className="border-b border-foreground/15 pb-4 sm:pb-8">
+                    <h1 className="text-4xl leading-[0.98] sm:text-7xl font-serif">
+                        Works for Sale
+                    </h1>
                 </div>
 
                 {/* Explorer Section */}

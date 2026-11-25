@@ -25,16 +25,6 @@ export default function ArtworkCard({ piece, priority = false }: ArtworkCardProp
                         priority={priority}
                         sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 360px) 50vw, 100vw"
                     />
-                    {piece.status === "available" && piece.price && (
-                        <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[11px] font-medium text-foreground backdrop-blur-md border border-foreground/10 shadow-xs">
-                            {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
-                        </span>
-                    )}
-                    {piece.status === "reserved" && (
-                        <span className="absolute top-2.5 right-2.5 z-10 rounded-xs bg-background/90 px-2 py-0.5 font-sans text-[10px] uppercase tracking-wider text-amber-500 backdrop-blur-md border border-amber-500/30">
-                            Reserved
-                        </span>
-                    )}
                 </div>
                 <figcaption className="gallery-caption">
                     <span>{piece.title}</span>
