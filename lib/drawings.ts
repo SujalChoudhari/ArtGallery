@@ -943,7 +943,8 @@ export function getAdjacentArtPieces(slug: string) {
 }
 
 export function getLatestArtPieces(limit: number, excludeSlug?: string) {
-    return chronologicalArtPieces.filter((piece) => piece.slug !== excludeSlug).slice(0, limit);
+    // Only active art pieces for sale, excluding archive (unavailable) works
+    return availableArtPieces.filter((piece) => piece.slug !== excludeSlug).slice(0, limit);
 }
 
 export default artPieces;

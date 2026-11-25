@@ -3,12 +3,12 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import ArtworkCard from "@/components/ArtworkCard";
 import ArtworkImage from "@/components/ArtworkImage";
 import SiteHeader from "@/components/SiteHeader";
-import { chronologicalArtPieces, getLatestArtPieces } from "@/lib/drawings";
+import { availableArtPieces, chronologicalArtPieces } from "@/lib/drawings";
 import { getImageAsset } from "@/lib/image-assets";
 
-const heroPiece = chronologicalArtPieces[0];
+const heroPiece = availableArtPieces[0] || chronologicalArtPieces[0];
 const heroAsset = getImageAsset(heroPiece.image);
-const recentWorks = getLatestArtPieces(9);
+const recentWorks = availableArtPieces;
 
 export default function HomePage() {
     return (
