@@ -113,13 +113,15 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                                 </div>
                             )}
 
-                            {piece.status === "reserved" && piece.price && (
+                            {piece.status === "reserved" && (
                                 <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-foreground/15 pb-6">
                                     <div>
                                         <div className="flex items-center gap-2.5">
-                                            <span className="font-sans text-2xl font-semibold tracking-tight text-foreground/75">
-                                                {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
-                                            </span>
+                                            {piece.price !== undefined && (
+                                                <span className="font-sans text-2xl font-semibold tracking-tight text-foreground/75">
+                                                    {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
+                                                </span>
+                                            )}
                                             <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-2.5 py-0.5 font-sans text-[11px] font-medium text-amber-500">
                                                 <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
                                                 Reserved
@@ -131,7 +133,7 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                                             </p>
                                         )}
                                     </div>
-                                    <WhatsAppInquireButton piece={piece} label="Waitlist" variant="outline" />
+                                    {piece.price !== undefined && <WhatsAppInquireButton piece={piece} label="Waitlist" variant="outline" />}
                                 </div>
                             )}
 

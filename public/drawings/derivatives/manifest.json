@@ -2264,6 +2264,29 @@
         "bytes": 929218,
         "format": "webp"
       }
+    },
+    "/drawings/99_Beyond_Bliss.jpg": {
+      "original": {
+        "path": "/drawings/99_Beyond_Bliss.jpg",
+        "width": 2048,
+        "height": 1555,
+        "bytes": 1168303,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/99_Beyond_Bliss-23dca1ed.thumb.webp",
+        "width": 640,
+        "height": 486,
+        "bytes": 71910,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/99_Beyond_Bliss-23dca1ed.detail.webp",
+        "width": 1800,
+        "height": 1367,
+        "bytes": 555802,
+        "format": "webp"
+      }
     }
   }
 }

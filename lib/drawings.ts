@@ -905,6 +905,14 @@ const artPieces: ArtPiece[] = [
         medium: "Acrylic & mixed media on canvas",
         thoughts: "Getting the light on the planet right was the hardest part.",
     },
+    {
+        id: 99,
+        slug: "beyond-bliss",
+        title: "Beyond Bliss",
+        image: "/drawings/99_Beyond_Bliss.jpg",
+        status: "reserved",
+        thoughts: "My first landscape. It reminds me of the Windows XP wallpaper I used to see on a screen. This time, I got to paint the view myself.",
+    },
 ];
 
 export const allArtPieces = artPieces;
