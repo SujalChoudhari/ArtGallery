@@ -91,13 +91,17 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
                         </div>
                         <ArtworkDetailStage piece={piece} asset={imageAsset} />
                         <div className="gallery-detail-copy min-w-0">
-                            {piece.status === "available" && piece.price && (
+                            {piece.status === "available" && (
                                 <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-foreground/15 pb-6">
                                     <div>
                                         <div className="flex items-center gap-2.5">
-                                            <span className="font-sans text-3xl font-semibold tracking-tight">
-                                                {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
-                                            </span>
+                                            {piece.price !== undefined ? (
+                                                <span className="font-sans text-3xl font-semibold tracking-tight">
+                                                    {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
+                                                </span>
+                                            ) : (
+                                                <span className="font-sans text-sm font-medium text-foreground/70">Price on inquiry</span>
+                                            )}
                                             <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2.5 py-0.5 font-sans text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
                                                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                                                 Available

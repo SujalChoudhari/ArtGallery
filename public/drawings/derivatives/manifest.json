@@ -241,6 +241,29 @@
         "format": "webp"
       }
     },
+    "/drawings/100_Rose_Peak.jpg": {
+      "original": {
+        "path": "/drawings/100_Rose_Peak.jpg",
+        "width": 1609,
+        "height": 2048,
+        "bytes": 1411871,
+        "format": "jpeg"
+      },
+      "thumb": {
+        "path": "/drawings/derivatives/100_Rose_Peak-f8c5fb76.thumb.webp",
+        "width": 503,
+        "height": 640,
+        "bytes": 93410,
+        "format": "webp"
+      },
+      "detail": {
+        "path": "/drawings/derivatives/100_Rose_Peak-f8c5fb76.detail.webp",
+        "width": 1414,
+        "height": 1800,
+        "bytes": 730024,
+        "format": "webp"
+      }
+    },
     "/drawings/11_Detailed_Pen_Sketch.jpg": {
       "original": {
         "path": "/drawings/11_Detailed_Pen_Sketch.jpg",

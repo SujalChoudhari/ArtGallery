@@ -910,14 +910,22 @@ const artPieces: ArtPiece[] = [
         slug: "beyond-bliss",
         title: "Beyond Bliss",
         image: "/drawings/99_Beyond_Bliss.jpg",
-        status: "reserved",
+        status: "available",
         thoughts: "My first landscape. It reminds me of the Windows XP wallpaper I used to see on a screen. This time, I got to paint the view myself.",
+    },
+    {
+        id: 100,
+        slug: "rose-peak",
+        title: "Rose Peak",
+        image: "/drawings/100_Rose_Peak.jpg",
+        alt: "A rose-pink mountain above a quiet lake framed by dark evergreens",
+        status: "available",
     },
 ];
 
 export const allArtPieces = artPieces;
 
-export const availableArtPieces = artPieces.filter((piece) => piece.status === "available" && piece.price !== undefined);
+export const availableArtPieces = artPieces.filter((piece) => piece.status === "available");
 export const reservedArtPieces = artPieces.filter((piece) => piece.status === "reserved" && piece.price !== undefined);
 export const unavailableArtPieces = artPieces.filter((piece) => piece.status === "unavailable");
 export const soldArtPieces = artPieces.filter((piece) => piece.status === "sold");

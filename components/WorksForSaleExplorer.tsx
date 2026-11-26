@@ -17,9 +17,9 @@ interface WorksForSaleExplorerProps {
 }
 
 export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerProps) {
-    // Only artworks actively listed for sale with a price
+    // Available works can be listed without a fixed price.
     const listedPieces = useMemo(() => {
-        return pieces.filter((p) => (p.status === "available" || p.status === "reserved") && p.price !== undefined);
+        return pieces.filter((p) => p.status === "available" || (p.status === "reserved" && p.price !== undefined));
     }, [pieces]);
 
     const [statusFilter, setStatusFilter] = useState<StatusTab>("available");
@@ -77,11 +77,10 @@ export default function WorksForSaleExplorer({ pieces }: WorksForSaleExplorerPro
                 return true;
             })
             .sort((a, b) => {
-                if (sortOption === "price-asc") {
-                    return (a.price ?? 0) - (b.price ?? 0);
-                }
-                if (sortOption === "price-desc") {
-                    return (b.price ?? 0) - (a.price ?? 0);
+                if (sortOption === "price-asc" || sortOption === "price-desc") {
+                    if (a.price === undefined) return b.price === undefined ? b.id - a.id : 1;
+                    if (b.price === undefined) return -1;
+                    return sortOption === "price-asc" ? a.price - b.price : b.price - a.price;
                 }
                 if (sortOption === "newest") {
                     return b.id - a.id;
@@ -339,6 +338,9 @@ function SaleCard({ piece, priority = false }: { piece: ArtPiece; priority?: boo
                                 <span className="font-mono text-sm font-semibold tracking-tight text-foreground/90">
                                     {piece.currency ?? "₹"}{piece.price.toLocaleString("en-IN")}
                                 </span>
+                            )}
+                            {piece.status === "available" && piece.price === undefined && (
+                                <span className="font-mono text-[10px] text-foreground/65">Price on inquiry</span>
                             )}
                             {piece.status === "reserved" && (
                                 <span className="font-mono text-[10px] uppercase tracking-wider text-amber-500 font-medium">
